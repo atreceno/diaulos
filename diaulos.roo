@@ -1,1 +1,14 @@
 project --topLevelPackage com.atreceno.it.diaulos --projectName diaulos --java 6 --packaging JAR
+jpa setup --provider HIBERNATE --database MYSQL --databaseName diaulos_db --userName ulises
+entity jpa --class ~.domain.Discipline --equals --activeRecord true --identifierField code --identifierType java.lang.String --testAutomatically
+field string --fieldName code --notNull --sizeMin 2 --sizeMax 2
+field string --fieldName name --notNull --sizeMax 25
+field string --fieldName description --sizeMax 255
+finder add --finderName findDisciplinesByCodeEquals
+finder add --finderName findDisciplinesByNameLike
+web mvc setup
+web mvc all --package ~.web
+web mvc finder all
+web mvc language --code es
+json all
+web mvc json all --package ~.web

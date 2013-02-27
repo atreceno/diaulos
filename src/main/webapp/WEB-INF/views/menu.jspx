@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_discipline" z="W3RCiPtGp5Jf+KOxYSTNTYlnQJQ=">
+            <menu:item id="i_discipline_new" messageCode="global_menu_new" url="/disciplines?form" z="qFIKIuGoDuubyyCeufAmj3lk4t4="/>
+            <menu:item id="i_discipline_list" messageCode="global_menu_list" url="/disciplines?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ljQy5YAGdzItEqK+yXX5hZAii5c="/>
+            <menu:item id="fi_discipline_codeequals" messageCode="global_menu_find" url="/disciplines?find=ByCodeEquals&amp;form" z="yNMY3chwWuo3E7mTjTIjX+lTfps="/>
+            <menu:item id="fi_discipline_namelike" messageCode="global_menu_find" url="/disciplines?find=ByNameLike&amp;form" z="1dPg3FpPolxzrytx2mX4zqOQTbQ="/>
+        </menu:category>
+    </menu:menu>
+</div>
