@@ -1,0 +1,1 @@
+project --topLevelPackage com.atreceno.it.diaulos --projectName diaulos --java 6 --packaging JAR

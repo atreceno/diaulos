@@ -1,0 +1,8 @@
+# Mac OS X
+.DS_Store
+# Eclipse
+/target
+/.project
+/.classpath
+/.settings
+/log.roo
