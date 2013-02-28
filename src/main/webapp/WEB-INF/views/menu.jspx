@@ -9,5 +9,13 @@
             <menu:item id="fi_discipline_codeequals" messageCode="global_menu_find" url="/disciplines?find=ByCodeEquals&amp;form" z="yNMY3chwWuo3E7mTjTIjX+lTfps="/>
             <menu:item id="fi_discipline_namelike" messageCode="global_menu_find" url="/disciplines?find=ByNameLike&amp;form" z="1dPg3FpPolxzrytx2mX4zqOQTbQ="/>
         </menu:category>
+        <menu:category id="c_event" z="AURyeKTmOObIARXqfI9DXukJNIE=">
+            <menu:item id="i_event_new" messageCode="global_menu_new" url="/events?form" z="BObcRn250Q23VbXG8kWIXR49efE="/>
+            <menu:item id="i_event_list" messageCode="global_menu_list" url="/events?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MxywFHCy64/coyVU05GEg92ERF4="/>
+        </menu:category>
+        <menu:category id="c_eventgender" z="uklw+d1imwiJqgPyTWbvsEptPeY=">
+            <menu:item id="i_eventgender_new" messageCode="global_menu_new" url="/eventgenders?form" z="WN0EtjypsP05XFjeMDbQ+vzlCuA="/>
+            <menu:item id="i_eventgender_list" messageCode="global_menu_list" url="/eventgenders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="19aOxpcB9I5lCncI7E/7/dP63kY="/>
+        </menu:category>
     </menu:menu>
 </div>

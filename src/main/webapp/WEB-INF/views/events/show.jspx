@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_atreceno_it_diaulos_domain_Event" object="${event}" path="/events" z="pqwQiEfI2F2NXwEBA1JFwJiJ14c=">
+        <field:display field="code" id="s_com_atreceno_it_diaulos_domain_Event_code" object="${event}" z="6xcP6s3q7ex1PotJImI0XBz1xTg="/>
+        <field:display field="name" id="s_com_atreceno_it_diaulos_domain_Event_name" object="${event}" z="/lBK2VEd4x9mmjpI2+t1yyb7f7E="/>
+        <field:display field="description" id="s_com_atreceno_it_diaulos_domain_Event_description" object="${event}" z="kd48AAgvzwsE6jXZ7ro+EI8KMcE="/>
+        <field:display field="discipline" id="s_com_atreceno_it_diaulos_domain_Event_discipline" object="${event}" z="GVn7cQ87WjN2sks89UXvYNTyJA4="/>
+        <field:display field="eventGender" id="s_com_atreceno_it_diaulos_domain_Event_eventGender" object="${event}" z="fOo2fdlEzL6xwzkKtgPptha3fRo="/>
+    </page:show>
+</div>

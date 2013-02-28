@@ -4,6 +4,7 @@
 package com.atreceno.it.diaulos.web;
 
 import com.atreceno.it.diaulos.domain.Discipline;
+import com.atreceno.it.diaulos.domain.Event;
 import com.atreceno.it.diaulos.web.DisciplineController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -86,6 +87,7 @@ privileged aspect DisciplineController_Roo_Controller {
     
     void DisciplineController.populateEditForm(Model uiModel, Discipline discipline) {
         uiModel.addAttribute("discipline", discipline);
+        uiModel.addAttribute("events", Event.findAllEvents());
     }
     
     String DisciplineController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

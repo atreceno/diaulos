@@ -4,6 +4,8 @@
 package com.atreceno.it.diaulos.web;
 
 import com.atreceno.it.diaulos.domain.Discipline;
+import com.atreceno.it.diaulos.domain.Event;
+import com.atreceno.it.diaulos.domain.EventGender;
 import com.atreceno.it.diaulos.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -29,9 +31,54 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Event, String> ApplicationConversionServiceFactoryBean.getEventToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Event, java.lang.String>() {
+            public String convert(Event event) {
+                return new StringBuilder().append(event.getCode()).append(' ').append(event.getName()).append(' ').append(event.getDescription()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Event> ApplicationConversionServiceFactoryBean.getIdToEventConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.atreceno.it.diaulos.domain.Event>() {
+            public com.atreceno.it.diaulos.domain.Event convert(java.lang.Long id) {
+                return Event.findEvent(id);
+            }
+        };
+    }
+    
+    public Converter<String, Event> ApplicationConversionServiceFactoryBean.getStringToEventConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.atreceno.it.diaulos.domain.Event>() {
+            public com.atreceno.it.diaulos.domain.Event convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Event.class);
+            }
+        };
+    }
+    
+    public Converter<EventGender, String> ApplicationConversionServiceFactoryBean.getEventGenderToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.EventGender, java.lang.String>() {
+            public String convert(EventGender eventGender) {
+                return new StringBuilder().append(eventGender.getName()).toString();
+            }
+        };
+    }
+    
+    public Converter<String, EventGender> ApplicationConversionServiceFactoryBean.getIdToEventGenderConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.atreceno.it.diaulos.domain.EventGender>() {
+            public com.atreceno.it.diaulos.domain.EventGender convert(java.lang.String id) {
+                return EventGender.findEventGender(id);
+            }
+        };
+    }
+    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
         registry.addConverter(getDisciplineToStringConverter());
         registry.addConverter(getIdToDisciplineConverter());
+        registry.addConverter(getEventToStringConverter());
+        registry.addConverter(getIdToEventConverter());
+        registry.addConverter(getStringToEventConverter());
+        registry.addConverter(getEventGenderToStringConverter());
+        registry.addConverter(getIdToEventGenderConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {

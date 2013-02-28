@@ -1,6 +1,11 @@
 package com.atreceno.it.diaulos.domain;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -28,5 +33,8 @@ public class Discipline {
 
     @Size(max = 255)
     private String description;
-    
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "discipline")
+    private Set<com.atreceno.it.diaulos.domain.Event> events = new HashSet<com.atreceno.it.diaulos.domain.Event>();
+
 }

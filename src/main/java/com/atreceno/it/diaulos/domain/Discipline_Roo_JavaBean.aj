@@ -4,6 +4,8 @@
 package com.atreceno.it.diaulos.domain;
 
 import com.atreceno.it.diaulos.domain.Discipline;
+import com.atreceno.it.diaulos.domain.Event;
+import java.util.Set;
 
 privileged aspect Discipline_Roo_JavaBean {
     
@@ -29,6 +31,14 @@ privileged aspect Discipline_Roo_JavaBean {
     
     public void Discipline.setDescription(String description) {
         this.description = description;
+    }
+    
+    public Set<Event> Discipline.getEvents() {
+        return this.events;
+    }
+    
+    public void Discipline.setEvents(Set<Event> events) {
+        this.events = events;
     }
     
 }

@@ -6,6 +6,7 @@
         <field:input field="code" id="c_com_atreceno_it_diaulos_domain_Discipline_code" z="ggKBkPNLg5uO/YAny84oqqXIeAo="/>
         <field:input field="name" id="c_com_atreceno_it_diaulos_domain_Discipline_name" max="25" required="true" z="xZ/6mBhy7GOU7FtSy6DpiNNbyNE="/>
         <field:textarea field="description" id="c_com_atreceno_it_diaulos_domain_Discipline_description" z="72gnNKMLmosYKcU7YYZmxHtXoMc="/>
+        <field:simple field="events" id="c_com_atreceno_it_diaulos_domain_Discipline_events" messageCode="entity_reference_not_managed" messageCodeAttribute="Event" z="3iuNdVafNd6DKbDimG9QUJTbnuo="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_atreceno_it_diaulos_domain_Discipline" render="${not empty dependencies}" z="IbZ0FrkhELyQK5nGZkUcRKEUqrw="/>
 </div>
