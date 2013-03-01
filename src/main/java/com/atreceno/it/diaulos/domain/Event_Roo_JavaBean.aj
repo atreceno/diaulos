@@ -6,6 +6,8 @@ package com.atreceno.it.diaulos.domain;
 import com.atreceno.it.diaulos.domain.Discipline;
 import com.atreceno.it.diaulos.domain.Event;
 import com.atreceno.it.diaulos.domain.EventGender;
+import com.atreceno.it.diaulos.domain.Phase;
+import java.util.Set;
 
 privileged aspect Event_Roo_JavaBean {
     
@@ -47,6 +49,14 @@ privileged aspect Event_Roo_JavaBean {
     
     public void Event.setDiscipline(Discipline discipline) {
         this.discipline = discipline;
+    }
+    
+    public Set<Phase> Event.getPhases() {
+        return this.phases;
+    }
+    
+    public void Event.setPhases(Set<Phase> phases) {
+        this.phases = phases;
     }
     
 }

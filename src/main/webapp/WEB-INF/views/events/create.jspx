@@ -8,6 +8,7 @@
         <field:textarea field="description" id="c_com_atreceno_it_diaulos_domain_Event_description" z="iJC93vXbTWjyla5zo9uUFW0Oe1Y="/>
         <field:select field="discipline" id="c_com_atreceno_it_diaulos_domain_Event_discipline" itemValue="code" items="${disciplines}" path="/disciplines" required="true" z="mcLC85xfYEFcjsm43EDjnHr06OY="/>
         <field:select field="eventGender" id="c_com_atreceno_it_diaulos_domain_Event_eventGender" itemValue="code" items="${eventgenders}" path="/eventgenders" required="true" z="5361L/Sr+EuMfeObcIaBUo5i3GM="/>
+        <field:simple field="phases" id="c_com_atreceno_it_diaulos_domain_Event_phases" messageCode="entity_reference_not_managed" messageCodeAttribute="Phase" z="yfeM/nJTIR1HmaaZzq6f/J/aZwo="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_atreceno_it_diaulos_domain_Event" render="${not empty dependencies}" z="KUdGcqg/ApyQc29QhWBJS35s1KE="/>
 </div>

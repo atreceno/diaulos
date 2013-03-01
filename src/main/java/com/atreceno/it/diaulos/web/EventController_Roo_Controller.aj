@@ -6,6 +6,7 @@ package com.atreceno.it.diaulos.web;
 import com.atreceno.it.diaulos.domain.Discipline;
 import com.atreceno.it.diaulos.domain.Event;
 import com.atreceno.it.diaulos.domain.EventGender;
+import com.atreceno.it.diaulos.domain.Phase;
 import com.atreceno.it.diaulos.web.EventController;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -100,6 +101,7 @@ privileged aspect EventController_Roo_Controller {
         uiModel.addAttribute("event", event);
         uiModel.addAttribute("disciplines", Discipline.findAllDisciplines());
         uiModel.addAttribute("eventgenders", EventGender.findAllEventGenders());
+        uiModel.addAttribute("phases", Phase.findAllPhases());
     }
     
     String EventController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

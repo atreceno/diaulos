@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_atreceno_it_diaulos_domain_Competition" items="${competitions}" z="lVXfNdby3BjId9EQS1lYPW1iP4A=">
+        <table:table data="${competitions}" id="l_com_atreceno_it_diaulos_domain_Competition" path="/competitions" z="aDPz9IuX2GYTExN1cs8OZ/q/GaA=">
+            <table:column id="c_com_atreceno_it_diaulos_domain_Competition_code" property="code" z="8HWVH3mqk1zSud56qFmVLWG6R6Q="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Competition_name" property="name" z="7p+rMK7nyPyclwioX74aQ5+rcfo="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Competition_description" property="description" z="0s0YUnUVyJU4+yZgIGiL1yS8HoY="/>
+            <table:column date="true" dateTimePattern="${competition_startdate_date_format}" id="c_com_atreceno_it_diaulos_domain_Competition_startDate" property="startDate" z="ffJiYN1AiRyeAuzOLX9c4Lm4PA0="/>
+            <table:column date="true" dateTimePattern="${competition_finishdate_date_format}" id="c_com_atreceno_it_diaulos_domain_Competition_finishDate" property="finishDate" z="elcASaPiPoP/JRvrsR7Ai+8Sn0I="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Competition_officialResult" property="officialResult" z="oTjdsZ1IDhFdS9IDIL+5fucxOtA="/>
+        </table:table>
+    </page:list>
+</div>

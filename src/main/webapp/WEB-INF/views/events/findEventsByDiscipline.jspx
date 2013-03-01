@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByDiscipline" id="ff_com_atreceno_it_diaulos_domain_Event" path="/events" z="tUgkqP2yvO4h4bezbGdsKoRTpD0=">
+        <field:select disableFormBinding="true" field="discipline" id="f_com_atreceno_it_diaulos_domain_Event_discipline" itemValue="code" items="${disciplines}" path="/disciplines" required="true" z="yN4i9yK/1mM1Maj8XNs9NC91KTo="/>
+    </form:find>
+</div>

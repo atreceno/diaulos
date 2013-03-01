@@ -13,4 +13,22 @@
 <definition extends="default" name="events/update">
         <put-attribute name="body" value="/WEB-INF/views/events/update.jspx"/>
     </definition>
+<definition extends="default" name="events/findEventsByCodeLike">
+        <put-attribute name="body" value="/WEB-INF/views/events/findEventsByCodeLike.jspx"/>
+    </definition>
+<definition extends="default" name="events/findEventsByDiscipline">
+        <put-attribute name="body" value="/WEB-INF/views/events/findEventsByDiscipline.jspx"/>
+    </definition>
+<definition extends="default" name="events/findEventsByEventGender">
+        <put-attribute name="body" value="/WEB-INF/views/events/findEventsByEventGender.jspx"/>
+    </definition>
+<definition extends="default" name="events/findEventsByNameLike">
+        <put-attribute name="body" value="/WEB-INF/views/events/findEventsByNameLike.jspx"/>
+    </definition>
+<definition extends="default" name="events/findEventsByDisciplineOrEventGender">
+        <put-attribute name="body" value="/WEB-INF/views/events/findEventsByDisciplineOrEventGender.jspx"/>
+    </definition>
+<definition extends="default" name="events/findEventsByDisciplineAndEventGender">
+        <put-attribute name="body" value="/WEB-INF/views/events/findEventsByDisciplineAndEventGender.jspx"/>
+    </definition>
 </tiles-definitions>

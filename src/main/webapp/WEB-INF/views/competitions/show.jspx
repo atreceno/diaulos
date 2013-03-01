@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_atreceno_it_diaulos_domain_Competition" object="${competition}" path="/competitions" z="C/MXR3kXqvj9PZiAsukepDf4lF8=">
+        <field:display field="code" id="s_com_atreceno_it_diaulos_domain_Competition_code" object="${competition}" z="7Op6qC2IMoYXOJEwzKq5C7cQ0CI="/>
+        <field:display field="name" id="s_com_atreceno_it_diaulos_domain_Competition_name" object="${competition}" z="gGPn0zBr5E2UXN/FDJzxBfu8McA="/>
+        <field:display field="description" id="s_com_atreceno_it_diaulos_domain_Competition_description" object="${competition}" z="hi4TTJXU4DdRoCL2Nkqwmq/Y/y4="/>
+        <field:display date="true" dateTimePattern="${competition_startdate_date_format}" field="startDate" id="s_com_atreceno_it_diaulos_domain_Competition_startDate" object="${competition}" z="7P9I4TktrTnirk2yX6ztJg4Qics="/>
+        <field:display date="true" dateTimePattern="${competition_finishdate_date_format}" field="finishDate" id="s_com_atreceno_it_diaulos_domain_Competition_finishDate" object="${competition}" z="9U1UwTSc4tRI6N4kN4tSEY1WLOo="/>
+        <field:display field="officialResult" id="s_com_atreceno_it_diaulos_domain_Competition_officialResult" object="${competition}" z="PVVK20voCZiSDPCD8gsbS4fu2ZA="/>
+        <field:display field="phase" id="s_com_atreceno_it_diaulos_domain_Competition_phase" object="${competition}" z="odfxg//zE578gzxep5EYrtFC0xQ="/>
+        <field:display field="venue" id="s_com_atreceno_it_diaulos_domain_Competition_venue" object="${competition}" z="KfrNRmrY+3PyfaT57+r2HYHDK/s="/>
+    </page:show>
+</div>

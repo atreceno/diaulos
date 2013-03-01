@@ -3,9 +3,12 @@
 
 package com.atreceno.it.diaulos.web;
 
+import com.atreceno.it.diaulos.domain.Competition;
 import com.atreceno.it.diaulos.domain.Discipline;
 import com.atreceno.it.diaulos.domain.Event;
 import com.atreceno.it.diaulos.domain.EventGender;
+import com.atreceno.it.diaulos.domain.Phase;
+import com.atreceno.it.diaulos.domain.Venue;
 import com.atreceno.it.diaulos.web.ApplicationConversionServiceFactoryBean;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
@@ -14,6 +17,30 @@ import org.springframework.format.FormatterRegistry;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<Competition, String> ApplicationConversionServiceFactoryBean.getCompetitionToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Competition, java.lang.String>() {
+            public String convert(Competition competition) {
+                return new StringBuilder().append(competition.getCode()).append(' ').append(competition.getName()).append(' ').append(competition.getDescription()).append(' ').append(competition.getStartDate()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Competition> ApplicationConversionServiceFactoryBean.getIdToCompetitionConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.atreceno.it.diaulos.domain.Competition>() {
+            public com.atreceno.it.diaulos.domain.Competition convert(java.lang.Long id) {
+                return Competition.findCompetition(id);
+            }
+        };
+    }
+    
+    public Converter<String, Competition> ApplicationConversionServiceFactoryBean.getStringToCompetitionConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.atreceno.it.diaulos.domain.Competition>() {
+            public com.atreceno.it.diaulos.domain.Competition convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Competition.class);
+            }
+        };
+    }
     
     public Converter<Discipline, String> ApplicationConversionServiceFactoryBean.getDisciplineToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Discipline, java.lang.String>() {
@@ -71,7 +98,50 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<Phase, String> ApplicationConversionServiceFactoryBean.getPhaseToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Phase, java.lang.String>() {
+            public String convert(Phase phase) {
+                return new StringBuilder().append(phase.getCode()).append(' ').append(phase.getName()).append(' ').append(phase.getDescription()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Phase> ApplicationConversionServiceFactoryBean.getIdToPhaseConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.atreceno.it.diaulos.domain.Phase>() {
+            public com.atreceno.it.diaulos.domain.Phase convert(java.lang.Long id) {
+                return Phase.findPhase(id);
+            }
+        };
+    }
+    
+    public Converter<String, Phase> ApplicationConversionServiceFactoryBean.getStringToPhaseConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.atreceno.it.diaulos.domain.Phase>() {
+            public com.atreceno.it.diaulos.domain.Phase convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Phase.class);
+            }
+        };
+    }
+    
+    public Converter<Venue, String> ApplicationConversionServiceFactoryBean.getVenueToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Venue, java.lang.String>() {
+            public String convert(Venue venue) {
+                return new StringBuilder().append(venue.getName()).append(' ').append(venue.getDescription()).append(' ').append(venue.getCapacity()).append(' ').append(venue.getAddress()).toString();
+            }
+        };
+    }
+    
+    public Converter<String, Venue> ApplicationConversionServiceFactoryBean.getIdToVenueConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.atreceno.it.diaulos.domain.Venue>() {
+            public com.atreceno.it.diaulos.domain.Venue convert(java.lang.String id) {
+                return Venue.findVenue(id);
+            }
+        };
+    }
+    
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getCompetitionToStringConverter());
+        registry.addConverter(getIdToCompetitionConverter());
+        registry.addConverter(getStringToCompetitionConverter());
         registry.addConverter(getDisciplineToStringConverter());
         registry.addConverter(getIdToDisciplineConverter());
         registry.addConverter(getEventToStringConverter());
@@ -79,6 +149,11 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getStringToEventConverter());
         registry.addConverter(getEventGenderToStringConverter());
         registry.addConverter(getIdToEventGenderConverter());
+        registry.addConverter(getPhaseToStringConverter());
+        registry.addConverter(getIdToPhaseConverter());
+        registry.addConverter(getStringToPhaseConverter());
+        registry.addConverter(getVenueToStringConverter());
+        registry.addConverter(getIdToVenueConverter());
     }
     
     public void ApplicationConversionServiceFactoryBean.afterPropertiesSet() {

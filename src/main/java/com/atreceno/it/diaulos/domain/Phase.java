@@ -16,13 +16,13 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
+@RooJpaActiveRecord
 @RooEquals
-@RooJpaActiveRecord(finders = { "findEventsByCodeLike", "findEventsByDisciplineAndEventGender", "findEventsByNameLike" })
-public class Event {
+public class Phase {
 
     @NotNull
     @Column(unique = true)
-    @Size(min = 6, max = 6)
+    @Size(min = 7, max = 7)
     private String code;
 
     @NotNull
@@ -34,14 +34,10 @@ public class Event {
 
     @NotNull
     @ManyToOne
-    @JoinColumn(name = "gender_code")
-    private EventGender eventGender;
+    @JoinColumn(name = "event_id")
+    private Event event;
 
-    @NotNull
-    @ManyToOne
-    @JoinColumn(name = "discipline_code")
-    private Discipline discipline;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "phase")
+    private Set<Competition> competitions = new HashSet<Competition>();
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private Set<Phase> phases = new HashSet<Phase>();
 }

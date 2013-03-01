@@ -12,10 +12,25 @@
         <menu:category id="c_event" z="AURyeKTmOObIARXqfI9DXukJNIE=">
             <menu:item id="i_event_new" messageCode="global_menu_new" url="/events?form" z="BObcRn250Q23VbXG8kWIXR49efE="/>
             <menu:item id="i_event_list" messageCode="global_menu_list" url="/events?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MxywFHCy64/coyVU05GEg92ERF4="/>
+            <menu:item id="fi_event_codelike" messageCode="global_menu_find" url="/events?find=ByCodeLike&amp;form" z="z8ulOQuQ6D0uzX9sYFOCAM3qe08="/>
+            <menu:item id="fi_event_disciplineandeventgender" messageCode="global_menu_find" url="/events?find=ByDisciplineAndEventGender&amp;form" z="wpgRdEygFkzYNoXaD5nG665OWDE="/>
+            <menu:item id="fi_event_namelike" messageCode="global_menu_find" url="/events?find=ByNameLike&amp;form" z="v+eZJsm+kwR14Qm+m1KeEBIA2/Q="/>
         </menu:category>
         <menu:category id="c_eventgender" z="uklw+d1imwiJqgPyTWbvsEptPeY=">
             <menu:item id="i_eventgender_new" messageCode="global_menu_new" url="/eventgenders?form" z="WN0EtjypsP05XFjeMDbQ+vzlCuA="/>
             <menu:item id="i_eventgender_list" messageCode="global_menu_list" url="/eventgenders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="19aOxpcB9I5lCncI7E/7/dP63kY="/>
+        </menu:category>
+        <menu:category id="c_phase" z="9fjQE6nTFVP5IYRnDQfKv2Xy97o=">
+            <menu:item id="i_phase_new" messageCode="global_menu_new" url="/phases?form" z="pl21lez+zvOx+9QNzUtk6Gs6pvQ="/>
+            <menu:item id="i_phase_list" messageCode="global_menu_list" url="/phases?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KUfQD8stsm//WTpE/EkmdEoeFB8="/>
+        </menu:category>
+        <menu:category id="c_competition" z="3o4yHluQ9XIhyw6c4vcZI1oWpss=">
+            <menu:item id="i_competition_new" messageCode="global_menu_new" url="/competitions?form" z="ra45JUnDZvDLqqs+g5BL0NlEK6k="/>
+            <menu:item id="i_competition_list" messageCode="global_menu_list" url="/competitions?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+6VEWqszkUUVkknGJ3mQLq+rR1I="/>
+        </menu:category>
+        <menu:category id="c_venue" z="PuK9BiH7zeOJAH31wtFNKW4HZIE=">
+            <menu:item id="i_venue_new" messageCode="global_menu_new" url="/venues?form" z="BzPxP3VhbuLuFIZpYVPUbl90JIE="/>
+            <menu:item id="i_venue_list" messageCode="global_menu_list" url="/venues?page=1&amp;size=${empty param.size ? 10 : param.size}" z="A/T6bffysLZueO27CAWFqrpVwFM="/>
         </menu:category>
     </menu:menu>
 </div>

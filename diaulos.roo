@@ -1,5 +1,6 @@
 project --topLevelPackage com.atreceno.it.diaulos --projectName diaulos --java 6 --packaging JAR
 jpa setup --provider HIBERNATE --database MYSQL --databaseName diaulos_db --userName ulises
+// Discipline
 entity jpa --class ~.domain.Discipline --equals --activeRecord true --identifierField code --identifierType java.lang.String --testAutomatically
 field string --fieldName code --notNull --sizeMin 2 --sizeMax 2
 field string --fieldName name --notNull --sizeMax 25
@@ -12,3 +13,50 @@ web mvc finder all
 web mvc language --code es
 json all
 web mvc json all --package ~.web
+// Event
+entity jpa --class ~.domain.Event --equals --activeRecord true --testAutomatically
+field string --fieldName code --notNull --sizeMin 6 --sizeMax 6 --unique
+field string --fieldName name --sizeMax 45 --notNull
+field string --fieldName description --sizeMax 255
+field reference --fieldName eventGender --type ~.domain.EventGender --notNull --joinColumnName gender_code
+field reference --fieldName discipline --type ~.domain.Discipline --notNull --joinColumnName discipline_code
+field set --fieldName events --type ~.domain.Event --mappedBy discipline --cardinality ONE_TO_MANY
+entity jpa --class ~.domain.EventGender --equals --activeRecord true --identifierField code --identifierType java.lang.String --testAutomatically
+field string --fieldName code --notNull --sizeMin 1 --sizeMax 1
+field string --fieldName name --notNull --sizeMax 10
+web mvc all --package ~.web
+// Phase
+entity jpa --class ~.domain.Phase --equals --activeRecord true --testAutomatically
+field string --fieldName code --notNull --sizeMin 7 --sizeMax 7 --unique 
+field string --fieldName name --sizeMax 45 --notNull
+field string --fieldName description --sizeMax 255
+field reference --fieldName event --type ~.domain.Event --notNull --joinColumnName event_id
+// Competition
+entity jpa --class ~.domain.Competition --equals --activeRecord true --testAutomatically
+focus --class ~.domain.Phase
+field set --fieldName competitions --type ~.domain.Competition --mappedBy phase --cardinality ONE_TO_MANY
+focus --class ~.domain.Competition
+field string --fieldName code --notNull --sizeMin 9 --sizeMax 9 --unique 
+field string --fieldName name --sizeMax 45 --notNull
+field string --fieldName description --sizeMax 255
+field date --fieldName startDate --type java.util.Date
+field date --fieldName finishDate --type java.util.Date
+field boolean --fieldName officialResult
+field reference --fieldName phase --type ~.domain.Phase --notNull --joinColumnName phase_id
+web mvc all --package com.atreceno.it.diaulos.web
+focus --class ~.domain.Event
+finder add --finderName findEventsByCodeLike
+web mvc all --package com.atreceno.it.diaulos.web
+web mvc finder all
+focus --class ~.domain.Event
+focus --class ~.domain.Event
+field set --fieldName phases --type ~.domain.Phase --mappedBy event --cardinality ONE_TO_MANY
+// Venue
+entity jpa --class ~.domain.Venue --equals --activeRecord true --identifierField code --identifierType java.lang.String --testAutomatically
+field string --fieldName name --sizeMax 25 --notNull
+field string --fieldName description --sizeMax 255
+field number --fieldName capacity --type java.lang.Integer --min 1 --max 100000
+field string --fieldName address --sizeMax 255
+focus --class ~.domain.Competition
+field reference --fieldName venue --type ~.domain.Venue --joinColumnName venue_code
+web mvc all --package com.atreceno.it.diaulos.web
