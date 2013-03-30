@@ -30,8 +30,8 @@ privileged aspect EventGenderDataOnDemand_Roo_DataOnDemand {
     
     public void EventGenderDataOnDemand.setName(EventGender obj, int index) {
         String name = "name_" + index;
-        if (name.length() > 10) {
-            name = name.substring(0, 10);
+        if (name.length() > 20) {
+            name = name.substring(0, 20);
         }
         obj.setName(name);
     }

@@ -5,8 +5,6 @@ package com.atreceno.it.diaulos.domain;
 
 import com.atreceno.it.diaulos.domain.Competition;
 import com.atreceno.it.diaulos.domain.CompetitionDataOnDemand;
-import com.atreceno.it.diaulos.domain.Phase;
-import com.atreceno.it.diaulos.domain.PhaseDataOnDemand;
 import com.atreceno.it.diaulos.domain.VenueDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -30,9 +28,6 @@ privileged aspect CompetitionDataOnDemand_Roo_DataOnDemand {
     private List<Competition> CompetitionDataOnDemand.data;
     
     @Autowired
-    PhaseDataOnDemand CompetitionDataOnDemand.phaseDataOnDemand;
-    
-    @Autowired
     VenueDataOnDemand CompetitionDataOnDemand.venueDataOnDemand;
     
     public Competition CompetitionDataOnDemand.getNewTransientCompetition(int index) {
@@ -42,7 +37,6 @@ privileged aspect CompetitionDataOnDemand_Roo_DataOnDemand {
         setFinishDate(obj, index);
         setName(obj, index);
         setOfficialResult(obj, index);
-        setPhase(obj, index);
         setStartDate(obj, index);
         return obj;
     }
@@ -79,11 +73,6 @@ privileged aspect CompetitionDataOnDemand_Roo_DataOnDemand {
     public void CompetitionDataOnDemand.setOfficialResult(Competition obj, int index) {
         Boolean officialResult = Boolean.TRUE;
         obj.setOfficialResult(officialResult);
-    }
-    
-    public void CompetitionDataOnDemand.setPhase(Competition obj, int index) {
-        Phase phase = phaseDataOnDemand.getRandomPhase();
-        obj.setPhase(phase);
     }
     
     public void CompetitionDataOnDemand.setStartDate(Competition obj, int index) {

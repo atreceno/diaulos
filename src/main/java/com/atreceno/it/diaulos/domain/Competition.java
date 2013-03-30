@@ -42,10 +42,10 @@ public class Competition {
 
     private Boolean officialResult;
 
-    @NotNull
-    @ManyToOne
-    @JoinColumn(name = "phase_id")
-    private Phase phase;
+//    @NotNull
+//    @ManyToOne
+//    @JoinColumn(name = "phase_id")
+//    private Phase phase;
 
     @ManyToOne
     @JoinColumn(name = "venue_code")

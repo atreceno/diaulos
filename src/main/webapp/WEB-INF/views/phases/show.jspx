@@ -6,6 +6,5 @@
         <field:display field="code" id="s_com_atreceno_it_diaulos_domain_Phase_code" object="${phase}" z="a5apKkK/aOYJrVWXgPa8X89VovY="/>
         <field:display field="name" id="s_com_atreceno_it_diaulos_domain_Phase_name" object="${phase}" z="xIGP6qsPS4DlHd1UpzjcU7KpTm8="/>
         <field:display field="description" id="s_com_atreceno_it_diaulos_domain_Phase_description" object="${phase}" z="JhtKkhwVD0oKNDZ/zkMJOM5Fsfs="/>
-        <field:display field="event" id="s_com_atreceno_it_diaulos_domain_Phase_event" object="${phase}" z="D5Zs66ESq/iU8IfjAH6lKEMksno="/>
     </page:show>
 </div>

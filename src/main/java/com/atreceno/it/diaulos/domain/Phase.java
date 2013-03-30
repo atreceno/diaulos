@@ -32,12 +32,12 @@ public class Phase {
     @Size(max = 255)
     private String description;
 
-    @NotNull
-    @ManyToOne
-    @JoinColumn(name = "event_id")
-    private Event event;
+//    @NotNull
+//    @ManyToOne
+//    @JoinColumn(name = "event_id")
+//    private Event event;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "phase")
-    private Set<Competition> competitions = new HashSet<Competition>();
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "phase")
+//    private Set<Competition> competitions = new HashSet<Competition>();
 
 }

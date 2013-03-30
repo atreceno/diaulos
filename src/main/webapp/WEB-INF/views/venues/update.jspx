@@ -5,7 +5,7 @@
     <form:update id="fu_com_atreceno_it_diaulos_domain_Venue" idField="code" modelAttribute="venue" path="/venues" versionField="Version" z="w0OYy8t9bxV8YG8JGSEFOfEHEMk=">
         <field:input field="name" id="c_com_atreceno_it_diaulos_domain_Venue_name" max="25" required="true" z="j/pDjyGysPQGqAinxK4+LJIY7hU="/>
         <field:textarea field="description" id="c_com_atreceno_it_diaulos_domain_Venue_description" z="VUxIiUiUuZy8t/yupHjLiDbq/S0="/>
-        <field:input field="capacity" id="c_com_atreceno_it_diaulos_domain_Venue_capacity" max="100000" min="1" required="true" validationMessageCode="field_invalid_integer" z="vfKow2hCQMVE5+OjlPkXN0VI3eA="/>
+        <field:input field="capacity" id="c_com_atreceno_it_diaulos_domain_Venue_capacity" max="100000" validationMessageCode="field_invalid_integer" z="T7sN8TXTMYFZzg9eMuJ2RyPg3wg="/>
         <field:textarea field="address" id="c_com_atreceno_it_diaulos_domain_Venue_address" z="PdRahzxELK+Q2Nx+MCthR3ivHh4="/>
     </form:update>
 </div>

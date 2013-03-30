@@ -4,6 +4,7 @@
 package com.atreceno.it.diaulos.domain;
 
 import com.atreceno.it.diaulos.domain.Event;
+import com.atreceno.it.diaulos.domain.EventCode;
 import com.atreceno.it.diaulos.domain.EventDataOnDemand;
 import com.atreceno.it.diaulos.domain.EventIntegrationTest;
 import java.util.List;
@@ -37,7 +38,7 @@ privileged aspect EventIntegrationTest_Roo_IntegrationTest {
     public void EventIntegrationTest.testFindEvent() {
         Event obj = dod.getRandomEvent();
         Assert.assertNotNull("Data on demand for 'Event' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        EventCode id = obj.getId();
         Assert.assertNotNull("Data on demand for 'Event' failed to provide an identifier", id);
         obj = Event.findEvent(id);
         Assert.assertNotNull("Find method for 'Event' illegally returned null for id '" + id + "'", obj);
@@ -70,7 +71,7 @@ privileged aspect EventIntegrationTest_Roo_IntegrationTest {
     public void EventIntegrationTest.testFlush() {
         Event obj = dod.getRandomEvent();
         Assert.assertNotNull("Data on demand for 'Event' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        EventCode id = obj.getId();
         Assert.assertNotNull("Data on demand for 'Event' failed to provide an identifier", id);
         obj = Event.findEvent(id);
         Assert.assertNotNull("Find method for 'Event' illegally returned null for id '" + id + "'", obj);
@@ -84,7 +85,7 @@ privileged aspect EventIntegrationTest_Roo_IntegrationTest {
     public void EventIntegrationTest.testMergeUpdate() {
         Event obj = dod.getRandomEvent();
         Assert.assertNotNull("Data on demand for 'Event' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        EventCode id = obj.getId();
         Assert.assertNotNull("Data on demand for 'Event' failed to provide an identifier", id);
         obj = Event.findEvent(id);
         boolean modified =  dod.modifyEvent(obj);
@@ -100,7 +101,6 @@ privileged aspect EventIntegrationTest_Roo_IntegrationTest {
         Assert.assertNotNull("Data on demand for 'Event' failed to initialize correctly", dod.getRandomEvent());
         Event obj = dod.getNewTransientEvent(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'Event' failed to provide a new transient entity", obj);
-        Assert.assertNull("Expected 'Event' identifier to be null", obj.getId());
         obj.persist();
         obj.flush();
         Assert.assertNotNull("Expected 'Event' identifier to no longer be null", obj.getId());
@@ -110,7 +110,7 @@ privileged aspect EventIntegrationTest_Roo_IntegrationTest {
     public void EventIntegrationTest.testRemove() {
         Event obj = dod.getRandomEvent();
         Assert.assertNotNull("Data on demand for 'Event' failed to initialize correctly", obj);
-        Long id = obj.getId();
+        EventCode id = obj.getId();
         Assert.assertNotNull("Data on demand for 'Event' failed to provide an identifier", id);
         obj = Event.findEvent(id);
         obj.remove();

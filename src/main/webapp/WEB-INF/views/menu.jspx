@@ -12,7 +12,6 @@
         <menu:category id="c_event" z="AURyeKTmOObIARXqfI9DXukJNIE=">
             <menu:item id="i_event_new" messageCode="global_menu_new" url="/events?form" z="BObcRn250Q23VbXG8kWIXR49efE="/>
             <menu:item id="i_event_list" messageCode="global_menu_list" url="/events?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MxywFHCy64/coyVU05GEg92ERF4="/>
-            <menu:item id="fi_event_codelike" messageCode="global_menu_find" url="/events?find=ByCodeLike&amp;form" z="z8ulOQuQ6D0uzX9sYFOCAM3qe08="/>
             <menu:item id="fi_event_disciplineandeventgender" messageCode="global_menu_find" url="/events?find=ByDisciplineAndEventGender&amp;form" z="wpgRdEygFkzYNoXaD5nG665OWDE="/>
             <menu:item id="fi_event_namelike" messageCode="global_menu_find" url="/events?find=ByNameLike&amp;form" z="v+eZJsm+kwR14Qm+m1KeEBIA2/Q="/>
         </menu:category>

@@ -9,7 +9,6 @@
         <field:datetime dateTimePattern="${competition_startdate_date_format}" field="startDate" id="c_com_atreceno_it_diaulos_domain_Competition_startDate" z="KgD9JgRdvT2iDxUYolQI8JMcdG0="/>
         <field:datetime dateTimePattern="${competition_finishdate_date_format}" field="finishDate" id="c_com_atreceno_it_diaulos_domain_Competition_finishDate" z="wrqCk+SdfKd9ZC8VmtNXFuM+Q4w="/>
         <field:checkbox field="officialResult" id="c_com_atreceno_it_diaulos_domain_Competition_officialResult" z="6QQmo/t6KxEaCoNgCTF2Fg3kugQ="/>
-        <field:select field="phase" id="c_com_atreceno_it_diaulos_domain_Competition_phase" itemValue="id" items="${phases}" path="/phases" required="true" z="kiUEXAOdmf8yynjQ03vzrnSq3Uo="/>
         <field:select field="venue" id="c_com_atreceno_it_diaulos_domain_Competition_venue" itemValue="code" items="${venues}" path="/venues" z="FHwT8jQSDpYfvPz+jTyTQjqX0Jw="/>
     </form:update>
 </div>

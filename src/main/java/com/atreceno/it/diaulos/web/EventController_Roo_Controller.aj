@@ -5,14 +5,14 @@ package com.atreceno.it.diaulos.web;
 
 import com.atreceno.it.diaulos.domain.Discipline;
 import com.atreceno.it.diaulos.domain.Event;
+import com.atreceno.it.diaulos.domain.EventCode;
 import com.atreceno.it.diaulos.domain.EventGender;
-import com.atreceno.it.diaulos.domain.Phase;
 import com.atreceno.it.diaulos.web.EventController;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.convert.ConversionService;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +24,14 @@ import org.springframework.web.util.WebUtils;
 
 privileged aspect EventController_Roo_Controller {
     
+    private ConversionService EventController.conversionService;
+    
+    @Autowired
+    public EventController.new(ConversionService conversionService) {
+        super();
+        this.conversionService = conversionService;
+    }
+
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String EventController.create(@Valid Event event, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
         if (bindingResult.hasErrors()) {
@@ -32,27 +40,13 @@ privileged aspect EventController_Roo_Controller {
         }
         uiModel.asMap().clear();
         event.persist();
-        return "redirect:/events/" + encodeUrlPathSegment(event.getId().toString(), httpServletRequest);
-    }
-    
-    @RequestMapping(params = "form", produces = "text/html")
-    public String EventController.createForm(Model uiModel) {
-        populateEditForm(uiModel, new Event());
-        List<String[]> dependencies = new ArrayList<String[]>();
-        if (EventGender.countEventGenders() == 0) {
-            dependencies.add(new String[] { "eventgender", "eventgenders" });
-        }
-        if (Discipline.countDisciplines() == 0) {
-            dependencies.add(new String[] { "discipline", "disciplines" });
-        }
-        uiModel.addAttribute("dependencies", dependencies);
-        return "events/create";
+        return "redirect:/events/" + encodeUrlPathSegment(conversionService.convert(event.getId(), String.class), httpServletRequest);
     }
     
     @RequestMapping(value = "/{id}", produces = "text/html")
-    public String EventController.show(@PathVariable("id") Long id, Model uiModel) {
+    public String EventController.show(@PathVariable("id") EventCode id, Model uiModel) {
         uiModel.addAttribute("event", Event.findEvent(id));
-        uiModel.addAttribute("itemId", id);
+        uiModel.addAttribute("itemId", conversionService.convert(id, String.class));
         return "events/show";
     }
     
@@ -78,17 +72,17 @@ privileged aspect EventController_Roo_Controller {
         }
         uiModel.asMap().clear();
         event.merge();
-        return "redirect:/events/" + encodeUrlPathSegment(event.getId().toString(), httpServletRequest);
+        return "redirect:/events/" + encodeUrlPathSegment(conversionService.convert(event.getId(), String.class), httpServletRequest);
     }
     
     @RequestMapping(value = "/{id}", params = "form", produces = "text/html")
-    public String EventController.updateForm(@PathVariable("id") Long id, Model uiModel) {
+    public String EventController.updateForm(@PathVariable("id") EventCode id, Model uiModel) {
         populateEditForm(uiModel, Event.findEvent(id));
         return "events/update";
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "text/html")
-    public String EventController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String EventController.delete(@PathVariable("id") EventCode id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Event event = Event.findEvent(id);
         event.remove();
         uiModel.asMap().clear();
@@ -101,7 +95,6 @@ privileged aspect EventController_Roo_Controller {
         uiModel.addAttribute("event", event);
         uiModel.addAttribute("disciplines", Discipline.findAllDisciplines());
         uiModel.addAttribute("eventgenders", EventGender.findAllEventGenders());
-        uiModel.addAttribute("phases", Phase.findAllPhases());
     }
     
     String EventController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

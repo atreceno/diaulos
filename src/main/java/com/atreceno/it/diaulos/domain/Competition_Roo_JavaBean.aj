@@ -4,7 +4,6 @@
 package com.atreceno.it.diaulos.domain;
 
 import com.atreceno.it.diaulos.domain.Competition;
-import com.atreceno.it.diaulos.domain.Phase;
 import com.atreceno.it.diaulos.domain.Venue;
 import java.util.Date;
 
@@ -56,14 +55,6 @@ privileged aspect Competition_Roo_JavaBean {
     
     public void Competition.setOfficialResult(Boolean officialResult) {
         this.officialResult = officialResult;
-    }
-    
-    public Phase Competition.getPhase() {
-        return this.phase;
-    }
-    
-    public void Competition.setPhase(Phase phase) {
-        this.phase = phase;
     }
     
     public Venue Competition.getVenue() {

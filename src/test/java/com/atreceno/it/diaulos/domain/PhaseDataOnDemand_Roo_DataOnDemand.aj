@@ -3,8 +3,6 @@
 
 package com.atreceno.it.diaulos.domain;
 
-import com.atreceno.it.diaulos.domain.Event;
-import com.atreceno.it.diaulos.domain.EventDataOnDemand;
 import com.atreceno.it.diaulos.domain.Phase;
 import com.atreceno.it.diaulos.domain.PhaseDataOnDemand;
 import java.security.SecureRandom;
@@ -14,7 +12,6 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect PhaseDataOnDemand_Roo_DataOnDemand {
@@ -25,14 +22,10 @@ privileged aspect PhaseDataOnDemand_Roo_DataOnDemand {
     
     private List<Phase> PhaseDataOnDemand.data;
     
-    @Autowired
-    EventDataOnDemand PhaseDataOnDemand.eventDataOnDemand;
-    
     public Phase PhaseDataOnDemand.getNewTransientPhase(int index) {
         Phase obj = new Phase();
         setCode(obj, index);
         setDescription(obj, index);
-        setEvent(obj, index);
         setName(obj, index);
         return obj;
     }
@@ -51,11 +44,6 @@ privileged aspect PhaseDataOnDemand_Roo_DataOnDemand {
             description = description.substring(0, 255);
         }
         obj.setDescription(description);
-    }
-    
-    public void PhaseDataOnDemand.setEvent(Phase obj, int index) {
-        Event event = eventDataOnDemand.getRandomEvent();
-        obj.setEvent(event);
     }
     
     public void PhaseDataOnDemand.setName(Phase obj, int index) {

@@ -17,11 +17,11 @@ privileged aspect Competition_Roo_Equals {
             return true;
         }
         Competition rhs = (Competition) obj;
-        return new EqualsBuilder().append(code, rhs.code).append(description, rhs.description).append(finishDate, rhs.finishDate).append(id, rhs.id).append(name, rhs.name).append(officialResult, rhs.officialResult).append(phase, rhs.phase).append(startDate, rhs.startDate).append(venue, rhs.venue).isEquals();
+        return new EqualsBuilder().append(code, rhs.code).append(description, rhs.description).append(finishDate, rhs.finishDate).append(id, rhs.id).append(name, rhs.name).append(officialResult, rhs.officialResult).append(startDate, rhs.startDate).append(venue, rhs.venue).isEquals();
     }
     
     public int Competition.hashCode() {
-        return new HashCodeBuilder().append(code).append(description).append(finishDate).append(id).append(name).append(officialResult).append(phase).append(startDate).append(venue).toHashCode();
+        return new HashCodeBuilder().append(code).append(description).append(finishDate).append(id).append(name).append(officialResult).append(startDate).append(venue).toHashCode();
     }
     
 }

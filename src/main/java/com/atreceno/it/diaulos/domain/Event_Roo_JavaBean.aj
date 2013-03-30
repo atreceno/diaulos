@@ -6,17 +6,31 @@ package com.atreceno.it.diaulos.domain;
 import com.atreceno.it.diaulos.domain.Discipline;
 import com.atreceno.it.diaulos.domain.Event;
 import com.atreceno.it.diaulos.domain.EventGender;
-import com.atreceno.it.diaulos.domain.Phase;
-import java.util.Set;
 
 privileged aspect Event_Roo_JavaBean {
     
-    public String Event.getCode() {
-        return this.code;
+    public Discipline Event.getDiscipline() {
+        return this.discipline;
     }
     
-    public void Event.setCode(String code) {
-        this.code = code;
+    public void Event.setDiscipline(Discipline discipline) {
+        this.discipline = discipline;
+    }
+    
+    public EventGender Event.getEventGender() {
+        return this.eventGender;
+    }
+    
+    public void Event.setEventGender(EventGender eventGender) {
+        this.eventGender = eventGender;
+    }
+    
+    public String Event.getSubcode() {
+        return this.subcode;
+    }
+    
+    public void Event.setSubcode(String subcode) {
+        this.subcode = subcode;
     }
     
     public String Event.getName() {
@@ -33,30 +47,6 @@ privileged aspect Event_Roo_JavaBean {
     
     public void Event.setDescription(String description) {
         this.description = description;
-    }
-    
-    public EventGender Event.getEventGender() {
-        return this.eventGender;
-    }
-    
-    public void Event.setEventGender(EventGender eventGender) {
-        this.eventGender = eventGender;
-    }
-    
-    public Discipline Event.getDiscipline() {
-        return this.discipline;
-    }
-    
-    public void Event.setDiscipline(Discipline discipline) {
-        this.discipline = discipline;
-    }
-    
-    public Set<Phase> Event.getPhases() {
-        return this.phases;
-    }
-    
-    public void Event.setPhases(Set<Phase> phases) {
-        this.phases = phases;
     }
     
 }

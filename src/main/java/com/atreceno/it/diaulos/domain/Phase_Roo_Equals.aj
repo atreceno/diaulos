@@ -17,11 +17,11 @@ privileged aspect Phase_Roo_Equals {
             return true;
         }
         Phase rhs = (Phase) obj;
-        return new EqualsBuilder().append(code, rhs.code).append(description, rhs.description).append(event, rhs.event).append(id, rhs.id).append(name, rhs.name).isEquals();
+        return new EqualsBuilder().append(code, rhs.code).append(description, rhs.description).append(id, rhs.id).append(name, rhs.name).isEquals();
     }
     
     public int Phase.hashCode() {
-        return new HashCodeBuilder().append(code).append(description).append(event).append(id).append(name).toHashCode();
+        return new HashCodeBuilder().append(code).append(description).append(id).append(name).toHashCode();
     }
     
 }

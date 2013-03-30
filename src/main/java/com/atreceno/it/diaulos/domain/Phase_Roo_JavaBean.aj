@@ -3,10 +3,7 @@
 
 package com.atreceno.it.diaulos.domain;
 
-import com.atreceno.it.diaulos.domain.Competition;
-import com.atreceno.it.diaulos.domain.Event;
 import com.atreceno.it.diaulos.domain.Phase;
-import java.util.Set;
 
 privileged aspect Phase_Roo_JavaBean {
     
@@ -32,22 +29,6 @@ privileged aspect Phase_Roo_JavaBean {
     
     public void Phase.setDescription(String description) {
         this.description = description;
-    }
-    
-    public Event Phase.getEvent() {
-        return this.event;
-    }
-    
-    public void Phase.setEvent(Event event) {
-        this.event = event;
-    }
-    
-    public Set<Competition> Phase.getCompetitions() {
-        return this.competitions;
-    }
-    
-    public void Phase.setCompetitions(Set<Competition> competitions) {
-        this.competitions = competitions;
     }
     
 }

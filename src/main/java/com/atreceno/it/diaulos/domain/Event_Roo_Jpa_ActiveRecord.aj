@@ -4,6 +4,7 @@
 package com.atreceno.it.diaulos.domain;
 
 import com.atreceno.it.diaulos.domain.Event;
+import com.atreceno.it.diaulos.domain.EventCode;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -28,7 +29,7 @@ privileged aspect Event_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Event o", Event.class).getResultList();
     }
     
-    public static Event Event.findEvent(Long id) {
+    public static Event Event.findEvent(EventCode id) {
         if (id == null) return null;
         return entityManager().find(Event.class, id);
     }

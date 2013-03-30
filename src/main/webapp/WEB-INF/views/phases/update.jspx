@@ -6,7 +6,5 @@
         <field:input field="code" id="c_com_atreceno_it_diaulos_domain_Phase_code" max="7" min="7" required="true" z="6/hOOTCVvVNceAzKT4NSHMvV0BM="/>
         <field:textarea field="name" id="c_com_atreceno_it_diaulos_domain_Phase_name" required="true" z="YM4Wl7NOBmxGwJjxl4aYV7PizII="/>
         <field:textarea field="description" id="c_com_atreceno_it_diaulos_domain_Phase_description" z="S7/Nqraga/7PSIQPntKjV+i2v3g="/>
-        <field:select field="event" id="c_com_atreceno_it_diaulos_domain_Phase_event" itemValue="id" items="${events}" path="/events" required="true" z="XXEbWsz6KD68nTQpPnl3rijRGcI="/>
-        <field:simple field="competitions" id="c_com_atreceno_it_diaulos_domain_Phase_competitions" messageCode="entity_reference_not_managed" messageCodeAttribute="Competition" z="zD8YetoOE3hnPEpAmjLglzTA/Yw="/>
     </form:update>
 </div>

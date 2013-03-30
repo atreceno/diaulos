@@ -6,6 +6,7 @@ package com.atreceno.it.diaulos.domain;
 import com.atreceno.it.diaulos.domain.Discipline;
 import com.atreceno.it.diaulos.domain.DisciplineDataOnDemand;
 import com.atreceno.it.diaulos.domain.Event;
+import com.atreceno.it.diaulos.domain.EventCode;
 import com.atreceno.it.diaulos.domain.EventDataOnDemand;
 import com.atreceno.it.diaulos.domain.EventGender;
 import com.atreceno.it.diaulos.domain.EventGenderDataOnDemand;
@@ -35,20 +36,22 @@ privileged aspect EventDataOnDemand_Roo_DataOnDemand {
     
     public Event EventDataOnDemand.getNewTransientEvent(int index) {
         Event obj = new Event();
-        setCode(obj, index);
+        setEmbeddedIdClass(obj, index);
         setDescription(obj, index);
         setDiscipline(obj, index);
         setEventGender(obj, index);
         setName(obj, index);
+        setSubcode(obj, index);
         return obj;
     }
     
-    public void EventDataOnDemand.setCode(Event obj, int index) {
-        String code = "code_" + index;
-        if (code.length() > 6) {
-            code = new Random().nextInt(10) + code.substring(1, 6);
-        }
-        obj.setCode(code);
+    public void EventDataOnDemand.setEmbeddedIdClass(Event obj, int index) {
+        String disciplineCode = "disciplineCode_" + index;
+        String genderCode = "genderCode_" + index;
+        String subcode = "subcode_" + index;
+        
+        EventCode embeddedIdClass = new EventCode(disciplineCode, genderCode, subcode);
+        obj.setId(embeddedIdClass);
     }
     
     public void EventDataOnDemand.setDescription(Event obj, int index) {
@@ -77,6 +80,14 @@ privileged aspect EventDataOnDemand_Roo_DataOnDemand {
         obj.setName(name);
     }
     
+    public void EventDataOnDemand.setSubcode(Event obj, int index) {
+        String subcode = "s_" + index;
+        if (subcode.length() > 3) {
+            subcode = subcode.substring(0, 3);
+        }
+        obj.setSubcode(subcode);
+    }
+    
     public Event EventDataOnDemand.getSpecificEvent(int index) {
         init();
         if (index < 0) {
@@ -86,14 +97,14 @@ privileged aspect EventDataOnDemand_Roo_DataOnDemand {
             index = data.size() - 1;
         }
         Event obj = data.get(index);
-        Long id = obj.getId();
+        EventCode id = obj.getId();
         return Event.findEvent(id);
     }
     
     public Event EventDataOnDemand.getRandomEvent() {
         init();
         Event obj = data.get(rnd.nextInt(data.size()));
-        Long id = obj.getId();
+        EventCode id = obj.getId();
         return Event.findEvent(id);
     }
     

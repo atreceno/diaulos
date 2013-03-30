@@ -5,7 +5,7 @@
     <form:create id="fc_com_atreceno_it_diaulos_domain_Venue" modelAttribute="venue" path="/venues" render="${empty dependencies}" z="iK5GKIGFRrz32QYwU3SmeOzin7c=">
         <field:input field="name" id="c_com_atreceno_it_diaulos_domain_Venue_name" max="25" required="true" z="j/pDjyGysPQGqAinxK4+LJIY7hU="/>
         <field:textarea field="description" id="c_com_atreceno_it_diaulos_domain_Venue_description" z="VUxIiUiUuZy8t/yupHjLiDbq/S0="/>
-        <field:input field="capacity" id="c_com_atreceno_it_diaulos_domain_Venue_capacity" max="100000" min="1" required="true" validationMessageCode="field_invalid_integer" z="vfKow2hCQMVE5+OjlPkXN0VI3eA="/>
+        <field:input field="capacity" id="c_com_atreceno_it_diaulos_domain_Venue_capacity" max="100000" validationMessageCode="field_invalid_integer" z="T7sN8TXTMYFZzg9eMuJ2RyPg3wg="/>
         <field:textarea field="address" id="c_com_atreceno_it_diaulos_domain_Venue_address" z="PdRahzxELK+Q2Nx+MCthR3ivHh4="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_atreceno_it_diaulos_domain_Venue" render="${not empty dependencies}" z="8faIpGvPvwqg3NJ7ig1sB4qFBwE="/>

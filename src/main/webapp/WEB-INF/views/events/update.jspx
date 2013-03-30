@@ -2,12 +2,12 @@
 <div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
-    <form:update id="fu_com_atreceno_it_diaulos_domain_Event" modelAttribute="event" path="/events" versionField="Version" z="zz0uIBnQqAcUJgBJi8Za1kMvnSc=">
-        <field:input field="code" id="c_com_atreceno_it_diaulos_domain_Event_code" max="6" min="6" required="true" z="Atqg8U8/1vPn68c98Kk6+IYu0Ec="/>
-        <field:textarea field="name" id="c_com_atreceno_it_diaulos_domain_Event_name" required="true" z="+awTuof1EF5xji/p/iepWfCwP84="/>
-        <field:textarea field="description" id="c_com_atreceno_it_diaulos_domain_Event_description" z="iJC93vXbTWjyla5zo9uUFW0Oe1Y="/>
-        <field:select field="discipline" id="c_com_atreceno_it_diaulos_domain_Event_discipline" itemValue="code" items="${disciplines}" path="/disciplines" required="true" z="mcLC85xfYEFcjsm43EDjnHr06OY="/>
-        <field:select field="eventGender" id="c_com_atreceno_it_diaulos_domain_Event_eventGender" itemValue="code" items="${eventgenders}" path="/eventgenders" required="true" z="5361L/Sr+EuMfeObcIaBUo5i3GM="/>
-        <field:simple field="phases" id="c_com_atreceno_it_diaulos_domain_Event_phases" messageCode="entity_reference_not_managed" messageCodeAttribute="Phase" z="yfeM/nJTIR1HmaaZzq6f/J/aZwo="/>
+    <form:update id="fu_com_atreceno_it_diaulos_domain_Event"  modelAttribute="event" path="/events" versionField="Version" z="zz0uIBnQqAcUJgBJi8Za1kMvnSc=">
+        <field:select field="discipline" id="s_com_atreceno_it_diaulos_domain_Event_discipline" itemValue="code" items="${disciplines}" path="/disciplines" disabled="false" />
+        <field:select field="eventGender" id="s_com_atreceno_it_diaulos_domain_Event_eventGender" itemValue="code" items="${eventgenders}" path="/eventgenders" disabled="false" />
+        <field:input field="subcode" id="s_com_atreceno_it_diaulos_domain_Event_subcode" disabled="false" />
+        <field:display field="id" id="s_com_atreceno_it_diaulos_domain_event_code" object="${event}" z="user-managed"/>
+        <field:input field="name" id="c_com_atreceno_it_diaulos_domain_Event_name" required="true" z="user-managed"/>
+        <field:input field="description" id="c_com_atreceno_it_diaulos_domain_Event_name" required="false" z="user-managed"/>
     </form:update>
 </div>

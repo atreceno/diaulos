@@ -11,21 +11,6 @@ import javax.persistence.TypedQuery;
 
 privileged aspect Event_Roo_Finder {
     
-    public static TypedQuery<Event> Event.findEventsByCodeLike(String code) {
-        if (code == null || code.length() == 0) throw new IllegalArgumentException("The code argument is required");
-        code = code.replace('*', '%');
-        if (code.charAt(0) != '%') {
-            code = "%" + code;
-        }
-        if (code.charAt(code.length() - 1) != '%') {
-            code = code + "%";
-        }
-        EntityManager em = Event.entityManager();
-        TypedQuery<Event> q = em.createQuery("SELECT o FROM Event AS o WHERE LOWER(o.code) LIKE LOWER(:code)", Event.class);
-        q.setParameter("code", code);
-        return q;
-    }
-    
     public static TypedQuery<Event> Event.findEventsByDisciplineAndEventGender(Discipline discipline, EventGender eventGender) {
         if (discipline == null) throw new IllegalArgumentException("The discipline argument is required");
         if (eventGender == null) throw new IllegalArgumentException("The eventGender argument is required");

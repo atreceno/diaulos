@@ -21,7 +21,7 @@ public class EventGender {
 	private String code;
 
 	@NotNull
-	@Size(max = 10)
+	@Size(max = 20)
 	private String name;
 
 }

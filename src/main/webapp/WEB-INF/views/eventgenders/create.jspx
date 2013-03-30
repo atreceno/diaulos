@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_atreceno_it_diaulos_domain_EventGender" modelAttribute="eventGender" path="/eventgenders" render="${empty dependencies}" z="TdYbhVOFdSjRbgPgJZ68dBXtPXo=">
         <field:input field="code" id="c_com_atreceno_it_diaulos_domain_EventGender_code" max="1" required="true" z="QfOYX53nSkfwNhCH2qZpt25lLM8="/>
-        <field:input field="name" id="c_com_atreceno_it_diaulos_domain_EventGender_name" max="10" required="true" z="loASjQzSRYOShBevkUAWVH1s2qs="/>
+        <field:input field="name" id="c_com_atreceno_it_diaulos_domain_EventGender_name" max="20" required="true" z="zArsvPI3Us3HjPnop+HwwQXlW7Y="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_atreceno_it_diaulos_domain_EventGender" render="${not empty dependencies}" z="KloS7lQALAfWycUHZBCd9nGeNRc="/>
 </div>

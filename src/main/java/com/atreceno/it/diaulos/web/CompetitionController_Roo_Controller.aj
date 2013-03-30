@@ -4,12 +4,9 @@
 package com.atreceno.it.diaulos.web;
 
 import com.atreceno.it.diaulos.domain.Competition;
-import com.atreceno.it.diaulos.domain.Phase;
 import com.atreceno.it.diaulos.domain.Venue;
 import com.atreceno.it.diaulos.web.CompetitionController;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
@@ -39,11 +36,6 @@ privileged aspect CompetitionController_Roo_Controller {
     @RequestMapping(params = "form", produces = "text/html")
     public String CompetitionController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Competition());
-        List<String[]> dependencies = new ArrayList<String[]>();
-        if (Phase.countPhases() == 0) {
-            dependencies.add(new String[] { "phase", "phases" });
-        }
-        uiModel.addAttribute("dependencies", dependencies);
         return "competitions/create";
     }
     
@@ -105,7 +97,6 @@ privileged aspect CompetitionController_Roo_Controller {
     void CompetitionController.populateEditForm(Model uiModel, Competition competition) {
         uiModel.addAttribute("competition", competition);
         addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("phases", Phase.findAllPhases());
         uiModel.addAttribute("venues", Venue.findAllVenues());
     }
     

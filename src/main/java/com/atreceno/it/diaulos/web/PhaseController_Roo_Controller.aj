@@ -3,13 +3,9 @@
 
 package com.atreceno.it.diaulos.web;
 
-import com.atreceno.it.diaulos.domain.Competition;
-import com.atreceno.it.diaulos.domain.Event;
 import com.atreceno.it.diaulos.domain.Phase;
 import com.atreceno.it.diaulos.web.PhaseController;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.springframework.ui.Model;
@@ -37,11 +33,6 @@ privileged aspect PhaseController_Roo_Controller {
     @RequestMapping(params = "form", produces = "text/html")
     public String PhaseController.createForm(Model uiModel) {
         populateEditForm(uiModel, new Phase());
-        List<String[]> dependencies = new ArrayList<String[]>();
-        if (Event.countEvents() == 0) {
-            dependencies.add(new String[] { "event", "events" });
-        }
-        uiModel.addAttribute("dependencies", dependencies);
         return "phases/create";
     }
     
@@ -95,8 +86,6 @@ privileged aspect PhaseController_Roo_Controller {
     
     void PhaseController.populateEditForm(Model uiModel, Phase phase) {
         uiModel.addAttribute("phase", phase);
-        uiModel.addAttribute("competitions", Competition.findAllCompetitions());
-        uiModel.addAttribute("events", Event.findAllEvents());
     }
     
     String PhaseController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

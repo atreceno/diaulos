@@ -4,11 +4,11 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_atreceno_it_diaulos_domain_Event" items="${events}" z="kLuEH7wBGqtJXanOYsJxMKiUmW8=">
         <table:table data="${events}" id="l_com_atreceno_it_diaulos_domain_Event" path="/events" z="KPofHFQjn/TYIWPEqBlMBFq/Wns=">
-            <table:column id="c_com_atreceno_it_diaulos_domain_Event_code" property="code" z="B2ovJTb9Hrf7yPWuCXkXTR7MLXU="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_Event_name" property="name" z="TQHJ7JMsjYlvdKe9m14o3I4OCxQ="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_Event_description" property="description" z="5S0mGC4+Kvz8sZbgTiqh+Ud3UGk="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_Event_discipline" property="discipline" z="+Avyvs4F67vo4KTUQlJHKEWtyf4="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_Event_eventGender" property="eventGender" z="WbGOJOsGKfvLcLYgHw+qqY1P4Nw="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Event_subcode" property="subcode" z="BoEquqr5X/17kZdSmleZ9B35jqQ="/>
         </table:table>
     </page:list>
 </div>

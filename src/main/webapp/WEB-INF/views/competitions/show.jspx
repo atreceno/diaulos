@@ -9,7 +9,6 @@
         <field:display date="true" dateTimePattern="${competition_startdate_date_format}" field="startDate" id="s_com_atreceno_it_diaulos_domain_Competition_startDate" object="${competition}" z="7P9I4TktrTnirk2yX6ztJg4Qics="/>
         <field:display date="true" dateTimePattern="${competition_finishdate_date_format}" field="finishDate" id="s_com_atreceno_it_diaulos_domain_Competition_finishDate" object="${competition}" z="9U1UwTSc4tRI6N4kN4tSEY1WLOo="/>
         <field:display field="officialResult" id="s_com_atreceno_it_diaulos_domain_Competition_officialResult" object="${competition}" z="PVVK20voCZiSDPCD8gsbS4fu2ZA="/>
-        <field:display field="phase" id="s_com_atreceno_it_diaulos_domain_Competition_phase" object="${competition}" z="odfxg//zE578gzxep5EYrtFC0xQ="/>
         <field:display field="venue" id="s_com_atreceno_it_diaulos_domain_Competition_venue" object="${competition}" z="KfrNRmrY+3PyfaT57+r2HYHDK/s="/>
     </page:show>
 </div>

@@ -4,31 +4,28 @@
 package com.atreceno.it.diaulos.domain;
 
 import com.atreceno.it.diaulos.domain.Event;
+import com.atreceno.it.diaulos.domain.EventCode;
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Version;
 
 privileged aspect Event_Roo_Jpa_Entity {
     
     declare @type: Event: @Entity;
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
-    private Long Event.id;
+    @EmbeddedId
+    private EventCode Event.id;
     
     @Version
     @Column(name = "version")
     private Integer Event.version;
     
-    public Long Event.getId() {
+    public EventCode Event.getId() {
         return this.id;
     }
     
-    public void Event.setId(Long id) {
+    public void Event.setId(EventCode id) {
         this.id = id;
     }
     

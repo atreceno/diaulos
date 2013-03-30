@@ -14,17 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 privileged aspect EventController_Roo_Controller_Finder {
     
-    @RequestMapping(params = { "find=ByCodeLike", "form" }, method = RequestMethod.GET)
-    public String EventController.findEventsByCodeLikeForm(Model uiModel) {
-        return "events/findEventsByCodeLike";
-    }
-    
-    @RequestMapping(params = "find=ByCodeLike", method = RequestMethod.GET)
-    public String EventController.findEventsByCodeLike(@RequestParam("code") String code, Model uiModel) {
-        uiModel.addAttribute("events", Event.findEventsByCodeLike(code).getResultList());
-        return "events/list";
-    }
-    
     @RequestMapping(params = { "find=ByDisciplineAndEventGender", "form" }, method = RequestMethod.GET)
     public String EventController.findEventsByDisciplineAndEventGenderForm(Model uiModel) {
         uiModel.addAttribute("disciplines", Discipline.findAllDisciplines());
