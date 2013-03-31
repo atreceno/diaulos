@@ -28,9 +28,9 @@ privileged aspect Medal_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Medal o", Medal.class).getResultList();
     }
     
-    public static Medal Medal.findMedal(String code_) {
-        if (code_ == null || code_.length() == 0) return null;
-        return entityManager().find(Medal.class, code_);
+    public static Medal Medal.findMedal(String code) {
+        if (code == null || code.length() == 0) return null;
+        return entityManager().find(Medal.class, code);
     }
     
     public static List<Medal> Medal.findMedalEntries(int firstResult, int maxResults) {
@@ -49,7 +49,7 @@ privileged aspect Medal_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Medal attached = Medal.findMedal(this.code_);
+            Medal attached = Medal.findMedal(this.code);
             this.entityManager.remove(attached);
         }
     }

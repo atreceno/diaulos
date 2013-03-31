@@ -28,9 +28,9 @@ privileged aspect Sport_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Sport o", Sport.class).getResultList();
     }
     
-    public static Sport Sport.findSport(String code_) {
-        if (code_ == null || code_.length() == 0) return null;
-        return entityManager().find(Sport.class, code_);
+    public static Sport Sport.findSport(String code) {
+        if (code == null || code.length() == 0) return null;
+        return entityManager().find(Sport.class, code);
     }
     
     public static List<Sport> Sport.findSportEntries(int firstResult, int maxResults) {
@@ -49,7 +49,7 @@ privileged aspect Sport_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Sport attached = Sport.findSport(this.code_);
+            Sport attached = Sport.findSport(this.code);
             this.entityManager.remove(attached);
         }
     }

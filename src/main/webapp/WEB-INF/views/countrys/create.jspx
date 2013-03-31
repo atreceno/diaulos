@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_atreceno_it_diaulos_domain_Country" modelAttribute="country" path="/countrys" render="${empty dependencies}" z="H8eOgFRWIQWBh9TidfiZMJZCjvs=">
-        <field:input field="code" id="c_com_atreceno_it_diaulos_domain_Country_code" max="3" min="3" required="true" z="FfCnHnt5h7SCzGEx6XHAV7SmGyo="/>
         <field:input field="name" id="c_com_atreceno_it_diaulos_domain_Country_name" max="15" required="true" z="GBlm7Rn4STvW1qvIk3iSXxSkfCo="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_atreceno_it_diaulos_domain_Country" render="${not empty dependencies}" z="Q1Ar1gI2XGiYFSz1PbqT/0B77vk="/>

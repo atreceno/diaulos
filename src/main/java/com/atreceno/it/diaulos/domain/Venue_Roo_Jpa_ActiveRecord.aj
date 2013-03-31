@@ -28,9 +28,9 @@ privileged aspect Venue_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM Venue o", Venue.class).getResultList();
     }
     
-    public static Venue Venue.findVenue(String code_) {
-        if (code_ == null || code_.length() == 0) return null;
-        return entityManager().find(Venue.class, code_);
+    public static Venue Venue.findVenue(String code) {
+        if (code == null || code.length() == 0) return null;
+        return entityManager().find(Venue.class, code);
     }
     
     public static List<Venue> Venue.findVenueEntries(int firstResult, int maxResults) {
@@ -49,7 +49,7 @@ privileged aspect Venue_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            Venue attached = Venue.findVenue(this.code_);
+            Venue attached = Venue.findVenue(this.code);
             this.entityManager.remove(attached);
         }
     }

@@ -5,7 +5,7 @@
     <form:update id="fu_com_atreceno_it_diaulos_domain_ParticEvent" modelAttribute="particEvent" path="/particevents" versionField="Version" z="tkfnsvapnIg427RgqyjPNg1tsYw=">
         <field:select field="event" id="c_com_atreceno_it_diaulos_domain_ParticEvent_event" itemValue="id" items="${events}" path="/events" required="true" z="KZF/1kO9oN5SyrWCUWxFY4UNZxo="/>
         <field:select field="participant" id="c_com_atreceno_it_diaulos_domain_ParticEvent_participant" itemValue="id" items="${participants}" path="/participants" required="true" z="8BpN5pVygiRmkHXco4w/JPAkCRE="/>
-        <field:select field="medal" id="c_com_atreceno_it_diaulos_domain_ParticEvent_medal" itemValue="code_" items="${medals}" path="/medals" z="oQsTqh1Tjz1t4OPMqA8VzUAR4Z8="/>
+        <field:select field="medal" id="c_com_atreceno_it_diaulos_domain_ParticEvent_medal" itemValue="code" items="${medals}" path="/medals" z="Nk7S9kcsQIS03N3ZbWmEWwdTxVM="/>
         <field:input field="rank" id="c_com_atreceno_it_diaulos_domain_ParticEvent_rank" validationMessageCode="field_invalid_integer" z="k6itJlKTiU5Wqu68x6fYhwWsfZs="/>
         <field:input field="result" id="c_com_atreceno_it_diaulos_domain_ParticEvent_result" z="Ivr47TTAmZFHT8H4a6kfjdQ+aNw="/>
     </form:update>

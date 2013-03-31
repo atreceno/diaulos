@@ -37,11 +37,11 @@ privileged aspect VenueIntegrationTest_Roo_IntegrationTest {
     public void VenueIntegrationTest.testFindVenue() {
         Venue obj = dod.getRandomVenue();
         Assert.assertNotNull("Data on demand for 'Venue' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Venue' failed to provide an identifier", id);
         obj = Venue.findVenue(id);
         Assert.assertNotNull("Find method for 'Venue' illegally returned null for id '" + id + "'", obj);
-        Assert.assertEquals("Find method for 'Venue' returned the incorrect identifier", id, obj.getCode_());
+        Assert.assertEquals("Find method for 'Venue' returned the incorrect identifier", id, obj.getCode());
     }
     
     @Test
@@ -70,7 +70,7 @@ privileged aspect VenueIntegrationTest_Roo_IntegrationTest {
     public void VenueIntegrationTest.testFlush() {
         Venue obj = dod.getRandomVenue();
         Assert.assertNotNull("Data on demand for 'Venue' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Venue' failed to provide an identifier", id);
         obj = Venue.findVenue(id);
         Assert.assertNotNull("Find method for 'Venue' illegally returned null for id '" + id + "'", obj);
@@ -84,14 +84,14 @@ privileged aspect VenueIntegrationTest_Roo_IntegrationTest {
     public void VenueIntegrationTest.testMergeUpdate() {
         Venue obj = dod.getRandomVenue();
         Assert.assertNotNull("Data on demand for 'Venue' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Venue' failed to provide an identifier", id);
         obj = Venue.findVenue(id);
         boolean modified =  dod.modifyVenue(obj);
         Integer currentVersion = obj.getVersion();
         Venue merged = obj.merge();
         obj.flush();
-        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getCode_(), id);
+        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getCode(), id);
         Assert.assertTrue("Version for 'Venue' failed to increment on merge and flush directive", (currentVersion != null && obj.getVersion() > currentVersion) || !modified);
     }
     
@@ -100,17 +100,17 @@ privileged aspect VenueIntegrationTest_Roo_IntegrationTest {
         Assert.assertNotNull("Data on demand for 'Venue' failed to initialize correctly", dod.getRandomVenue());
         Venue obj = dod.getNewTransientVenue(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'Venue' failed to provide a new transient entity", obj);
-        Assert.assertNull("Expected 'Venue' identifier to be null", obj.getCode_());
+        Assert.assertNull("Expected 'Venue' identifier to be null", obj.getCode());
         obj.persist();
         obj.flush();
-        Assert.assertNotNull("Expected 'Venue' identifier to no longer be null", obj.getCode_());
+        Assert.assertNotNull("Expected 'Venue' identifier to no longer be null", obj.getCode());
     }
     
     @Test
     public void VenueIntegrationTest.testRemove() {
         Venue obj = dod.getRandomVenue();
         Assert.assertNotNull("Data on demand for 'Venue' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Venue' failed to provide an identifier", id);
         obj = Venue.findVenue(id);
         obj.remove();

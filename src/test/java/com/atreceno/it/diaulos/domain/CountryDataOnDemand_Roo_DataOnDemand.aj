@@ -24,17 +24,8 @@ privileged aspect CountryDataOnDemand_Roo_DataOnDemand {
     
     public Country CountryDataOnDemand.getNewTransientCountry(int index) {
         Country obj = new Country();
-        setCode(obj, index);
         setName(obj, index);
         return obj;
-    }
-    
-    public void CountryDataOnDemand.setCode(Country obj, int index) {
-        String code = "c_" + index;
-        if (code.length() > 3) {
-            code = code.substring(0, 3);
-        }
-        obj.setCode(code);
     }
     
     public void CountryDataOnDemand.setName(Country obj, int index) {
@@ -54,14 +45,14 @@ privileged aspect CountryDataOnDemand_Roo_DataOnDemand {
             index = data.size() - 1;
         }
         Country obj = data.get(index);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         return Country.findCountry(id);
     }
     
     public Country CountryDataOnDemand.getRandomCountry() {
         init();
         Country obj = data.get(rnd.nextInt(data.size()));
-        String id = obj.getCode_();
+        String id = obj.getCode();
         return Country.findCountry(id);
     }
     

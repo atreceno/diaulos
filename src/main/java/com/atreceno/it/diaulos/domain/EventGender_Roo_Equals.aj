@@ -17,11 +17,11 @@ privileged aspect EventGender_Roo_Equals {
             return true;
         }
         EventGender rhs = (EventGender) obj;
-        return new EqualsBuilder().append(code, rhs.code).append(code_, rhs.code_).append(name, rhs.name).isEquals();
+        return new EqualsBuilder().append(code, rhs.code).append(name, rhs.name).isEquals();
     }
     
     public int EventGender.hashCode() {
-        return new HashCodeBuilder().append(code).append(code_).append(name).toHashCode();
+        return new HashCodeBuilder().append(code).append(name).toHashCode();
     }
     
 }

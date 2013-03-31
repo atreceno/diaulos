@@ -37,11 +37,11 @@ privileged aspect MedalIntegrationTest_Roo_IntegrationTest {
     public void MedalIntegrationTest.testFindMedal() {
         Medal obj = dod.getRandomMedal();
         Assert.assertNotNull("Data on demand for 'Medal' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Medal' failed to provide an identifier", id);
         obj = Medal.findMedal(id);
         Assert.assertNotNull("Find method for 'Medal' illegally returned null for id '" + id + "'", obj);
-        Assert.assertEquals("Find method for 'Medal' returned the incorrect identifier", id, obj.getCode_());
+        Assert.assertEquals("Find method for 'Medal' returned the incorrect identifier", id, obj.getCode());
     }
     
     @Test
@@ -70,7 +70,7 @@ privileged aspect MedalIntegrationTest_Roo_IntegrationTest {
     public void MedalIntegrationTest.testFlush() {
         Medal obj = dod.getRandomMedal();
         Assert.assertNotNull("Data on demand for 'Medal' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Medal' failed to provide an identifier", id);
         obj = Medal.findMedal(id);
         Assert.assertNotNull("Find method for 'Medal' illegally returned null for id '" + id + "'", obj);
@@ -84,14 +84,14 @@ privileged aspect MedalIntegrationTest_Roo_IntegrationTest {
     public void MedalIntegrationTest.testMergeUpdate() {
         Medal obj = dod.getRandomMedal();
         Assert.assertNotNull("Data on demand for 'Medal' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Medal' failed to provide an identifier", id);
         obj = Medal.findMedal(id);
         boolean modified =  dod.modifyMedal(obj);
         Integer currentVersion = obj.getVersion();
         Medal merged = obj.merge();
         obj.flush();
-        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getCode_(), id);
+        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getCode(), id);
         Assert.assertTrue("Version for 'Medal' failed to increment on merge and flush directive", (currentVersion != null && obj.getVersion() > currentVersion) || !modified);
     }
     
@@ -100,17 +100,17 @@ privileged aspect MedalIntegrationTest_Roo_IntegrationTest {
         Assert.assertNotNull("Data on demand for 'Medal' failed to initialize correctly", dod.getRandomMedal());
         Medal obj = dod.getNewTransientMedal(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'Medal' failed to provide a new transient entity", obj);
-        Assert.assertNull("Expected 'Medal' identifier to be null", obj.getCode_());
+        Assert.assertNull("Expected 'Medal' identifier to be null", obj.getCode());
         obj.persist();
         obj.flush();
-        Assert.assertNotNull("Expected 'Medal' identifier to no longer be null", obj.getCode_());
+        Assert.assertNotNull("Expected 'Medal' identifier to no longer be null", obj.getCode());
     }
     
     @Test
     public void MedalIntegrationTest.testRemove() {
         Medal obj = dod.getRandomMedal();
         Assert.assertNotNull("Data on demand for 'Medal' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Medal' failed to provide an identifier", id);
         obj = Medal.findMedal(id);
         obj.remove();

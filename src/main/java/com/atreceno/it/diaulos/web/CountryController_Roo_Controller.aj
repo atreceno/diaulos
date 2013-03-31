@@ -27,7 +27,7 @@ privileged aspect CountryController_Roo_Controller {
         }
         uiModel.asMap().clear();
         country.persist();
-        return "redirect:/countrys/" + encodeUrlPathSegment(country.getCode_().toString(), httpServletRequest);
+        return "redirect:/countrys/" + encodeUrlPathSegment(country.getCode().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", produces = "text/html")
@@ -36,10 +36,10 @@ privileged aspect CountryController_Roo_Controller {
         return "countrys/create";
     }
     
-    @RequestMapping(value = "/{code_}", produces = "text/html")
-    public String CountryController.show(@PathVariable("code_") String code_, Model uiModel) {
-        uiModel.addAttribute("country", Country.findCountry(code_));
-        uiModel.addAttribute("itemId", code_);
+    @RequestMapping(value = "/{code}", produces = "text/html")
+    public String CountryController.show(@PathVariable("code") String code, Model uiModel) {
+        uiModel.addAttribute("country", Country.findCountry(code));
+        uiModel.addAttribute("itemId", code);
         return "countrys/show";
     }
     
@@ -65,18 +65,18 @@ privileged aspect CountryController_Roo_Controller {
         }
         uiModel.asMap().clear();
         country.merge();
-        return "redirect:/countrys/" + encodeUrlPathSegment(country.getCode_().toString(), httpServletRequest);
+        return "redirect:/countrys/" + encodeUrlPathSegment(country.getCode().toString(), httpServletRequest);
     }
     
-    @RequestMapping(value = "/{code_}", params = "form", produces = "text/html")
-    public String CountryController.updateForm(@PathVariable("code_") String code_, Model uiModel) {
-        populateEditForm(uiModel, Country.findCountry(code_));
+    @RequestMapping(value = "/{code}", params = "form", produces = "text/html")
+    public String CountryController.updateForm(@PathVariable("code") String code, Model uiModel) {
+        populateEditForm(uiModel, Country.findCountry(code));
         return "countrys/update";
     }
     
-    @RequestMapping(value = "/{code_}", method = RequestMethod.DELETE, produces = "text/html")
-    public String CountryController.delete(@PathVariable("code_") String code_, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        Country country = Country.findCountry(code_);
+    @RequestMapping(value = "/{code}", method = RequestMethod.DELETE, produces = "text/html")
+    public String CountryController.delete(@PathVariable("code") String code, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        Country country = Country.findCountry(code);
         country.remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

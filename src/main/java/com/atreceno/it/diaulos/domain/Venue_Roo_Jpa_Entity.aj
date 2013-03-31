@@ -6,31 +6,15 @@ package com.atreceno.it.diaulos.domain;
 import com.atreceno.it.diaulos.domain.Venue;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Version;
 
 privileged aspect Venue_Roo_Jpa_Entity {
     
     declare @type: Venue: @Entity;
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "code_")
-    private String Venue.code_;
-    
     @Version
     @Column(name = "version")
     private Integer Venue.version;
-    
-    public String Venue.getCode_() {
-        return this.code_;
-    }
-    
-    public void Venue.setCode_(String id) {
-        this.code_ = id;
-    }
     
     public Integer Venue.getVersion() {
         return this.version;

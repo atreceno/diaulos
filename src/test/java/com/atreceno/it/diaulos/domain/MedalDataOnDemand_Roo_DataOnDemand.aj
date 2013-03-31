@@ -24,17 +24,8 @@ privileged aspect MedalDataOnDemand_Roo_DataOnDemand {
     
     public Medal MedalDataOnDemand.getNewTransientMedal(int index) {
         Medal obj = new Medal();
-        setCode(obj, index);
         setName(obj, index);
         return obj;
-    }
-    
-    public void MedalDataOnDemand.setCode(Medal obj, int index) {
-        String code = String.valueOf(index);
-        if (code.length() > 1) {
-            code = code.substring(0, 1);
-        }
-        obj.setCode(code);
     }
     
     public void MedalDataOnDemand.setName(Medal obj, int index) {
@@ -54,14 +45,14 @@ privileged aspect MedalDataOnDemand_Roo_DataOnDemand {
             index = data.size() - 1;
         }
         Medal obj = data.get(index);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         return Medal.findMedal(id);
     }
     
     public Medal MedalDataOnDemand.getRandomMedal() {
         init();
         Medal obj = data.get(rnd.nextInt(data.size()));
-        String id = obj.getCode_();
+        String id = obj.getCode();
         return Medal.findMedal(id);
     }
     

@@ -10,7 +10,7 @@
         <field:datetime dateTimePattern="${race_finishdate_date_format}" field="finishDate" id="c_com_atreceno_it_diaulos_domain_Race_finishDate" z="GZHNIJFwvh4XuivIDxE8wUyvKhU="/>
         <field:checkbox field="official" id="c_com_atreceno_it_diaulos_domain_Race_official" z="MqUk6cSCqMk5Xz/ZPj7jHTcsOPo="/>
         <field:select field="phase" id="c_com_atreceno_it_diaulos_domain_Race_phase" itemValue="id" items="${phases}" path="/phases" required="true" z="4qBUcKUW695G9DziFB/W5NrqKsk="/>
-        <field:select field="venue" id="c_com_atreceno_it_diaulos_domain_Race_venue" itemValue="code_" items="${venues}" path="/venues" z="EOHgM5coDEisKBvGHxIzsshQ1yo="/>
+        <field:select field="venue" id="c_com_atreceno_it_diaulos_domain_Race_venue" itemValue="code" items="${venues}" path="/venues" z="QdA/ybVLAOrDjsFMTgHQkN5dSjs="/>
         <field:simple field="laps" id="c_com_atreceno_it_diaulos_domain_Race_laps" messageCode="entity_reference_not_managed" messageCodeAttribute="Lap" z="uZGiq7T+eeuPbHk5X3wYJh3VfU8="/>
         <field:simple field="participants" id="c_com_atreceno_it_diaulos_domain_Race_participants" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Race" z="6Zaf5hNCedK9kXo7Xoz3Ll84KS0="/>
     </form:update>

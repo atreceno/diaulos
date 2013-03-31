@@ -3,8 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_atreceno_it_diaulos_domain_EventGender" items="${eventgenders}" z="Wcwbd4sTs2BZ5QjavXPAq5zw7ws=">
-        <table:table data="${eventgenders}" id="l_com_atreceno_it_diaulos_domain_EventGender" path="/eventgenders" typeIdFieldName="code_" z="GhdKvyH0qvAE6jXbNHVCONqFoCE=">
-            <table:column id="c_com_atreceno_it_diaulos_domain_EventGender_code" property="code" z="dHPVdTaYk3cFg39U0675WZf0oF0="/>
+        <table:table data="${eventgenders}" id="l_com_atreceno_it_diaulos_domain_EventGender" path="/eventgenders" typeIdFieldName="code" z="BpXeLsI6w9qqTzZVUDBkOTXvBK0=">
             <table:column id="c_com_atreceno_it_diaulos_domain_EventGender_name" property="name" z="4TsktP6kocinYWGvriWDnMqff8k="/>
         </table:table>
     </page:list>

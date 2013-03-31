@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 privileged aspect SportController_Roo_Controller_Json {
     
-    @RequestMapping(value = "/{code_}", headers = "Accept=application/json")
+    @RequestMapping(value = "/{code}", headers = "Accept=application/json")
     @ResponseBody
-    public ResponseEntity<String> SportController.showJson(@PathVariable("code_") String code_) {
-        Sport sport = Sport.findSport(code_);
+    public ResponseEntity<String> SportController.showJson(@PathVariable("code") String code) {
+        Sport sport = Sport.findSport(code);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         if (sport == null) {
@@ -81,9 +81,9 @@ privileged aspect SportController_Roo_Controller_Json {
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
     
-    @RequestMapping(value = "/{code_}", method = RequestMethod.DELETE, headers = "Accept=application/json")
-    public ResponseEntity<String> SportController.deleteFromJson(@PathVariable("code_") String code_) {
-        Sport sport = Sport.findSport(code_);
+    @RequestMapping(value = "/{code}", method = RequestMethod.DELETE, headers = "Accept=application/json")
+    public ResponseEntity<String> SportController.deleteFromJson(@PathVariable("code") String code) {
+        Sport sport = Sport.findSport(code);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         if (sport == null) {

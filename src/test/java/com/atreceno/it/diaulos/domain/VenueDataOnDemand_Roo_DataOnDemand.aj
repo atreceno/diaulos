@@ -26,7 +26,6 @@ privileged aspect VenueDataOnDemand_Roo_DataOnDemand {
         Venue obj = new Venue();
         setAddress(obj, index);
         setCapacity(obj, index);
-        setCode(obj, index);
         setDescription(obj, index);
         setName(obj, index);
         return obj;
@@ -46,14 +45,6 @@ privileged aspect VenueDataOnDemand_Roo_DataOnDemand {
             capacity = 100000;
         }
         obj.setCapacity(capacity);
-    }
-    
-    public void VenueDataOnDemand.setCode(Venue obj, int index) {
-        String code = "c_" + index;
-        if (code.length() > 3) {
-            code = code.substring(0, 3);
-        }
-        obj.setCode(code);
     }
     
     public void VenueDataOnDemand.setDescription(Venue obj, int index) {
@@ -81,14 +72,14 @@ privileged aspect VenueDataOnDemand_Roo_DataOnDemand {
             index = data.size() - 1;
         }
         Venue obj = data.get(index);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         return Venue.findVenue(id);
     }
     
     public Venue VenueDataOnDemand.getRandomVenue() {
         init();
         Venue obj = data.get(rnd.nextInt(data.size()));
-        String id = obj.getCode_();
+        String id = obj.getCode();
         return Venue.findVenue(id);
     }
     

@@ -17,11 +17,11 @@ privileged aspect Venue_Roo_Equals {
             return true;
         }
         Venue rhs = (Venue) obj;
-        return new EqualsBuilder().append(address, rhs.address).append(capacity, rhs.capacity).append(code, rhs.code).append(code_, rhs.code_).append(description, rhs.description).append(name, rhs.name).isEquals();
+        return new EqualsBuilder().append(address, rhs.address).append(capacity, rhs.capacity).append(code, rhs.code).append(description, rhs.description).append(name, rhs.name).isEquals();
     }
     
     public int Venue.hashCode() {
-        return new HashCodeBuilder().append(address).append(capacity).append(code).append(code_).append(description).append(name).toHashCode();
+        return new HashCodeBuilder().append(address).append(capacity).append(code).append(description).append(name).toHashCode();
     }
     
 }

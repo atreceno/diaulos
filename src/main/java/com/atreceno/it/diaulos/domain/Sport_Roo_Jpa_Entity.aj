@@ -6,31 +6,15 @@ package com.atreceno.it.diaulos.domain;
 import com.atreceno.it.diaulos.domain.Sport;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Version;
 
 privileged aspect Sport_Roo_Jpa_Entity {
     
     declare @type: Sport: @Entity;
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "code_")
-    private String Sport.code_;
-    
     @Version
     @Column(name = "version")
     private Integer Sport.version;
-    
-    public String Sport.getCode_() {
-        return this.code_;
-    }
-    
-    public void Sport.setCode_(String id) {
-        this.code_ = id;
-    }
     
     public Integer Sport.getVersion() {
         return this.version;

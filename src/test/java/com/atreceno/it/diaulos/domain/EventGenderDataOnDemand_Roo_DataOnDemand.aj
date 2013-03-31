@@ -24,17 +24,8 @@ privileged aspect EventGenderDataOnDemand_Roo_DataOnDemand {
     
     public EventGender EventGenderDataOnDemand.getNewTransientEventGender(int index) {
         EventGender obj = new EventGender();
-        setCode(obj, index);
         setName(obj, index);
         return obj;
-    }
-    
-    public void EventGenderDataOnDemand.setCode(EventGender obj, int index) {
-        String code = String.valueOf(index);
-        if (code.length() > 1) {
-            code = code.substring(0, 1);
-        }
-        obj.setCode(code);
     }
     
     public void EventGenderDataOnDemand.setName(EventGender obj, int index) {
@@ -54,14 +45,14 @@ privileged aspect EventGenderDataOnDemand_Roo_DataOnDemand {
             index = data.size() - 1;
         }
         EventGender obj = data.get(index);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         return EventGender.findEventGender(id);
     }
     
     public EventGender EventGenderDataOnDemand.getRandomEventGender() {
         init();
         EventGender obj = data.get(rnd.nextInt(data.size()));
-        String id = obj.getCode_();
+        String id = obj.getCode();
         return EventGender.findEventGender(id);
     }
     

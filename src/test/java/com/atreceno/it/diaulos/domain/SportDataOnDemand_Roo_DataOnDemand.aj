@@ -24,18 +24,9 @@ privileged aspect SportDataOnDemand_Roo_DataOnDemand {
     
     public Sport SportDataOnDemand.getNewTransientSport(int index) {
         Sport obj = new Sport();
-        setCode(obj, index);
         setDescription(obj, index);
         setName(obj, index);
         return obj;
-    }
-    
-    public void SportDataOnDemand.setCode(Sport obj, int index) {
-        String code = "c" + index;
-        if (code.length() > 2) {
-            code = code.substring(0, 2);
-        }
-        obj.setCode(code);
     }
     
     public void SportDataOnDemand.setDescription(Sport obj, int index) {
@@ -63,14 +54,14 @@ privileged aspect SportDataOnDemand_Roo_DataOnDemand {
             index = data.size() - 1;
         }
         Sport obj = data.get(index);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         return Sport.findSport(id);
     }
     
     public Sport SportDataOnDemand.getRandomSport() {
         init();
         Sport obj = data.get(rnd.nextInt(data.size()));
-        String id = obj.getCode_();
+        String id = obj.getCode();
         return Sport.findSport(id);
     }
     

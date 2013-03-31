@@ -37,11 +37,11 @@ privileged aspect SportIntegrationTest_Roo_IntegrationTest {
     public void SportIntegrationTest.testFindSport() {
         Sport obj = dod.getRandomSport();
         Assert.assertNotNull("Data on demand for 'Sport' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Sport' failed to provide an identifier", id);
         obj = Sport.findSport(id);
         Assert.assertNotNull("Find method for 'Sport' illegally returned null for id '" + id + "'", obj);
-        Assert.assertEquals("Find method for 'Sport' returned the incorrect identifier", id, obj.getCode_());
+        Assert.assertEquals("Find method for 'Sport' returned the incorrect identifier", id, obj.getCode());
     }
     
     @Test
@@ -70,7 +70,7 @@ privileged aspect SportIntegrationTest_Roo_IntegrationTest {
     public void SportIntegrationTest.testFlush() {
         Sport obj = dod.getRandomSport();
         Assert.assertNotNull("Data on demand for 'Sport' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Sport' failed to provide an identifier", id);
         obj = Sport.findSport(id);
         Assert.assertNotNull("Find method for 'Sport' illegally returned null for id '" + id + "'", obj);
@@ -84,14 +84,14 @@ privileged aspect SportIntegrationTest_Roo_IntegrationTest {
     public void SportIntegrationTest.testMergeUpdate() {
         Sport obj = dod.getRandomSport();
         Assert.assertNotNull("Data on demand for 'Sport' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Sport' failed to provide an identifier", id);
         obj = Sport.findSport(id);
         boolean modified =  dod.modifySport(obj);
         Integer currentVersion = obj.getVersion();
         Sport merged = obj.merge();
         obj.flush();
-        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getCode_(), id);
+        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getCode(), id);
         Assert.assertTrue("Version for 'Sport' failed to increment on merge and flush directive", (currentVersion != null && obj.getVersion() > currentVersion) || !modified);
     }
     
@@ -100,17 +100,17 @@ privileged aspect SportIntegrationTest_Roo_IntegrationTest {
         Assert.assertNotNull("Data on demand for 'Sport' failed to initialize correctly", dod.getRandomSport());
         Sport obj = dod.getNewTransientSport(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'Sport' failed to provide a new transient entity", obj);
-        Assert.assertNull("Expected 'Sport' identifier to be null", obj.getCode_());
+        Assert.assertNull("Expected 'Sport' identifier to be null", obj.getCode());
         obj.persist();
         obj.flush();
-        Assert.assertNotNull("Expected 'Sport' identifier to no longer be null", obj.getCode_());
+        Assert.assertNotNull("Expected 'Sport' identifier to no longer be null", obj.getCode());
     }
     
     @Test
     public void SportIntegrationTest.testRemove() {
         Sport obj = dod.getRandomSport();
         Assert.assertNotNull("Data on demand for 'Sport' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Sport' failed to provide an identifier", id);
         obj = Sport.findSport(id);
         obj.remove();

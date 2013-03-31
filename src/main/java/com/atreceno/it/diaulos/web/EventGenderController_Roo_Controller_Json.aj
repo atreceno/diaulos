@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 privileged aspect EventGenderController_Roo_Controller_Json {
     
-    @RequestMapping(value = "/{code_}", headers = "Accept=application/json")
+    @RequestMapping(value = "/{code}", headers = "Accept=application/json")
     @ResponseBody
-    public ResponseEntity<String> EventGenderController.showJson(@PathVariable("code_") String code_) {
-        EventGender eventGender = EventGender.findEventGender(code_);
+    public ResponseEntity<String> EventGenderController.showJson(@PathVariable("code") String code) {
+        EventGender eventGender = EventGender.findEventGender(code);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         if (eventGender == null) {
@@ -80,9 +80,9 @@ privileged aspect EventGenderController_Roo_Controller_Json {
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
     
-    @RequestMapping(value = "/{code_}", method = RequestMethod.DELETE, headers = "Accept=application/json")
-    public ResponseEntity<String> EventGenderController.deleteFromJson(@PathVariable("code_") String code_) {
-        EventGender eventGender = EventGender.findEventGender(code_);
+    @RequestMapping(value = "/{code}", method = RequestMethod.DELETE, headers = "Accept=application/json")
+    public ResponseEntity<String> EventGenderController.deleteFromJson(@PathVariable("code") String code) {
+        EventGender eventGender = EventGender.findEventGender(code);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         if (eventGender == null) {

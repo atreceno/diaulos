@@ -28,9 +28,9 @@ privileged aspect EventGender_Roo_Jpa_ActiveRecord {
         return entityManager().createQuery("SELECT o FROM EventGender o", EventGender.class).getResultList();
     }
     
-    public static EventGender EventGender.findEventGender(String code_) {
-        if (code_ == null || code_.length() == 0) return null;
-        return entityManager().find(EventGender.class, code_);
+    public static EventGender EventGender.findEventGender(String code) {
+        if (code == null || code.length() == 0) return null;
+        return entityManager().find(EventGender.class, code);
     }
     
     public static List<EventGender> EventGender.findEventGenderEntries(int firstResult, int maxResults) {
@@ -49,7 +49,7 @@ privileged aspect EventGender_Roo_Jpa_ActiveRecord {
         if (this.entityManager.contains(this)) {
             this.entityManager.remove(this);
         } else {
-            EventGender attached = EventGender.findEventGender(this.code_);
+            EventGender attached = EventGender.findEventGender(this.code);
             this.entityManager.remove(attached);
         }
     }

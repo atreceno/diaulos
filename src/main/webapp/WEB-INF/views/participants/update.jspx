@@ -16,6 +16,6 @@
         <field:simple field="races" id="c_com_atreceno_it_diaulos_domain_Participant_races" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Race" z="5VaRNGoBT7UR0BIxxsMu51+C4FU="/>
         <field:simple field="phases" id="c_com_atreceno_it_diaulos_domain_Participant_phases" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Phase" z="l5eBgOa+ssiHWdo1iINM6twpphI="/>
         <field:simple field="events" id="c_com_atreceno_it_diaulos_domain_Participant_events" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Event" z="3zjEhSsKrL3cjQt1zDpyrhJok0M="/>
-        <field:select field="country" id="c_com_atreceno_it_diaulos_domain_Participant_country" itemValue="code_" items="${countrys}" path="/countrys" z="jmgcB5jpu48IyefxiQzn18Q/Tvs="/>
+        <field:select field="country" id="c_com_atreceno_it_diaulos_domain_Participant_country" itemValue="code" items="${countrys}" path="/countrys" z="25shVDq7p1Bh+IY7gwJdHmqZD3U="/>
     </form:update>
 </div>

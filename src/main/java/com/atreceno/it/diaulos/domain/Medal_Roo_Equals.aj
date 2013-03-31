@@ -17,11 +17,11 @@ privileged aspect Medal_Roo_Equals {
             return true;
         }
         Medal rhs = (Medal) obj;
-        return new EqualsBuilder().append(code, rhs.code).append(code_, rhs.code_).append(name, rhs.name).isEquals();
+        return new EqualsBuilder().append(code, rhs.code).append(name, rhs.name).isEquals();
     }
     
     public int Medal.hashCode() {
-        return new HashCodeBuilder().append(code).append(code_).append(name).toHashCode();
+        return new HashCodeBuilder().append(code).append(name).toHashCode();
     }
     
 }

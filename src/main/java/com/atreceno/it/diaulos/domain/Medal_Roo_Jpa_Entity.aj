@@ -6,31 +6,15 @@ package com.atreceno.it.diaulos.domain;
 import com.atreceno.it.diaulos.domain.Medal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Version;
 
 privileged aspect Medal_Roo_Jpa_Entity {
     
     declare @type: Medal: @Entity;
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "code_")
-    private String Medal.code_;
-    
     @Version
     @Column(name = "version")
     private Integer Medal.version;
-    
-    public String Medal.getCode_() {
-        return this.code_;
-    }
-    
-    public void Medal.setCode_(String id) {
-        this.code_ = id;
-    }
     
     public Integer Medal.getVersion() {
         return this.version;

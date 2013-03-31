@@ -37,11 +37,11 @@ privileged aspect CountryIntegrationTest_Roo_IntegrationTest {
     public void CountryIntegrationTest.testFindCountry() {
         Country obj = dod.getRandomCountry();
         Assert.assertNotNull("Data on demand for 'Country' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Country' failed to provide an identifier", id);
         obj = Country.findCountry(id);
         Assert.assertNotNull("Find method for 'Country' illegally returned null for id '" + id + "'", obj);
-        Assert.assertEquals("Find method for 'Country' returned the incorrect identifier", id, obj.getCode_());
+        Assert.assertEquals("Find method for 'Country' returned the incorrect identifier", id, obj.getCode());
     }
     
     @Test
@@ -70,7 +70,7 @@ privileged aspect CountryIntegrationTest_Roo_IntegrationTest {
     public void CountryIntegrationTest.testFlush() {
         Country obj = dod.getRandomCountry();
         Assert.assertNotNull("Data on demand for 'Country' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Country' failed to provide an identifier", id);
         obj = Country.findCountry(id);
         Assert.assertNotNull("Find method for 'Country' illegally returned null for id '" + id + "'", obj);
@@ -84,14 +84,14 @@ privileged aspect CountryIntegrationTest_Roo_IntegrationTest {
     public void CountryIntegrationTest.testMergeUpdate() {
         Country obj = dod.getRandomCountry();
         Assert.assertNotNull("Data on demand for 'Country' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Country' failed to provide an identifier", id);
         obj = Country.findCountry(id);
         boolean modified =  dod.modifyCountry(obj);
         Integer currentVersion = obj.getVersion();
         Country merged = obj.merge();
         obj.flush();
-        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getCode_(), id);
+        Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getCode(), id);
         Assert.assertTrue("Version for 'Country' failed to increment on merge and flush directive", (currentVersion != null && obj.getVersion() > currentVersion) || !modified);
     }
     
@@ -100,17 +100,17 @@ privileged aspect CountryIntegrationTest_Roo_IntegrationTest {
         Assert.assertNotNull("Data on demand for 'Country' failed to initialize correctly", dod.getRandomCountry());
         Country obj = dod.getNewTransientCountry(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'Country' failed to provide a new transient entity", obj);
-        Assert.assertNull("Expected 'Country' identifier to be null", obj.getCode_());
+        Assert.assertNull("Expected 'Country' identifier to be null", obj.getCode());
         obj.persist();
         obj.flush();
-        Assert.assertNotNull("Expected 'Country' identifier to no longer be null", obj.getCode_());
+        Assert.assertNotNull("Expected 'Country' identifier to no longer be null", obj.getCode());
     }
     
     @Test
     public void CountryIntegrationTest.testRemove() {
         Country obj = dod.getRandomCountry();
         Assert.assertNotNull("Data on demand for 'Country' failed to initialize correctly", obj);
-        String id = obj.getCode_();
+        String id = obj.getCode();
         Assert.assertNotNull("Data on demand for 'Country' failed to provide an identifier", id);
         obj = Country.findCountry(id);
         obj.remove();

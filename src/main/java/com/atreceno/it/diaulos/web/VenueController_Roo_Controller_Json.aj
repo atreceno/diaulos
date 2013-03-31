@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 privileged aspect VenueController_Roo_Controller_Json {
     
-    @RequestMapping(value = "/{code_}", headers = "Accept=application/json")
+    @RequestMapping(value = "/{code}", headers = "Accept=application/json")
     @ResponseBody
-    public ResponseEntity<String> VenueController.showJson(@PathVariable("code_") String code_) {
-        Venue venue = Venue.findVenue(code_);
+    public ResponseEntity<String> VenueController.showJson(@PathVariable("code") String code) {
+        Venue venue = Venue.findVenue(code);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         if (venue == null) {
@@ -81,9 +81,9 @@ privileged aspect VenueController_Roo_Controller_Json {
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
     
-    @RequestMapping(value = "/{code_}", method = RequestMethod.DELETE, headers = "Accept=application/json")
-    public ResponseEntity<String> VenueController.deleteFromJson(@PathVariable("code_") String code_) {
-        Venue venue = Venue.findVenue(code_);
+    @RequestMapping(value = "/{code}", method = RequestMethod.DELETE, headers = "Accept=application/json")
+    public ResponseEntity<String> VenueController.deleteFromJson(@PathVariable("code") String code) {
+        Venue venue = Venue.findVenue(code);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         if (venue == null) {

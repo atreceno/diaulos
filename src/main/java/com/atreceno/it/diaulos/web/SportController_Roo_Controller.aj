@@ -32,7 +32,7 @@ privileged aspect SportController_Roo_Controller {
         }
         uiModel.asMap().clear();
         sport.persist();
-        return "redirect:/sports/" + encodeUrlPathSegment(sport.getCode_().toString(), httpServletRequest);
+        return "redirect:/sports/" + encodeUrlPathSegment(sport.getCode().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", produces = "text/html")
@@ -41,10 +41,10 @@ privileged aspect SportController_Roo_Controller {
         return "sports/create";
     }
     
-    @RequestMapping(value = "/{code_}", produces = "text/html")
-    public String SportController.show(@PathVariable("code_") String code_, Model uiModel) {
-        uiModel.addAttribute("sport", Sport.findSport(code_));
-        uiModel.addAttribute("itemId", code_);
+    @RequestMapping(value = "/{code}", produces = "text/html")
+    public String SportController.show(@PathVariable("code") String code, Model uiModel) {
+        uiModel.addAttribute("sport", Sport.findSport(code));
+        uiModel.addAttribute("itemId", code);
         return "sports/show";
     }
     
@@ -70,18 +70,18 @@ privileged aspect SportController_Roo_Controller {
         }
         uiModel.asMap().clear();
         sport.merge();
-        return "redirect:/sports/" + encodeUrlPathSegment(sport.getCode_().toString(), httpServletRequest);
+        return "redirect:/sports/" + encodeUrlPathSegment(sport.getCode().toString(), httpServletRequest);
     }
     
-    @RequestMapping(value = "/{code_}", params = "form", produces = "text/html")
-    public String SportController.updateForm(@PathVariable("code_") String code_, Model uiModel) {
-        populateEditForm(uiModel, Sport.findSport(code_));
+    @RequestMapping(value = "/{code}", params = "form", produces = "text/html")
+    public String SportController.updateForm(@PathVariable("code") String code, Model uiModel) {
+        populateEditForm(uiModel, Sport.findSport(code));
         return "sports/update";
     }
     
-    @RequestMapping(value = "/{code_}", method = RequestMethod.DELETE, produces = "text/html")
-    public String SportController.delete(@PathVariable("code_") String code_, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        Sport sport = Sport.findSport(code_);
+    @RequestMapping(value = "/{code}", method = RequestMethod.DELETE, produces = "text/html")
+    public String SportController.delete(@PathVariable("code") String code, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        Sport sport = Sport.findSport(code);
         sport.remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

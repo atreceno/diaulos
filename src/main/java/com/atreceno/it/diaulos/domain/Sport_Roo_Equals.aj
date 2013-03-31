@@ -17,11 +17,11 @@ privileged aspect Sport_Roo_Equals {
             return true;
         }
         Sport rhs = (Sport) obj;
-        return new EqualsBuilder().append(code, rhs.code).append(code_, rhs.code_).append(description, rhs.description).append(name, rhs.name).isEquals();
+        return new EqualsBuilder().append(code, rhs.code).append(description, rhs.description).append(name, rhs.name).isEquals();
     }
     
     public int Sport.hashCode() {
-        return new HashCodeBuilder().append(code).append(code_).append(description).append(name).toHashCode();
+        return new HashCodeBuilder().append(code).append(description).append(name).toHashCode();
     }
     
 }

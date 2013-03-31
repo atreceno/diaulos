@@ -27,7 +27,7 @@ privileged aspect VenueController_Roo_Controller {
         }
         uiModel.asMap().clear();
         venue.persist();
-        return "redirect:/venues/" + encodeUrlPathSegment(venue.getCode_().toString(), httpServletRequest);
+        return "redirect:/venues/" + encodeUrlPathSegment(venue.getCode().toString(), httpServletRequest);
     }
     
     @RequestMapping(params = "form", produces = "text/html")
@@ -36,10 +36,10 @@ privileged aspect VenueController_Roo_Controller {
         return "venues/create";
     }
     
-    @RequestMapping(value = "/{code_}", produces = "text/html")
-    public String VenueController.show(@PathVariable("code_") String code_, Model uiModel) {
-        uiModel.addAttribute("venue", Venue.findVenue(code_));
-        uiModel.addAttribute("itemId", code_);
+    @RequestMapping(value = "/{code}", produces = "text/html")
+    public String VenueController.show(@PathVariable("code") String code, Model uiModel) {
+        uiModel.addAttribute("venue", Venue.findVenue(code));
+        uiModel.addAttribute("itemId", code);
         return "venues/show";
     }
     
@@ -65,18 +65,18 @@ privileged aspect VenueController_Roo_Controller {
         }
         uiModel.asMap().clear();
         venue.merge();
-        return "redirect:/venues/" + encodeUrlPathSegment(venue.getCode_().toString(), httpServletRequest);
+        return "redirect:/venues/" + encodeUrlPathSegment(venue.getCode().toString(), httpServletRequest);
     }
     
-    @RequestMapping(value = "/{code_}", params = "form", produces = "text/html")
-    public String VenueController.updateForm(@PathVariable("code_") String code_, Model uiModel) {
-        populateEditForm(uiModel, Venue.findVenue(code_));
+    @RequestMapping(value = "/{code}", params = "form", produces = "text/html")
+    public String VenueController.updateForm(@PathVariable("code") String code, Model uiModel) {
+        populateEditForm(uiModel, Venue.findVenue(code));
         return "venues/update";
     }
     
-    @RequestMapping(value = "/{code_}", method = RequestMethod.DELETE, produces = "text/html")
-    public String VenueController.delete(@PathVariable("code_") String code_, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
-        Venue venue = Venue.findVenue(code_);
+    @RequestMapping(value = "/{code}", method = RequestMethod.DELETE, produces = "text/html")
+    public String VenueController.delete(@PathVariable("code") String code, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+        Venue venue = Venue.findVenue(code);
         venue.remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_atreceno_it_diaulos_domain_Venue" modelAttribute="venue" path="/venues" render="${empty dependencies}" z="iK5GKIGFRrz32QYwU3SmeOzin7c=">
-        <field:input field="code" id="c_com_atreceno_it_diaulos_domain_Venue_code" max="3" min="3" required="true" z="wTI3jPUbkVEeShXmLsqayjevX+M="/>
         <field:input field="name" id="c_com_atreceno_it_diaulos_domain_Venue_name" max="25" required="true" z="j/pDjyGysPQGqAinxK4+LJIY7hU="/>
         <field:textarea field="description" id="c_com_atreceno_it_diaulos_domain_Venue_description" z="VUxIiUiUuZy8t/yupHjLiDbq/S0="/>
         <field:input field="capacity" id="c_com_atreceno_it_diaulos_domain_Venue_capacity" max="100000" min="1" required="true" validationMessageCode="field_invalid_integer" z="vfKow2hCQMVE5+OjlPkXN0VI3eA="/>

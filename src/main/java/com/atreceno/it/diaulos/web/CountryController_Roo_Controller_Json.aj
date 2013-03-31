@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 privileged aspect CountryController_Roo_Controller_Json {
     
-    @RequestMapping(value = "/{code_}", headers = "Accept=application/json")
+    @RequestMapping(value = "/{code}", headers = "Accept=application/json")
     @ResponseBody
-    public ResponseEntity<String> CountryController.showJson(@PathVariable("code_") String code_) {
-        Country country = Country.findCountry(code_);
+    public ResponseEntity<String> CountryController.showJson(@PathVariable("code") String code) {
+        Country country = Country.findCountry(code);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json; charset=utf-8");
         if (country == null) {
@@ -81,9 +81,9 @@ privileged aspect CountryController_Roo_Controller_Json {
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }
     
-    @RequestMapping(value = "/{code_}", method = RequestMethod.DELETE, headers = "Accept=application/json")
-    public ResponseEntity<String> CountryController.deleteFromJson(@PathVariable("code_") String code_) {
-        Country country = Country.findCountry(code_);
+    @RequestMapping(value = "/{code}", method = RequestMethod.DELETE, headers = "Accept=application/json")
+    public ResponseEntity<String> CountryController.deleteFromJson(@PathVariable("code") String code) {
+        Country country = Country.findCountry(code);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         if (country == null) {
