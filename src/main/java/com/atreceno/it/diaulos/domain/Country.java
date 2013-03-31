@@ -9,8 +9,8 @@ import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(identifierField = "code", identifierType = String.class)
 @RooEquals
+@RooJpaActiveRecord(identifierField = "code", identifierType = String.class, finders = { "findCountrysByCodeEquals", "findCountrysByNameLike" })
 public class Country {
 
     @NotNull
