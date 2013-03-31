@@ -18,11 +18,11 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooToString
 @RooJpaEntity
 @RooEquals
-public class Event {
+public class Phase {
 
     @NotNull
     @Column(unique = true)
-    @Size(min = 6, max = 6)
+    @Size(min = 7, max = 7)
     private String code;
 
     @NotNull
@@ -34,17 +34,12 @@ public class Event {
 
     @NotNull
     @ManyToOne
-    @JoinColumn(name = "gender_code")
-    private EventGender gender;
+    @JoinColumn(name = "event_id")
+    private Event event;
 
-    @NotNull
-    @ManyToOne
-    @JoinColumn(name = "sport_code")
-    private Sport sport;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "phase")
+    private Set<Race> races = new HashSet<Race>();
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private Set<Phase> phases = new HashSet<Phase>();
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private Set<ParticEvent> participants = new HashSet<ParticEvent>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "phase")
+    private Set<ParticPhase> participants = new HashSet<ParticPhase>();
 }

@@ -1,9 +1,9 @@
 package com.atreceno.it.diaulos.domain;
 
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
@@ -18,33 +18,23 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooToString
 @RooJpaEntity
 @RooEquals
-public class Event {
+public class Lap {
 
     @NotNull
-    @Column(unique = true)
-    @Size(min = 6, max = 6)
     private String code;
 
-    @NotNull
-    @Size(max = 45)
+    @Size(max = 20)
     private String name;
 
-    @Size(max = 255)
-    private String description;
+    private BigDecimal cumulativeDistance;
+
+    private BigDecimal partialDistance;
 
     @NotNull
     @ManyToOne
-    @JoinColumn(name = "gender_code")
-    private EventGender gender;
+    @JoinColumn(name = "competition_id")
+    private Race race;
 
-    @NotNull
-    @ManyToOne
-    @JoinColumn(name = "sport_code")
-    private Sport sport;
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private Set<Phase> phases = new HashSet<Phase>();
-
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "event")
-    private Set<ParticEvent> participants = new HashSet<ParticEvent>();
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "lap")
+    private Set<ParticLap> participants = new HashSet<ParticLap>();
 }
