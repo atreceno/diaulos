@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_atreceno_it_diaulos_domain_ParticPhase" object="${particphase}" path="/particphases" z="/od/o9K7MOpa/KSKLus7pbtaKQo=">
+        <field:display field="phase" id="s_com_atreceno_it_diaulos_domain_ParticPhase_phase" object="${particphase}" z="dZtbpz1k45inrtVxMmVsuGcQ3Do="/>
+        <field:display field="participant" id="s_com_atreceno_it_diaulos_domain_ParticPhase_participant" object="${particphase}" z="IRZrjFF9KQfla3RF8aGyLMWTEMg="/>
+        <field:display field="rank" id="s_com_atreceno_it_diaulos_domain_ParticPhase_rank" object="${particphase}" z="8z0MZHwqEPtmmajv9UR1RdyrN6U="/>
+        <field:display field="result" id="s_com_atreceno_it_diaulos_domain_ParticPhase_result" object="${particphase}" z="0JFqJx9Noi5kDwDJE0NlICLQlbk="/>
+        <field:display field="qualified" id="s_com_atreceno_it_diaulos_domain_ParticPhase_qualified" object="${particphase}" z="l+GPMp9lNZ6+4RdxbrgAC8lzo9s="/>
+    </page:show>
+</div>

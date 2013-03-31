@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_atreceno_it_diaulos_domain_ParticPhase" modelAttribute="particPhase" path="/particphases" versionField="Version" z="EhaQLq99aNCAo6GJE2thl9ghHPU=">
+        <field:select field="phase" id="c_com_atreceno_it_diaulos_domain_ParticPhase_phase" itemValue="id" items="${phases}" path="/phases" required="true" z="YnAjfBLG319kf0PZNXYSFr1Z2Ec="/>
+        <field:select field="participant" id="c_com_atreceno_it_diaulos_domain_ParticPhase_participant" itemValue="id" items="${participants}" path="/participants" required="true" z="HPLF+SVeiiPSwmHm1miyQz35DX0="/>
+        <field:input field="rank" id="c_com_atreceno_it_diaulos_domain_ParticPhase_rank" validationMessageCode="field_invalid_integer" z="oqI879aHKMvzPNzBtIKeqdDTTfM="/>
+        <field:input field="result" id="c_com_atreceno_it_diaulos_domain_ParticPhase_result" z="ko9WnVoLJ4H6cWJ1pyPBif21dMs="/>
+        <field:checkbox field="qualified" id="c_com_atreceno_it_diaulos_domain_ParticPhase_qualified" z="AWCXzWvwjZMThTnaik6WOd/uEY0="/>
+    </form:update>
+</div>

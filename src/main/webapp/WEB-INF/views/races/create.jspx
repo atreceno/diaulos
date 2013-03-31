@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_atreceno_it_diaulos_domain_Race" modelAttribute="race" path="/races" render="${empty dependencies}" z="C34Ahn4OyHikxEweN1nBUmRj3ww=">
+        <field:input field="code" id="c_com_atreceno_it_diaulos_domain_Race_code" max="9" min="9" required="true" z="+nnWY9jczSWOZhYDiOl0NUXHexE="/>
+        <field:textarea field="name" id="c_com_atreceno_it_diaulos_domain_Race_name" required="true" z="HAzJOloNmgJw54E34ShMngyH8Lo="/>
+        <field:textarea field="description" id="c_com_atreceno_it_diaulos_domain_Race_description" z="g+9YBAr7uBSh+qpLCvBufsYQzf0="/>
+        <field:datetime dateTimePattern="${race_startdate_date_format}" field="startDate" id="c_com_atreceno_it_diaulos_domain_Race_startDate" z="UKDPQtgB/EeLGnc9y2LuIFwatYw="/>
+        <field:datetime dateTimePattern="${race_finishdate_date_format}" field="finishDate" id="c_com_atreceno_it_diaulos_domain_Race_finishDate" z="GZHNIJFwvh4XuivIDxE8wUyvKhU="/>
+        <field:checkbox field="official" id="c_com_atreceno_it_diaulos_domain_Race_official" z="MqUk6cSCqMk5Xz/ZPj7jHTcsOPo="/>
+        <field:select field="phase" id="c_com_atreceno_it_diaulos_domain_Race_phase" itemValue="id" items="${phases}" path="/phases" required="true" z="4qBUcKUW695G9DziFB/W5NrqKsk="/>
+        <field:select field="venue" id="c_com_atreceno_it_diaulos_domain_Race_venue" itemValue="code_" items="${venues}" path="/venues" z="EOHgM5coDEisKBvGHxIzsshQ1yo="/>
+        <field:simple field="laps" id="c_com_atreceno_it_diaulos_domain_Race_laps" messageCode="entity_reference_not_managed" messageCodeAttribute="Lap" z="uZGiq7T+eeuPbHk5X3wYJh3VfU8="/>
+        <field:simple field="participants" id="c_com_atreceno_it_diaulos_domain_Race_participants" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Race" z="6Zaf5hNCedK9kXo7Xoz3Ll84KS0="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_atreceno_it_diaulos_domain_Race" render="${not empty dependencies}" z="IInM5qATIqGWEupINFu0Xt79hNQ="/>
+</div>

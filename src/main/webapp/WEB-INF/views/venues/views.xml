@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="venues/list">
+        <put-attribute name="body" value="/WEB-INF/views/venues/list.jspx"/>
+    </definition>
+<definition extends="default" name="venues/show">
+        <put-attribute name="body" value="/WEB-INF/views/venues/show.jspx"/>
+    </definition>
+<definition extends="default" name="venues/create">
+        <put-attribute name="body" value="/WEB-INF/views/venues/create.jspx"/>
+    </definition>
+<definition extends="default" name="venues/update">
+        <put-attribute name="body" value="/WEB-INF/views/venues/update.jspx"/>
+    </definition>
+<definition extends="default" name="venues/findVenuesByCodeEquals">
+        <put-attribute name="body" value="/WEB-INF/views/venues/findVenuesByCodeEquals.jspx"/>
+    </definition>
+<definition extends="default" name="venues/findVenuesByNameLike">
+        <put-attribute name="body" value="/WEB-INF/views/venues/findVenuesByNameLike.jspx"/>
+    </definition>
+</tiles-definitions>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_atreceno_it_diaulos_domain_Phase" items="${phases}" z="daGJkShys228PhfisL7fpGIjOoQ=">
+        <table:table data="${phases}" id="l_com_atreceno_it_diaulos_domain_Phase" path="/phases" z="UI2AHU5Ir9cs4J0adqCxDLY3agM=">
+            <table:column id="c_com_atreceno_it_diaulos_domain_Phase_code" property="code" z="t0nch03xtDW5tM2Zg6YYhCWN4cw="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Phase_name" property="name" z="l4YuHWziMhujBJrWp9Tbq8zLHYU="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Phase_description" property="description" z="kCdrEEhgxMTc9GMgJHYGZpZuZOo="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Phase_event" property="event" z="X2ry0xLXx8aqkz7/ZcmB2rWB4N0="/>
+        </table:table>
+    </page:list>
+</div>

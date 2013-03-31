@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_atreceno_it_diaulos_domain_ParticPhase" items="${particphases}" z="XnJ0QmKwGsJGMUJZAcW4PyCnX2Q=">
+        <table:table data="${particphases}" id="l_com_atreceno_it_diaulos_domain_ParticPhase" path="/particphases" z="tk/nazaDL/y4gWQxDMAVDUXWuIc=">
+            <table:column id="c_com_atreceno_it_diaulos_domain_ParticPhase_phase" property="phase" z="VtDWFXb5hTIwYclPB78TzMyqDmU="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_ParticPhase_participant" property="participant" z="9G6gz+4LMmBSDY/FGNqI4aeb5PY="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_ParticPhase_rank" property="rank" z="odiEBiF55lEg9pl990ltzkssQnQ="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_ParticPhase_result" property="result" z="lWb7HjqS7+Z4HDtGFSH9x/PB/n4="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_ParticPhase_qualified" property="qualified" z="z/Az8JK0alD4D0HwieMGNvkL78g="/>
+        </table:table>
+    </page:list>
+</div>

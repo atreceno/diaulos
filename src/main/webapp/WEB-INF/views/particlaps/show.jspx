@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_atreceno_it_diaulos_domain_ParticLap" object="${particlap}" path="/particlaps" z="NLkhmOntZ5McvPagelcrtN0US8A=">
+        <field:display field="phase" id="s_com_atreceno_it_diaulos_domain_ParticLap_phase" object="${particlap}" z="Pkfi5QJ6HcuwAKXOaiMtKSjGRm8="/>
+        <field:display field="participant" id="s_com_atreceno_it_diaulos_domain_ParticLap_participant" object="${particlap}" z="yjSDZiLiCdGaMRwIgt6OsWiEd9M="/>
+        <field:display field="rank" id="s_com_atreceno_it_diaulos_domain_ParticLap_rank" object="${particlap}" z="dIkAYZaTpzvF7CiYZasA5RI588A="/>
+        <field:display field="result" id="s_com_atreceno_it_diaulos_domain_ParticLap_result" object="${particlap}" z="6vQEgC1UVg1FaAYMVMnsimiX+ak="/>
+    </page:show>
+</div>

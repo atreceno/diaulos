@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_atreceno_it_diaulos_domain_Country" items="${countrys}" z="82PHY9qj/ttlLzNw+LTnhov99YY=">
+        <table:table data="${countrys}" id="l_com_atreceno_it_diaulos_domain_Country" path="/countrys" typeIdFieldName="code_" z="mvkG6SyyRVNMScEoiWGmClaV0YA=">
+            <table:column id="c_com_atreceno_it_diaulos_domain_Country_code" property="code" z="Humvfy0wQ+LuefF7UoZ32Ao1cpM="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Country_name" property="name" z="ptRnj0fAq+8xXPXYR7iDCWTJ21E="/>
+        </table:table>
+    </page:list>
+</div>

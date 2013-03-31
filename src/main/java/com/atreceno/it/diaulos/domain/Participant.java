@@ -24,6 +24,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.equals.RooEquals;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.entity.RooJpaEntity;
+import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 import org.springframework.roo.classpath.operations.jsr303.RooUploadedFile;
 
@@ -31,6 +32,7 @@ import org.springframework.roo.classpath.operations.jsr303.RooUploadedFile;
 @RooToString
 @RooJpaEntity
 @RooEquals
+@RooJson
 public class Participant {
 
     @NotNull

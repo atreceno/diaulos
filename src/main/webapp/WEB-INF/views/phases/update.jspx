@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_atreceno_it_diaulos_domain_Phase" modelAttribute="phase" path="/phases" versionField="Version" z="oxoAaiBs1RULqL8zNeOfpqiPAuA=">
+        <field:input field="code" id="c_com_atreceno_it_diaulos_domain_Phase_code" max="7" min="7" required="true" z="6/hOOTCVvVNceAzKT4NSHMvV0BM="/>
+        <field:textarea field="name" id="c_com_atreceno_it_diaulos_domain_Phase_name" required="true" z="YM4Wl7NOBmxGwJjxl4aYV7PizII="/>
+        <field:textarea field="description" id="c_com_atreceno_it_diaulos_domain_Phase_description" z="S7/Nqraga/7PSIQPntKjV+i2v3g="/>
+        <field:select field="event" id="c_com_atreceno_it_diaulos_domain_Phase_event" itemValue="id" items="${events}" path="/events" required="true" z="XXEbWsz6KD68nTQpPnl3rijRGcI="/>
+        <field:simple field="races" id="c_com_atreceno_it_diaulos_domain_Phase_races" messageCode="entity_reference_not_managed" messageCodeAttribute="Race" z="Fd6e5HLViajd16lxVOiWElyAXYY="/>
+        <field:simple field="participants" id="c_com_atreceno_it_diaulos_domain_Phase_participants" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Phase" z="/jlk/KU6MwUCc/Rlx4tc/MFRX0M="/>
+    </form:update>
+</div>

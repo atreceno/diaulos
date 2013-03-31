@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_atreceno_it_diaulos_domain_Lap" items="${laps}" z="8m8Za4Q6kFCHeiHIpNlcayaCkio=">
+        <table:table data="${laps}" id="l_com_atreceno_it_diaulos_domain_Lap" path="/laps" z="UVk33ORpsn+wn3R1oNXyC5K90Fs=">
+            <table:column id="c_com_atreceno_it_diaulos_domain_Lap_code" property="code" z="fPgc+W5XrjVorJzGTAdc92okJXM="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Lap_name" property="name" z="lDZs1Yn4QWhhGgtrHK0SVXMhVaw="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Lap_cumulativeDistance" property="cumulativeDistance" z="LeY/5mSyxRdbqESxcyDQKPvrlcI="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Lap_partialDistance" property="partialDistance" z="l4XJ6bK7IFymNoSavzQAnWsP4wA="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Lap_race" property="race" z="xb0f7y49vyvnB02EhYjQ2FZPTzc="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_atreceno_it_diaulos_domain_Venue" object="${venue}" path="/venues" z="4NkzMkRAVkvJ+QbXAJDZBSR3yVE=">
+        <field:display field="code" id="s_com_atreceno_it_diaulos_domain_Venue_code" object="${venue}" z="oayMRLEc1hSdtMPvFm0CHImqKfI="/>
+        <field:display field="name" id="s_com_atreceno_it_diaulos_domain_Venue_name" object="${venue}" z="BzjFbw5GfQVp/CjykgjclKUDk+w="/>
+        <field:display field="description" id="s_com_atreceno_it_diaulos_domain_Venue_description" object="${venue}" z="vxBM8N9OxPj6zQGcj6pKxrJkza4="/>
+        <field:display field="capacity" id="s_com_atreceno_it_diaulos_domain_Venue_capacity" object="${venue}" z="90ess2Xr5OsWp+E1hQYpw4Bz3nY="/>
+        <field:display field="address" id="s_com_atreceno_it_diaulos_domain_Venue_address" object="${venue}" z="tE4tMo5aQ6IqRFTddD087LkWMho="/>
+    </page:show>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_atreceno_it_diaulos_domain_Race" object="${race}" path="/races" z="BIMrbLED0w51ENXt+G5gkqrlEaU=">
+        <field:display field="code" id="s_com_atreceno_it_diaulos_domain_Race_code" object="${race}" z="9MaPjyvtRXEtW8ztxis7zaKoeNY="/>
+        <field:display field="name" id="s_com_atreceno_it_diaulos_domain_Race_name" object="${race}" z="nKbnTlGrPsXLr5CZt9tpAmCF86k="/>
+        <field:display field="description" id="s_com_atreceno_it_diaulos_domain_Race_description" object="${race}" z="VrRupI4nUuJUSM10guHoMPpdVBk="/>
+        <field:display date="true" dateTimePattern="${race_startdate_date_format}" field="startDate" id="s_com_atreceno_it_diaulos_domain_Race_startDate" object="${race}" z="WAo4wIbRYr7cfJP0cXnsLuj8HFc="/>
+        <field:display date="true" dateTimePattern="${race_finishdate_date_format}" field="finishDate" id="s_com_atreceno_it_diaulos_domain_Race_finishDate" object="${race}" z="s0AkX33GU6vnNjQpYJ9GH7Nnqq8="/>
+        <field:display field="official" id="s_com_atreceno_it_diaulos_domain_Race_official" object="${race}" z="6TFj1qohAcAbvF9anteGqikj7U0="/>
+        <field:display field="phase" id="s_com_atreceno_it_diaulos_domain_Race_phase" object="${race}" z="887Ud+uIAsgy4gJLItyiE7em5nA="/>
+        <field:display field="venue" id="s_com_atreceno_it_diaulos_domain_Race_venue" object="${race}" z="qY1/2k//IM66FpdHz7VHPHu27XY="/>
+    </page:show>
+</div>

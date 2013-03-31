@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_atreceno_it_diaulos_domain_Phase" object="${phase}" path="/phases" z="eIeGz8JCfD1OhSAope4igpPfwXE=">
+        <field:display field="code" id="s_com_atreceno_it_diaulos_domain_Phase_code" object="${phase}" z="a5apKkK/aOYJrVWXgPa8X89VovY="/>
+        <field:display field="name" id="s_com_atreceno_it_diaulos_domain_Phase_name" object="${phase}" z="xIGP6qsPS4DlHd1UpzjcU7KpTm8="/>
+        <field:display field="description" id="s_com_atreceno_it_diaulos_domain_Phase_description" object="${phase}" z="JhtKkhwVD0oKNDZ/zkMJOM5Fsfs="/>
+        <field:display field="event" id="s_com_atreceno_it_diaulos_domain_Phase_event" object="${phase}" z="D5Zs66ESq/iU8IfjAH6lKEMksno="/>
+    </page:show>
+</div>

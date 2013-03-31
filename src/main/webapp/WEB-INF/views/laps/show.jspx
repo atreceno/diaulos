@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_atreceno_it_diaulos_domain_Lap" object="${lap}" path="/laps" z="g3HrdplAZbyanApmOZVDqPKEGIY=">
+        <field:display field="code" id="s_com_atreceno_it_diaulos_domain_Lap_code" object="${lap}" z="3oD4FNfwDfr4ckE2eXD2B9DiPSU="/>
+        <field:display field="name" id="s_com_atreceno_it_diaulos_domain_Lap_name" object="${lap}" z="Vxp+EixIPc7wo5zdpjV95WJKPXA="/>
+        <field:display field="cumulativeDistance" id="s_com_atreceno_it_diaulos_domain_Lap_cumulativeDistance" object="${lap}" z="D2Z0hWQj0VhUFZmuDdq+I4kWoDU="/>
+        <field:display field="partialDistance" id="s_com_atreceno_it_diaulos_domain_Lap_partialDistance" object="${lap}" z="VOUBBlyuEVdCG6sc4E8oPQDxOdY="/>
+        <field:display field="race" id="s_com_atreceno_it_diaulos_domain_Lap_race" object="${lap}" z="QBYVpzf0BjIhUxkwTKdP27hp9Sc="/>
+    </page:show>
+</div>

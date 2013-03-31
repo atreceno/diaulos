@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_atreceno_it_diaulos_domain_Participant" modelAttribute="participant" path="/participants" versionField="Version" z="4dcbnIurJ8xq1+oHoZHaL8rVkhk=">
+        <field:input field="code" id="c_com_atreceno_it_diaulos_domain_Participant_code" required="true" z="+M5jgTk9JfP+86NaGSjFflakHGg="/>
+        <field:input field="firstName" id="c_com_atreceno_it_diaulos_domain_Participant_firstName" max="30" min="3" required="true" z="NnVvjksX82eMfgwnaq5NLCnT+XQ="/>
+        <field:input field="lastName" id="c_com_atreceno_it_diaulos_domain_Participant_lastName" max="30" min="3" required="true" z="oMNFV6hd5FIuLJPJlXZlH9owvyY="/>
+        <field:select field="gender" id="c_com_atreceno_it_diaulos_domain_Participant_gender" items="${genders}" path="genders" required="true" z="+QVNBH/dSs0d2rbvDMFL+3jvHNY="/>
+        <field:input field="email" id="c_com_atreceno_it_diaulos_domain_Participant_email" max="30" min="6" required="true" validationMessageCode="field_invalid_email" validationRegex="[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+" z="MqSasg8bojNkayDC2uUMlDNFpkA="/>
+        <field:datetime dateTimePattern="${participant_birthdate_date_format}" field="birthDate" id="c_com_atreceno_it_diaulos_domain_Participant_birthDate" past="true" required="true" z="5Hs3sFzVfnp0HSg147iCc6f2eyc="/>
+        <field:textarea field="image" id="c_com_atreceno_it_diaulos_domain_Participant_image" z="xGpYeKb+U4jg1+p/IYiAeL+tLco="/>
+        <field:input decimalMax="299.99" decimalMin="0.0" field="weight" id="c_com_atreceno_it_diaulos_domain_Participant_weight" required="true" validationMessageCode="field_invalid_number" z="wgf+f1eCnLBW5J+3dY1/M/k45I8="/>
+        <field:input decimalMax="299.99" decimalMin="0.0" field="height" id="c_com_atreceno_it_diaulos_domain_Participant_height" required="true" validationMessageCode="field_invalid_number" z="ron3AdNPBeZrhUYymlsqw54pqLY="/>
+        <field:simple field="laps" id="c_com_atreceno_it_diaulos_domain_Participant_laps" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Lap" z="xSvApLjl6HAf3/uDMPgSNgQMt2w="/>
+        <field:simple field="races" id="c_com_atreceno_it_diaulos_domain_Participant_races" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Race" z="5VaRNGoBT7UR0BIxxsMu51+C4FU="/>
+        <field:simple field="phases" id="c_com_atreceno_it_diaulos_domain_Participant_phases" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Phase" z="l5eBgOa+ssiHWdo1iINM6twpphI="/>
+        <field:simple field="events" id="c_com_atreceno_it_diaulos_domain_Participant_events" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Event" z="3zjEhSsKrL3cjQt1zDpyrhJok0M="/>
+        <field:select field="country" id="c_com_atreceno_it_diaulos_domain_Participant_country" itemValue="code_" items="${countrys}" path="/countrys" z="jmgcB5jpu48IyefxiQzn18Q/Tvs="/>
+    </form:update>
+</div>

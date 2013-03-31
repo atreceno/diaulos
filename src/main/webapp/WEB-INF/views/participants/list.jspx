@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_atreceno_it_diaulos_domain_Participant" items="${participants}" z="O+cyk80kKzwAnCH9h3Oa2G8Dsfs=">
+        <table:table data="${participants}" id="l_com_atreceno_it_diaulos_domain_Participant" path="/participants" z="liGv0Kj9mZRiHlpWK+ioRD53YI8=">
+            <table:column id="c_com_atreceno_it_diaulos_domain_Participant_code" property="code" z="a4rSUGgENV+7/0ugogaIoFJXFcs="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Participant_firstName" property="firstName" z="2t6pHIQ2E5J8ILqTDaO4orpeaHM="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Participant_lastName" property="lastName" z="0ZD2Z31s+G/lKtlsCYLNFWGhZSY="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Participant_gender" property="gender" z="zH+IF7eI5qEYTtyQXsnvEZjxZEA="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_Participant_email" property="email" z="GI6mAoiW4u8aW5s+ifuFzFrk85o="/>
+            <table:column date="true" dateTimePattern="${participant_birthdate_date_format}" id="c_com_atreceno_it_diaulos_domain_Participant_birthDate" property="birthDate" z="1/IjCinMlq4jD1s70BoO/RXMOIc="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_atreceno_it_diaulos_domain_EventGender" idField="code_" modelAttribute="eventGender" path="/eventgenders" versionField="Version" z="kNgvBByoZIVHUSM/OYqP8eT3eZ4=">
+        <field:input field="code" id="c_com_atreceno_it_diaulos_domain_EventGender_code" max="1" min="1" required="true" z="CRCD7W3nOOX4z8v2J8W7gUezvp8="/>
+        <field:input field="name" id="c_com_atreceno_it_diaulos_domain_EventGender_name" max="15" required="true" z="YDVJjPheZn9dBEUMbqN6pFLxCVE="/>
+    </form:update>
+</div>
