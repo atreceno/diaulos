@@ -3,12 +3,12 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_atreceno_it_diaulos_domain_ParticRace" modelAttribute="particRace" path="/particraces" render="${empty dependencies}" z="16nuFHo7wfoDahY2ftS9ZdYFlfo=">
-        <field:select field="phase" id="c_com_atreceno_it_diaulos_domain_ParticRace_phase" itemValue="id" items="${phases}" path="/phases" required="true" z="ErIlRQIUqysharTs+I3Wc+He9ws="/>
         <field:select field="participant" id="c_com_atreceno_it_diaulos_domain_ParticRace_participant" itemValue="id" items="${participants}" path="/participants" required="true" z="cvJGEbEIy4ojgGeaHe/kSIcyb+g="/>
         <field:input field="rank" id="c_com_atreceno_it_diaulos_domain_ParticRace_rank" validationMessageCode="field_invalid_integer" z="+fvYMfHnSVBHCXjiTRfWIpCInnY="/>
         <field:input field="result" id="c_com_atreceno_it_diaulos_domain_ParticRace_result" z="JJREpIewuToqBaDyEXEAMWbq5lc="/>
         <field:input field="lane" id="c_com_atreceno_it_diaulos_domain_ParticRace_lane" z="0wFyWyCYthWoaDsW19pG2P0UYMI="/>
         <field:input field="bib" id="c_com_atreceno_it_diaulos_domain_ParticRace_bib" validationMessageCode="field_invalid_integer" z="xDfMv0wImoU/nO1m497t9rXV06U="/>
+        <field:select field="race" id="c_com_atreceno_it_diaulos_domain_ParticRace_race" itemValue="id" items="${races}" path="/races" required="true" z="Lomwakv89VqOg9C76/C0PZqc5IA="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_atreceno_it_diaulos_domain_ParticRace" render="${not empty dependencies}" z="C174tSKtf4lCGTbtZMPm3TxlsrY="/>
 </div>

@@ -3,12 +3,12 @@
 
 package com.atreceno.it.diaulos.domain;
 
+import com.atreceno.it.diaulos.domain.Lap;
+import com.atreceno.it.diaulos.domain.LapDataOnDemand;
 import com.atreceno.it.diaulos.domain.ParticLap;
 import com.atreceno.it.diaulos.domain.ParticLapDataOnDemand;
 import com.atreceno.it.diaulos.domain.Participant;
 import com.atreceno.it.diaulos.domain.ParticipantDataOnDemand;
-import com.atreceno.it.diaulos.domain.Phase;
-import com.atreceno.it.diaulos.domain.PhaseDataOnDemand;
 import com.atreceno.it.diaulos.repository.ParticLapRepository;
 import com.atreceno.it.diaulos.service.ParticLapService;
 import java.security.SecureRandom;
@@ -30,10 +30,10 @@ privileged aspect ParticLapDataOnDemand_Roo_DataOnDemand {
     private List<ParticLap> ParticLapDataOnDemand.data;
     
     @Autowired
-    ParticipantDataOnDemand ParticLapDataOnDemand.participantDataOnDemand;
+    LapDataOnDemand ParticLapDataOnDemand.lapDataOnDemand;
     
     @Autowired
-    PhaseDataOnDemand ParticLapDataOnDemand.phaseDataOnDemand;
+    ParticipantDataOnDemand ParticLapDataOnDemand.participantDataOnDemand;
     
     @Autowired
     ParticLapService ParticLapDataOnDemand.particLapService;
@@ -43,21 +43,21 @@ privileged aspect ParticLapDataOnDemand_Roo_DataOnDemand {
     
     public ParticLap ParticLapDataOnDemand.getNewTransientParticLap(int index) {
         ParticLap obj = new ParticLap();
+        setLap(obj, index);
         setParticipant(obj, index);
-        setPhase(obj, index);
         setRank(obj, index);
         setResult(obj, index);
         return obj;
     }
     
+    public void ParticLapDataOnDemand.setLap(ParticLap obj, int index) {
+        Lap lap = lapDataOnDemand.getRandomLap();
+        obj.setLap(lap);
+    }
+    
     public void ParticLapDataOnDemand.setParticipant(ParticLap obj, int index) {
         Participant participant = participantDataOnDemand.getRandomParticipant();
         obj.setParticipant(participant);
-    }
-    
-    public void ParticLapDataOnDemand.setPhase(ParticLap obj, int index) {
-        Phase phase = phaseDataOnDemand.getRandomPhase();
-        obj.setPhase(phase);
     }
     
     public void ParticLapDataOnDemand.setRank(ParticLap obj, int index) {

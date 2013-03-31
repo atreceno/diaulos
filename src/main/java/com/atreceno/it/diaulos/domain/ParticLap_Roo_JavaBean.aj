@@ -3,18 +3,18 @@
 
 package com.atreceno.it.diaulos.domain;
 
+import com.atreceno.it.diaulos.domain.Lap;
 import com.atreceno.it.diaulos.domain.ParticLap;
 import com.atreceno.it.diaulos.domain.Participant;
-import com.atreceno.it.diaulos.domain.Phase;
 
 privileged aspect ParticLap_Roo_JavaBean {
     
-    public Phase ParticLap.getPhase() {
-        return this.phase;
+    public Lap ParticLap.getLap() {
+        return this.lap;
     }
     
-    public void ParticLap.setPhase(Phase phase) {
-        this.phase = phase;
+    public void ParticLap.setLap(Lap lap) {
+        this.lap = lap;
     }
     
     public Participant ParticLap.getParticipant() {

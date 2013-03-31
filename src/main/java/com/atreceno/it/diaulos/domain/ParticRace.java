@@ -3,6 +3,7 @@ package com.atreceno.it.diaulos.domain;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
+
 import org.springframework.roo.addon.equals.RooEquals;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.entity.RooJpaEntity;
@@ -16,21 +17,21 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJson
 public class ParticRace {
 
-    @NotNull
-    @ManyToOne
-    @JoinColumn(name = "phase_id")
-    private Phase phase;
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "race_id")
+	private Race race;
 
-    @NotNull
-    @ManyToOne
-    @JoinColumn(name = "participant_id")
-    private Participant participant;
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "participant_id")
+	private Participant participant;
 
-    private Integer rank;
+	private Integer rank;
 
-    private String result;
+	private String result;
 
-    private String lane;
+	private String lane;
 
-    private Integer bib;
+	private Integer bib;
 }

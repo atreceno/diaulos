@@ -4,12 +4,12 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_com_atreceno_it_diaulos_domain_ParticRace" items="${particraces}" z="f1bIecnr4EIw99H6WOqmk9EfFsc=">
         <table:table data="${particraces}" id="l_com_atreceno_it_diaulos_domain_ParticRace" path="/particraces" z="ySxPXyYobiTm1zFFVvnyfJUQU/4=">
-            <table:column id="c_com_atreceno_it_diaulos_domain_ParticRace_phase" property="phase" z="7exokIE6o44CfNa4KEzIxDlHbyA="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_ParticRace_participant" property="participant" z="NnSghmi8Y/BylofAyrB6/p3f8O0="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_ParticRace_rank" property="rank" z="kbIEw9nrBk0pSl6gehw6vTRM388="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_ParticRace_result" property="result" z="d9VuQ4V/UiuAeTUhPWxk5N4xpjc="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_ParticRace_lane" property="lane" z="WeGqEsReXkk6/swEPbyR/l5N6wI="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_ParticRace_bib" property="bib" z="n62M814XHQHfo+GOQHQ0JKzgNY0="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_ParticRace_race" property="race" z="q2plBKrxEa+XivrHfrEAynGNkU8="/>
         </table:table>
     </page:list>
 </div>

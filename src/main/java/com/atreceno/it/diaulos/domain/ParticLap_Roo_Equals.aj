@@ -17,11 +17,11 @@ privileged aspect ParticLap_Roo_Equals {
             return true;
         }
         ParticLap rhs = (ParticLap) obj;
-        return new EqualsBuilder().append(id, rhs.id).append(participant, rhs.participant).append(phase, rhs.phase).append(rank, rhs.rank).append(result, rhs.result).isEquals();
+        return new EqualsBuilder().append(id, rhs.id).append(lap, rhs.lap).append(participant, rhs.participant).append(rank, rhs.rank).append(result, rhs.result).isEquals();
     }
     
     public int ParticLap.hashCode() {
-        return new HashCodeBuilder().append(id).append(participant).append(phase).append(rank).append(result).toHashCode();
+        return new HashCodeBuilder().append(id).append(lap).append(participant).append(rank).append(result).toHashCode();
     }
     
 }

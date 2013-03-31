@@ -5,16 +5,16 @@ package com.atreceno.it.diaulos.domain;
 
 import com.atreceno.it.diaulos.domain.ParticRace;
 import com.atreceno.it.diaulos.domain.Participant;
-import com.atreceno.it.diaulos.domain.Phase;
+import com.atreceno.it.diaulos.domain.Race;
 
 privileged aspect ParticRace_Roo_JavaBean {
     
-    public Phase ParticRace.getPhase() {
-        return this.phase;
+    public Race ParticRace.getRace() {
+        return this.race;
     }
     
-    public void ParticRace.setPhase(Phase phase) {
-        this.phase = phase;
+    public void ParticRace.setRace(Race race) {
+        this.race = race;
     }
     
     public Participant ParticRace.getParticipant() {

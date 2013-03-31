@@ -5,10 +5,10 @@ package com.atreceno.it.diaulos.web;
 
 import com.atreceno.it.diaulos.domain.ParticRace;
 import com.atreceno.it.diaulos.domain.Participant;
-import com.atreceno.it.diaulos.domain.Phase;
+import com.atreceno.it.diaulos.domain.Race;
 import com.atreceno.it.diaulos.service.ParticRaceService;
 import com.atreceno.it.diaulos.service.ParticipantService;
-import com.atreceno.it.diaulos.service.PhaseService;
+import com.atreceno.it.diaulos.service.RaceService;
 import com.atreceno.it.diaulos.web.ParticRaceController;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -34,7 +34,7 @@ privileged aspect ParticRaceController_Roo_Controller {
     ParticipantService ParticRaceController.participantService;
     
     @Autowired
-    PhaseService ParticRaceController.phaseService;
+    RaceService ParticRaceController.raceService;
     
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String ParticRaceController.create(@Valid ParticRace particRace, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
@@ -51,8 +51,8 @@ privileged aspect ParticRaceController_Roo_Controller {
     public String ParticRaceController.createForm(Model uiModel) {
         populateEditForm(uiModel, new ParticRace());
         List<String[]> dependencies = new ArrayList<String[]>();
-        if (phaseService.countAllPhases() == 0) {
-            dependencies.add(new String[] { "phase", "phases" });
+        if (raceService.countAllRaces() == 0) {
+            dependencies.add(new String[] { "race", "races" });
         }
         if (participantService.countAllParticipants() == 0) {
             dependencies.add(new String[] { "participant", "participants" });
@@ -112,7 +112,7 @@ privileged aspect ParticRaceController_Roo_Controller {
     void ParticRaceController.populateEditForm(Model uiModel, ParticRace particRace) {
         uiModel.addAttribute("particRace", particRace);
         uiModel.addAttribute("participants", participantService.findAllParticipants());
-        uiModel.addAttribute("phases", phaseService.findAllPhases());
+        uiModel.addAttribute("races", raceService.findAllRaces());
     }
     
     String ParticRaceController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

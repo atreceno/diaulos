@@ -3,6 +3,7 @@ package com.atreceno.it.diaulos.domain;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
+
 import org.springframework.roo.addon.equals.RooEquals;
 import org.springframework.roo.addon.javabean.RooJavaBean;
 import org.springframework.roo.addon.jpa.entity.RooJpaEntity;
@@ -18,8 +19,8 @@ public class ParticLap {
 
     @NotNull
     @ManyToOne
-    @JoinColumn(name = "phase_id")
-    private Phase phase;
+    @JoinColumn(name = "lap_id")
+	private Lap lap;
 
     @NotNull
     @ManyToOne

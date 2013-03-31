@@ -3,11 +3,11 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_com_atreceno_it_diaulos_domain_ParticRace" object="${particrace}" path="/particraces" z="Agl6JrCOaRiB+EuhcnW7cu7TUXQ=">
-        <field:display field="phase" id="s_com_atreceno_it_diaulos_domain_ParticRace_phase" object="${particrace}" z="SUtKxaHFGGJ3uaXR3IYbahfYlM4="/>
         <field:display field="participant" id="s_com_atreceno_it_diaulos_domain_ParticRace_participant" object="${particrace}" z="CaqTRDmtHOs4mAhd+Kq8W1OK6So="/>
         <field:display field="rank" id="s_com_atreceno_it_diaulos_domain_ParticRace_rank" object="${particrace}" z="DtMOC5Rz2TIpTREaLY2nBa5/Nd4="/>
         <field:display field="result" id="s_com_atreceno_it_diaulos_domain_ParticRace_result" object="${particrace}" z="5fIGopdSKxZUDPOv3B709Skhcso="/>
         <field:display field="lane" id="s_com_atreceno_it_diaulos_domain_ParticRace_lane" object="${particrace}" z="UA/rqTmik4SQo3g/cMNtRhv2ac0="/>
         <field:display field="bib" id="s_com_atreceno_it_diaulos_domain_ParticRace_bib" object="${particrace}" z="AVtLWQkZKlbwr3IU0rJIdY/BCjU="/>
+        <field:display field="race" id="s_com_atreceno_it_diaulos_domain_ParticRace_race" object="${particrace}" z="6/ZzguZgwAvMz1OdUkGu4D85VWg="/>
     </page:show>
 </div>

@@ -3,12 +3,12 @@
 
 package com.atreceno.it.diaulos.web;
 
+import com.atreceno.it.diaulos.domain.Lap;
 import com.atreceno.it.diaulos.domain.ParticLap;
 import com.atreceno.it.diaulos.domain.Participant;
-import com.atreceno.it.diaulos.domain.Phase;
+import com.atreceno.it.diaulos.service.LapService;
 import com.atreceno.it.diaulos.service.ParticLapService;
 import com.atreceno.it.diaulos.service.ParticipantService;
-import com.atreceno.it.diaulos.service.PhaseService;
 import com.atreceno.it.diaulos.web.ParticLapController;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -31,10 +31,10 @@ privileged aspect ParticLapController_Roo_Controller {
     ParticLapService ParticLapController.particLapService;
     
     @Autowired
-    ParticipantService ParticLapController.participantService;
+    LapService ParticLapController.lapService;
     
     @Autowired
-    PhaseService ParticLapController.phaseService;
+    ParticipantService ParticLapController.participantService;
     
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String ParticLapController.create(@Valid ParticLap particLap, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
@@ -51,8 +51,8 @@ privileged aspect ParticLapController_Roo_Controller {
     public String ParticLapController.createForm(Model uiModel) {
         populateEditForm(uiModel, new ParticLap());
         List<String[]> dependencies = new ArrayList<String[]>();
-        if (phaseService.countAllPhases() == 0) {
-            dependencies.add(new String[] { "phase", "phases" });
+        if (lapService.countAllLaps() == 0) {
+            dependencies.add(new String[] { "lap", "laps" });
         }
         if (participantService.countAllParticipants() == 0) {
             dependencies.add(new String[] { "participant", "participants" });
@@ -111,8 +111,8 @@ privileged aspect ParticLapController_Roo_Controller {
     
     void ParticLapController.populateEditForm(Model uiModel, ParticLap particLap) {
         uiModel.addAttribute("particLap", particLap);
+        uiModel.addAttribute("laps", lapService.findAllLaps());
         uiModel.addAttribute("participants", participantService.findAllParticipants());
-        uiModel.addAttribute("phases", phaseService.findAllPhases());
     }
     
     String ParticLapController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

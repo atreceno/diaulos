@@ -7,8 +7,8 @@ import com.atreceno.it.diaulos.domain.ParticRace;
 import com.atreceno.it.diaulos.domain.ParticRaceDataOnDemand;
 import com.atreceno.it.diaulos.domain.Participant;
 import com.atreceno.it.diaulos.domain.ParticipantDataOnDemand;
-import com.atreceno.it.diaulos.domain.Phase;
-import com.atreceno.it.diaulos.domain.PhaseDataOnDemand;
+import com.atreceno.it.diaulos.domain.Race;
+import com.atreceno.it.diaulos.domain.RaceDataOnDemand;
 import com.atreceno.it.diaulos.repository.ParticRaceRepository;
 import com.atreceno.it.diaulos.service.ParticRaceService;
 import java.security.SecureRandom;
@@ -33,7 +33,7 @@ privileged aspect ParticRaceDataOnDemand_Roo_DataOnDemand {
     ParticipantDataOnDemand ParticRaceDataOnDemand.participantDataOnDemand;
     
     @Autowired
-    PhaseDataOnDemand ParticRaceDataOnDemand.phaseDataOnDemand;
+    RaceDataOnDemand ParticRaceDataOnDemand.raceDataOnDemand;
     
     @Autowired
     ParticRaceService ParticRaceDataOnDemand.particRaceService;
@@ -46,7 +46,7 @@ privileged aspect ParticRaceDataOnDemand_Roo_DataOnDemand {
         setBib(obj, index);
         setLane(obj, index);
         setParticipant(obj, index);
-        setPhase(obj, index);
+        setRace(obj, index);
         setRank(obj, index);
         setResult(obj, index);
         return obj;
@@ -67,9 +67,9 @@ privileged aspect ParticRaceDataOnDemand_Roo_DataOnDemand {
         obj.setParticipant(participant);
     }
     
-    public void ParticRaceDataOnDemand.setPhase(ParticRace obj, int index) {
-        Phase phase = phaseDataOnDemand.getRandomPhase();
-        obj.setPhase(phase);
+    public void ParticRaceDataOnDemand.setRace(ParticRace obj, int index) {
+        Race race = raceDataOnDemand.getRandomRace();
+        obj.setRace(race);
     }
     
     public void ParticRaceDataOnDemand.setRank(ParticRace obj, int index) {
