@@ -3,6 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:find finderName="ByNameLike" id="ff_com_atreceno_it_diaulos_domain_Country" path="/countrys" z="gq+eaTSRsTzZa7mw+/yvjfYpzC0=">
-        <field:input disableFormBinding="true" field="name" id="f_com_atreceno_it_diaulos_domain_Country_name" max="15" required="true" z="mjkRaMui6JvH37+M9BVUN0BECY0="/>
+        <field:input disableFormBinding="true" field="name" id="f_com_atreceno_it_diaulos_domain_Country_name" max="30" required="true" z="zQbrTYnnNaZwoaY18HVfB1o9GP4="/>
     </form:find>
 </div>

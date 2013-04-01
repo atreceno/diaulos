@@ -46,7 +46,6 @@ privileged aspect ParticipantDataOnDemand_Roo_DataOnDemand {
         setFirstName(obj, index);
         setGender(obj, index);
         setHeight(obj, index);
-        setImage(obj, index);
         setLastName(obj, index);
         setWeight(obj, index);
         return obj;
@@ -89,11 +88,6 @@ privileged aspect ParticipantDataOnDemand_Roo_DataOnDemand {
             height = new BigDecimal("299.99");
         }
         obj.setHeight(height);
-    }
-    
-    public void ParticipantDataOnDemand.setImage(Participant obj, int index) {
-        byte[] image = String.valueOf(index).getBytes();
-        obj.setImage(image);
     }
     
     public void ParticipantDataOnDemand.setLastName(Participant obj, int index) {

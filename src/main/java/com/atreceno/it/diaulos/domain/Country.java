@@ -23,6 +23,6 @@ public class Country {
 	private String code;
 
 	@NotNull
-	@Size(max = 15)
+	@Size(max = 30)
 	private String name;
 }

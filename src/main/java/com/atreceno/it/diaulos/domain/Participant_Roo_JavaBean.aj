@@ -64,14 +64,6 @@ privileged aspect Participant_Roo_JavaBean {
         this.birthDate = birthDate;
     }
     
-    public byte[] Participant.getImage() {
-        return this.image;
-    }
-    
-    public void Participant.setImage(byte[] image) {
-        this.image = image;
-    }
-    
     public BigDecimal Participant.getWeight() {
         return this.weight;
     }

@@ -9,7 +9,6 @@
         <field:display field="gender" id="s_com_atreceno_it_diaulos_domain_Participant_gender" object="${participant}" z="R35EPQRt9hYibHCgodW4J00LP8M="/>
         <field:display field="email" id="s_com_atreceno_it_diaulos_domain_Participant_email" object="${participant}" z="x2gTNLAjz4FyU6Im1F7G1JclLI8="/>
         <field:display date="true" dateTimePattern="${participant_birthdate_date_format}" field="birthDate" id="s_com_atreceno_it_diaulos_domain_Participant_birthDate" object="${participant}" z="gT6biNjmuQa1DcXXUeSA6oiZOdQ="/>
-        <field:display field="image" id="s_com_atreceno_it_diaulos_domain_Participant_image" object="${participant}" z="vI4B17azYiipii7BJvNcexEentQ="/>
         <field:display field="weight" id="s_com_atreceno_it_diaulos_domain_Participant_weight" object="${participant}" z="HVb81auoLHj2loea7OoRfJbwl9o="/>
         <field:display field="height" id="s_com_atreceno_it_diaulos_domain_Participant_height" object="${participant}" z="5nButiBMq0eB7knYYG7TN60stsM="/>
         <field:display field="country" id="s_com_atreceno_it_diaulos_domain_Participant_country" object="${participant}" z="ALtsyhhhyI9PmidVFUut5HGcQiA="/>

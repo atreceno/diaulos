@@ -30,8 +30,8 @@ privileged aspect CountryDataOnDemand_Roo_DataOnDemand {
     
     public void CountryDataOnDemand.setName(Country obj, int index) {
         String name = "name_" + index;
-        if (name.length() > 15) {
-            name = name.substring(0, 15);
+        if (name.length() > 30) {
+            name = name.substring(0, 30);
         }
         obj.setName(name);
     }

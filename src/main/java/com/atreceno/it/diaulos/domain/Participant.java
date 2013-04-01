@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
@@ -48,7 +49,7 @@ public class Participant {
     private String lastName;
 
     @NotNull
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Gender gender;
 
     @Size(min = 6, max = 30)
@@ -61,9 +62,9 @@ public class Participant {
     @DateTimeFormat(style = "M-")
     private Date birthDate;
 
-    @RooUploadedFile(contentType = "image/jpeg")
-    @Lob
-    private byte[] image;
+//    @RooUploadedFile(contentType = "image/jpeg")
+//    @Lob
+//    private byte[] image;
 
     @DecimalMin("0.0")
     @DecimalMax("299.99")
