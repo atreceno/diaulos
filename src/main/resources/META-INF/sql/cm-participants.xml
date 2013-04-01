@@ -1,0 +1,1495 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<athletes xmlns="http://utils.it.atreceno.com/info-athlete" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://utils.it.atreceno.com/info-athlete info-athlete.xsd">
+	<athlete>
+		<athlete-url>/athlete/abril-restrepo-laura-valentina-1105956/</athlete-url>
+		<firstname>Laura Valentina</firstname>
+		<lastname>ABRIL RESTREPO</lastname>
+		<birthdate>1990-01-28</birthdate>
+		<gender>F</gender>
+		<height>162</height>
+		<weight>50</weight>
+		<small-photo-url>/imgml/athletes/m/1243227.png</small-photo-url>
+		<country-code>COL</country-code>
+		<country-name>Colombia</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/absalon-julien-1106850/</athlete-url>
+		<firstname>Julien</firstname>
+		<lastname>ABSALON</lastname>
+		<birthdate>1980-08-16</birthdate>
+		<gender>M</gender>
+		<height>180</height>
+		<weight>68</weight>
+		<small-photo-url>/imgml/athletes/m/1243238.png</small-photo-url>
+		<country-code>FRA</country-code>
+		<country-name>France</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/athanasiadis-marios-1079767/</athlete-url>
+		<firstname>Marios</firstname>
+		<lastname>ATHANASIADIS</lastname>
+		<birthdate>1986-10-31</birthdate>
+		<gender>M</gender>
+		<height>179</height>
+		<weight>70</weight>
+		<small-photo-url>/imgml/athletes/m/1243137.png</small-photo-url>
+		<country-code>CYP</country-code>
+		<country-name>Cyprus</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/bassingthwaighte-marc-1046497/</athlete-url>
+		<firstname>Marc</firstname>
+		<lastname>BASSINGTHWAIGHTE</lastname>
+		<birthdate>1983-10-11</birthdate>
+		<gender>M</gender>
+		<height>178</height>
+		<weight>68</weight>
+		<small-photo-url>/imgml/athletes/m/1243069.png</small-photo-url>
+		<country-code>NAM</country-code>
+		<country-name>Namibia</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/batty-emily-1076550/</athlete-url>
+		<firstname>Emily</firstname>
+		<lastname>BATTY</lastname>
+		<birthdate>1988-06-16</birthdate>
+		<gender>F</gender>
+		<height>161</height>
+		<weight>48</weight>
+		<small-photo-url>/imgml/athletes/m/1243121.png</small-photo-url>
+		<country-code>CAN</country-code>
+		<country-name>Canada</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/belomoyna-yana-1071506/</athlete-url>
+		<firstname>Yana</firstname>
+		<lastname>BELOMOYNA</lastname>
+		<birthdate>1992-11-02</birthdate>
+		<gender>F</gender>
+		<height>164</height>
+		<weight>46</weight>
+		<small-photo-url>/imgml/athletes/m/1243092.png</small-photo-url>
+		<country-code>UKR</country-code>
+		<country-name>Ukraine</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/benko-barbara-1119820/</athlete-url>
+		<firstname>Barbara</firstname>
+		<lastname>BENKO</lastname>
+		<birthdate>1990-01-21</birthdate>
+		<gender>F</gender>
+		<height>173</height>
+		<weight>61</weight>
+		<small-photo-url>/imgml/athletes/m/1243306.png</small-photo-url>
+		<country-code>HUN</country-code>
+		<country-name>Hungary</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/bewley-sam-1125591/</athlete-url>
+		<firstname>Sam</firstname>
+		<lastname>BEWLEY</lastname>
+		<birthdate>1987-07-22</birthdate>
+		<gender>M</gender>
+		<height>191</height>
+		<weight>81</weight>
+		<small-photo-url>/imgml/athletes/m/1243338.png</small-photo-url>
+		<country-code>NZL</country-code>
+		<country-name>New Zealand</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+			<discipline>Cycling - Track</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+			<event>Men's Team Pursuit</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/bresset-julie-1106825/</athlete-url>
+		<firstname>Julie</firstname>
+		<lastname>BRESSET</lastname>
+		<birthdate>1989-06-09</birthdate>
+		<gender>F</gender>
+		<height>167</height>
+		<weight>53</weight>
+		<small-photo-url>/imgml/athletes/m/1243235.png</small-photo-url>
+		<country-code>FRA</country-code>
+		<country-name>France</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/brzozka-piotr-1027997/</athlete-url>
+		<firstname>Piotr</firstname>
+		<lastname>BRZOZKA</lastname>
+		<birthdate>1989-10-14</birthdate>
+		<gender>M</gender>
+		<height>174</height>
+		<weight>64</weight>
+		<small-photo-url>/imgml/athletes/m/1243046.png</small-photo-url>
+		<country-code>POL</country-code>
+		<country-name>Poland</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/buys-philip-1073425/</athlete-url>
+		<firstname>Philip</firstname>
+		<lastname>BUYS</lastname>
+		<birthdate>1988-09-30</birthdate>
+		<gender>M</gender>
+		<height>187</height>
+		<weight>74</weight>
+		<small-photo-url>/imgml/athletes/m/1243103.png</small-photo-url>
+		<country-code>RSA</country-code>
+		<country-name>South Africa</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/chan-chun-hing-1100101/</athlete-url>
+		<firstname>Chun Hing</firstname>
+		<lastname>CHAN</lastname>
+		<birthdate>1981-04-24</birthdate>
+		<gender>M</gender>
+		<height>175</height>
+		<weight>59</weight>
+		<small-photo-url>/imgml/athletes/m/1243198.png</small-photo-url>
+		<country-code>HKG</country-code>
+		<country-name>Hong Kong, China</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+			<discipline>Cycling - Road</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+			<event>Men's Road Race</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/choi-ki-ho-1100095/</athlete-url>
+		<firstname>Ki Ho</firstname>
+		<lastname>CHOI</lastname>
+		<birthdate>1991-05-05</birthdate>
+		<gender>M</gender>
+		<height>173</height>
+		<weight>59</weight>
+		<small-photo-url>/imgml/athletes/m/1243196.png</small-photo-url>
+		<country-code>HKG</country-code>
+		<country-name>Hong Kong, China</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+			<discipline>Cycling - Road</discipline>
+			<discipline>Cycling - Track</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Road Race</event>
+			<event>Men's Omnium</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/cink-ondrej-1109503/</athlete-url>
+		<firstname>Ondrej</firstname>
+		<lastname>CINK</lastname>
+		<birthdate>1990-12-07</birthdate>
+		<gender>M</gender>
+		<height>178</height>
+		<weight>67</weight>
+		<small-photo-url>/imgml/athletes/m/1243263.png</small-photo-url>
+		<country-code>CZE</country-code>
+		<country-name>Czech Republic</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/coloma-nicolas-carlos-1110034/</athlete-url>
+		<firstname>Carlos</firstname>
+		<lastname>COLOMA NICOLAS</lastname>
+		<birthdate>1981-09-28</birthdate>
+		<gender>M</gender>
+		<height>172</height>
+		<weight>66</weight>
+		<small-photo-url>/imgml/athletes/m/1243271.png</small-photo-url>
+		<country-code>ESP</country-code>
+		<country-name>Spain</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/dahle-flesjaa-gunn-rita-1044065/</athlete-url>
+		<firstname>Gunn-Rita</firstname>
+		<lastname>DAHLE FLESJAA</lastname>
+		<birthdate>1973-02-10</birthdate>
+		<gender>F</gender>
+		<height>0.0</height>
+		<weight>0.0</weight>
+		<small-photo-url>/imgml/athletes/m/1243063.png</small-photo-url>
+		<country-code>NOR</country-code>
+		<country-name>Norway</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/davison-lea-1132678/</athlete-url>
+		<firstname>Lea</firstname>
+		<lastname>DAVISON</lastname>
+		<birthdate>1983-05-19</birthdate>
+		<gender>F</gender>
+		<height>168</height>
+		<weight>55</weight>
+		<small-photo-url>/imgml/athletes/m/1243396.png</small-photo-url>
+		<country-code>USA</country-code>
+		<country-name>United States of America</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/dawidowicz-aleksandra-1029205/</athlete-url>
+		<firstname>Aleksandra</firstname>
+		<lastname>DAWIDOWICZ</lastname>
+		<birthdate>1987-02-04</birthdate>
+		<gender>F</gender>
+		<height>167</height>
+		<weight>57</weight>
+		<small-photo-url>/imgml/athletes/m/1243050.png</small-photo-url>
+		<country-code>POL</country-code>
+		<country-name>Poland</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/engen-alexandra-1018144/</athlete-url>
+		<firstname>Alexandra</firstname>
+		<lastname>ENGEN</lastname>
+		<birthdate>1988-01-05</birthdate>
+		<gender>F</gender>
+		<height>175</height>
+		<weight>65</weight>
+		<small-photo-url>/imgml/athletes/m/1243029.png</small-photo-url>
+		<country-code>SWE</country-code>
+		<country-name>Sweden</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/ferrand-prevot-pauline-1106922/</athlete-url>
+		<firstname>Pauline</firstname>
+		<lastname>FERRAND PREVOT</lastname>
+		<birthdate>1992-02-10</birthdate>
+		<gender>F</gender>
+		<height>165</height>
+		<weight>53</weight>
+		<small-photo-url>/imgml/athletes/m/1243248.png</small-photo-url>
+		<country-code>FRA</country-code>
+		<country-name>France</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+			<discipline>Cycling - Road</discipline>
+			<discipline>Cycling - Track</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+			<event>Women's Road Race</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/fontana-marco-aurelio-1075204/</athlete-url>
+		<firstname>Marco Aurelio</firstname>
+		<lastname>FONTANA</lastname>
+		<birthdate>1984-10-12</birthdate>
+		<gender>M</gender>
+		<height>172</height>
+		<weight>68</weight>
+		<small-photo-url>/imgml/athletes/m/1243118.png</small-photo-url>
+		<country-code>ITA</country-code>
+		<country-name>Italy</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/forstemann-robert-1114697/</athlete-url>
+		<firstname>Robert</firstname>
+		<lastname>FORSTEMANN</lastname>
+		<birthdate>1986-03-05</birthdate>
+		<gender>M</gender>
+		<height>174</height>
+		<weight>90</weight>
+		<small-photo-url>/imgml/athletes/m/1243291.png</small-photo-url>
+		<country-code>GER</country-code>
+		<country-name>Germany</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+			<discipline>Cycling - Track</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+			<event>Men's Sprint</event>
+			<event>Men's Team Sprint</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/fumic-manuel-1114699/</athlete-url>
+		<firstname>Manuel</firstname>
+		<lastname>FUMIC</lastname>
+		<birthdate>1982-03-30</birthdate>
+		<gender>M</gender>
+		<height>175</height>
+		<weight>69</weight>
+		<small-photo-url>/imgml/athletes/m/1243292.png</small-photo-url>
+		<country-code>GER</country-code>
+		<country-name>Germany</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/gehbauer-alexander-1121169/</athlete-url>
+		<firstname>Alexander</firstname>
+		<lastname>GEHBAUER</lastname>
+		<birthdate>1990-04-24</birthdate>
+		<gender>M</gender>
+		<height>187</height>
+		<weight>67</weight>
+		<small-photo-url>/imgml/athletes/m/1243323.png</small-photo-url>
+		<country-code>AUT</country-code>
+		<country-name>Austria</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/gorycka-paula-1029207/</athlete-url>
+		<firstname>Paula</firstname>
+		<lastname>GORYCKA</lastname>
+		<birthdate>1990-11-05</birthdate>
+		<gender>F</gender>
+		<height>172</height>
+		<weight>54</weight>
+		<small-photo-url>/imgml/athletes/m/1243051.png</small-photo-url>
+		<country-code>POL</country-code>
+		<country-name>Poland</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/gould-georgia-1132993/</athlete-url>
+		<firstname>Georgia</firstname>
+		<lastname>GOULD</lastname>
+		<birthdate>1980-01-05</birthdate>
+		<gender>F</gender>
+		<height>175</height>
+		<weight>61</weight>
+		<small-photo-url>/imgml/athletes/m/1243400.png</small-photo-url>
+		<country-code>USA</country-code>
+		<country-name>United States of America</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/hanlen-karen-1125609/</athlete-url>
+		<firstname>Karen</firstname>
+		<lastname>HANLEN</lastname>
+		<birthdate>1980-03-28</birthdate>
+		<gender>F</gender>
+		<height>177</height>
+		<weight>63</weight>
+		<small-photo-url>/imgml/athletes/m/1243339.png</small-photo-url>
+		<country-code>NZL</country-code>
+		<country-name>New Zealand</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/henderson-rebecca-1090636/</athlete-url>
+		<firstname>Rebecca</firstname>
+		<lastname>HENDERSON</lastname>
+		<birthdate>1991-09-27</birthdate>
+		<gender>F</gender>
+		<height>158</height>
+		<weight>49</weight>
+		<small-photo-url>/imgml/athletes/m/1243154.png</small-photo-url>
+		<country-code>AUS</country-code>
+		<country-name>Australia</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/hermida-ramos-jose-antonio-1110037/</athlete-url>
+		<firstname>Jose Antonio</firstname>
+		<lastname>HERMIDA RAMOS</lastname>
+		<birthdate>1978-08-24</birthdate>
+		<gender>M</gender>
+		<height>172</height>
+		<weight>66</weight>
+		<small-photo-url>/imgml/athletes/m/1243273.png</small-photo-url>
+		<country-code>ESP</country-code>
+		<country-name>Spain</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/horton-derek-1023611/</athlete-url>
+		<firstname>Derek</firstname>
+		<lastname>HORTON</lastname>
+		<birthdate>1972-09-26</birthdate>
+		<gender>M</gender>
+		<height>183</height>
+		<weight>70</weight>
+		<small-photo-url>/imgml/athletes/m/1243044.png</small-photo-url>
+		<country-code>GUM</country-code>
+		<country-name>Guam</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/ilias-periklis-1104051/</athlete-url>
+		<firstname>Periklis</firstname>
+		<lastname>ILIAS</lastname>
+		<birthdate>1986-06-26</birthdate>
+		<gender>M</gender>
+		<height>183</height>
+		<weight>69</weight>
+		<small-photo-url>/imgml/athletes/m/1243223.png</small-photo-url>
+		<country-code>GRE</country-code>
+		<country-name>Greece</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/kabush-geoff-1076553/</athlete-url>
+		<firstname>Geoff</firstname>
+		<lastname>KABUSH</lastname>
+		<birthdate>1977-04-14</birthdate>
+		<gender>M</gender>
+		<height>188</height>
+		<weight>75</weight>
+		<small-photo-url>/imgml/athletes/m/1243124.png</small-photo-url>
+		<country-code>CAN</country-code>
+		<country-name>Canada</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/kalentieva-irina-1020848/</athlete-url>
+		<firstname>Irina</firstname>
+		<lastname>KALENTIEVA</lastname>
+		<birthdate>1977-11-10</birthdate>
+		<gender>F</gender>
+		<height>150</height>
+		<weight>42</weight>
+		<small-photo-url>/imgml/athletes/m/1243034.png</small-photo-url>
+		<country-code>RUS</country-code>
+		<country-name>Russian Federation</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/katayama-rie-1021913/</athlete-url>
+		<firstname>Rie</firstname>
+		<lastname>KATAYAMA</lastname>
+		<birthdate>1979-09-13</birthdate>
+		<gender>F</gender>
+		<height>157</height>
+		<weight>48</weight>
+		<small-photo-url>/imgml/athletes/m/1243041.png</small-photo-url>
+		<country-code>JPN</country-code>
+		<country-name>Japan</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/kerschbaumer-gerhard-1075267/</athlete-url>
+		<firstname>Gerhard</firstname>
+		<lastname>KERSCHBAUMER</lastname>
+		<birthdate>1991-07-19</birthdate>
+		<gender>M</gender>
+		<height>184</height>
+		<weight>69</weight>
+		<small-photo-url>/imgml/athletes/m/1243119.png</small-photo-url>
+		<country-code>ITA</country-code>
+		<country-name>Italy</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/killeen-liam-1093796/</athlete-url>
+		<firstname>Liam</firstname>
+		<lastname>KILLEEN</lastname>
+		<birthdate>1982-04-12</birthdate>
+		<gender>M</gender>
+		<height>173</height>
+		<weight>65</weight>
+		<small-photo-url>/imgml/athletes/m/1243168.png</small-photo-url>
+		<country-code>GBR</country-code>
+		<country-name>Great Britain</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/klemencic-blaza-1119669/</athlete-url>
+		<firstname>Blaza</firstname>
+		<lastname>KLEMENCIC</lastname>
+		<birthdate>1980-03-11</birthdate>
+		<gender>F</gender>
+		<height>172</height>
+		<weight>55</weight>
+		<small-photo-url>/imgml/athletes/m/1243304.png</small-photo-url>
+		<country-code>SLO</country-code>
+		<country-name>Slovenia</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/konwa-marek-1028016/</athlete-url>
+		<firstname>Marek</firstname>
+		<lastname>KONWA</lastname>
+		<birthdate>1990-03-11</birthdate>
+		<gender>M</gender>
+		<height>176</height>
+		<weight>62</weight>
+		<small-photo-url>/imgml/athletes/m/1243048.png</small-photo-url>
+		<country-code>POL</country-code>
+		<country-name>Poland</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/kulhavy-jaroslav-1109587/</athlete-url>
+		<firstname>Jaroslav</firstname>
+		<lastname>KULHAVY</lastname>
+		<birthdate>1985-01-08</birthdate>
+		<gender>M</gender>
+		<height>187</height>
+		<weight>76</weight>
+		<small-photo-url>/imgml/athletes/m/1243265.png</small-photo-url>
+		<country-code>CZE</country-code>
+		<country-name>Czech Republic</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/last-annie-1093798/</athlete-url>
+		<firstname>Annie</firstname>
+		<lastname>LAST</lastname>
+		<birthdate>1990-09-07</birthdate>
+		<gender>F</gender>
+		<height>167</height>
+		<weight>60</weight>
+		<small-photo-url>/imgml/athletes/m/1243169.png</small-photo-url>
+		<country-code>GBR</country-code>
+		<country-name>Great Britain</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/lechner-eva-1073490/</athlete-url>
+		<firstname>Eva</firstname>
+		<lastname>LECHNER</lastname>
+		<birthdate>1985-07-01</birthdate>
+		<gender>F</gender>
+		<height>168</height>
+		<weight>52</weight>
+		<small-photo-url>/imgml/athletes/m/1243110.png</small-photo-url>
+		<country-code>ITA</country-code>
+		<country-name>Italy</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/leumann-katrin-1127865/</athlete-url>
+		<firstname>Katrin</firstname>
+		<lastname>LEUMANN</lastname>
+		<birthdate>1982-02-08</birthdate>
+		<gender>F</gender>
+		<height>174</height>
+		<weight>54</weight>
+		<small-photo-url>/imgml/athletes/m/1243367.png</small-photo-url>
+		<country-code>SUI</country-code>
+		<country-name>Switzerland</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/mantecon-gutierrez-sergio-1110039/</athlete-url>
+		<firstname>Sergio</firstname>
+		<lastname>MANTECON GUTIERREZ</lastname>
+		<birthdate>1984-09-25</birthdate>
+		<gender>M</gender>
+		<height>179</height>
+		<weight>71</weight>
+		<small-photo-url>/imgml/athletes/m/1243275.png</small-photo-url>
+		<country-code>ESP</country-code>
+		<country-name>Spain</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/markt-karl-1121182/</athlete-url>
+		<firstname>Karl</firstname>
+		<lastname>MARKT</lastname>
+		<birthdate>1980-03-08</birthdate>
+		<gender>M</gender>
+		<height>182</height>
+		<weight>75</weight>
+		<small-photo-url>/imgml/athletes/m/1243326.png</small-photo-url>
+		<country-code>AUT</country-code>
+		<country-name>Austria</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/mcconnell-daniel-1090671/</athlete-url>
+		<firstname>Daniel</firstname>
+		<lastname>MCCONNELL</lastname>
+		<birthdate>1985-08-09</birthdate>
+		<gender>M</gender>
+		<height>180</height>
+		<weight>70</weight>
+		<small-photo-url>/imgml/athletes/m/1243158.png</small-photo-url>
+		<country-code>AUS</country-code>
+		<country-name>Australia</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/milatz-moritz-1114728/</athlete-url>
+		<firstname>Moritz</firstname>
+		<lastname>MILATZ</lastname>
+		<birthdate>1982-06-24</birthdate>
+		<gender>M</gender>
+		<height>173</height>
+		<weight>65</weight>
+		<small-photo-url>/imgml/athletes/m/1243297.png</small-photo-url>
+		<country-code>GER</country-code>
+		<country-name>Germany</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/montoya-cantillo-paolo-cesar-1102033/</athlete-url>
+		<firstname>Paolo Cesar</firstname>
+		<lastname>MONTOYA CANTILLO</lastname>
+		<birthdate>1985-06-15</birthdate>
+		<gender>M</gender>
+		<height>186</height>
+		<weight>71</weight>
+		<small-photo-url>/imgml/athletes/m/1243211.png</small-photo-url>
+		<country-code>CRC</country-code>
+		<country-name>Costa Rica</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/morath-adelheid-1114729/</athlete-url>
+		<firstname>Adelheid</firstname>
+		<lastname>MORATH</lastname>
+		<birthdate>1984-08-02</birthdate>
+		<gender>F</gender>
+		<height>164</height>
+		<weight>52</weight>
+		<small-photo-url>/imgml/athletes/m/1243298.png</small-photo-url>
+		<country-code>GER</country-code>
+		<country-name>Germany</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/naef-ralph-1127868/</athlete-url>
+		<firstname>Ralph</firstname>
+		<lastname>NAEF</lastname>
+		<birthdate>1980-05-10</birthdate>
+		<gender>M</gender>
+		<height>175</height>
+		<weight>66</weight>
+		<small-photo-url>/imgml/athletes/m/1243369.png</small-photo-url>
+		<country-code>SUI</country-code>
+		<country-name>Switzerland</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/nash-katerina-1110543/</athlete-url>
+		<firstname>Katerina</firstname>
+		<lastname>NASH</lastname>
+		<birthdate>1977-12-09</birthdate>
+		<gender>F</gender>
+		<height>164</height>
+		<weight>51</weight>
+		<small-photo-url>/imgml/athletes/m/1243285.png</small-photo-url>
+		<country-code>CZE</country-code>
+		<country-name>Czech Republic</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/neethling-candice-1092064/</athlete-url>
+		<firstname>Candice</firstname>
+		<lastname>NEETHLING</lastname>
+		<birthdate>1992-02-15</birthdate>
+		<gender>F</gender>
+		<height>170</height>
+		<weight>60</weight>
+		<small-photo-url>/imgml/athletes/m/1243165.png</small-photo-url>
+		<country-code>RSA</country-code>
+		<country-name>South Africa</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/niyonshuti-adrien-1091245/</athlete-url>
+		<firstname>Adrien</firstname>
+		<lastname>NIYONSHUTI</lastname>
+		<birthdate>1987-01-02</birthdate>
+		<gender>M</gender>
+		<height>165</height>
+		<weight>68</weight>
+		<small-photo-url>/imgml/athletes/m/1243163.png</small-photo-url>
+		<country-code>RWA</country-code>
+		<country-name>Rwanda</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/nys-sven-1129447/</athlete-url>
+		<firstname>Sven</firstname>
+		<lastname>NYS</lastname>
+		<birthdate>1976-06-17</birthdate>
+		<gender>M</gender>
+		<height>181</height>
+		<weight>71</weight>
+		<small-photo-url>/imgml/athletes/m/1243384.png</small-photo-url>
+		<country-code>BEL</country-code>
+		<country-name>Belgium</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/osl-elisabeth-1121187/</athlete-url>
+		<firstname>Elisabeth</firstname>
+		<lastname>OSL</lastname>
+		<birthdate>1985-11-21</birthdate>
+		<gender>F</gender>
+		<height>165</height>
+		<weight>47</weight>
+		<small-photo-url>/imgml/athletes/m/1243329.png</small-photo-url>
+		<country-code>AUT</country-code>
+		<country-name>Austria</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/paez-leon-hector-leonardo-1106182/</athlete-url>
+		<firstname>Hector Leonardo</firstname>
+		<lastname>PAEZ LEON</lastname>
+		<birthdate>1982-07-10</birthdate>
+		<gender>M</gender>
+		<height>175</height>
+		<weight>63</weight>
+		<small-photo-url>/imgml/athletes/m/1243231.png</small-photo-url>
+		<country-code>COL</country-code>
+		<country-name>Colombia</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/parti-andras-1119828/</athlete-url>
+		<firstname>Andras</firstname>
+		<lastname>PARTI</lastname>
+		<birthdate>1982-09-18</birthdate>
+		<gender>M</gender>
+		<height>170</height>
+		<weight>65</weight>
+		<small-photo-url>/imgml/athletes/m/1243314.png</small-photo-url>
+		<country-code>HUN</country-code>
+		<country-name>Hungary</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/pechenin-evgeniy-1020865/</athlete-url>
+		<firstname>Evgeniy</firstname>
+		<lastname>PECHENIN</lastname>
+		<birthdate>1984-04-14</birthdate>
+		<gender>M</gender>
+		<height>172</height>
+		<weight>64</weight>
+		<small-photo-url>/imgml/athletes/m/1243036.png</small-photo-url>
+		<country-code>RUS</country-code>
+		<country-name>Russian Federation</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/pendrel-catharine-1076556/</athlete-url>
+		<firstname>Catharine</firstname>
+		<lastname>PENDREL</lastname>
+		<birthdate>1980-09-30</birthdate>
+		<gender>F</gender>
+		<height>166</height>
+		<weight>50</weight>
+		<small-photo-url>/imgml/athletes/m/1243127.png</small-photo-url>
+		<country-code>CAN</country-code>
+		<country-name>Canada</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/peraud-jean-christophe-1106924/</athlete-url>
+		<firstname>Jean-Christophe</firstname>
+		<lastname>PERAUD</lastname>
+		<birthdate>1977-05-22</birthdate>
+		<gender>M</gender>
+		<height>172</height>
+		<weight>62</weight>
+		<small-photo-url>/imgml/athletes/m/1243249.png</small-photo-url>
+		<country-code>FRA</country-code>
+		<country-name>France</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/plaxton-max-1076557/</athlete-url>
+		<firstname>Max</firstname>
+		<lastname>PLAXTON</lastname>
+		<birthdate>1985-05-29</birthdate>
+		<gender>M</gender>
+		<height>183</height>
+		<weight>70</weight>
+		<small-photo-url>/imgml/athletes/m/1243128.png</small-photo-url>
+		<country-code>CAN</country-code>
+		<country-name>Canada</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/rosa-david-joao-serralheiro-1107210/</athlete-url>
+		<firstname>David Joao Serralheiro</firstname>
+		<lastname>ROSA</lastname>
+		<birthdate>1986-11-12</birthdate>
+		<gender>M</gender>
+		<height>168</height>
+		<weight>52</weight>
+		<small-photo-url>/imgml/athletes/m/1243251.png</small-photo-url>
+		<country-code>POR</country-code>
+		<country-name>Portugal</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/rysenko-sergji-1250308/</athlete-url>
+		<firstname>Sergji</firstname>
+		<lastname>RYSENKO</lastname>
+		<birthdate>1980-03-15</birthdate>
+		<gender>M</gender>
+		<height>174</height>
+		<weight>62</weight>
+		<small-photo-url>/imgml/athletes/m/1243411.png</small-photo-url>
+		<country-code>UKR</country-code>
+		<country-name>Ukraine</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/schultz-samuel-1130701/</athlete-url>
+		<firstname>Samuel</firstname>
+		<lastname>SCHULTZ</lastname>
+		<birthdate>1985-12-11</birthdate>
+		<gender>M</gender>
+		<height>185</height>
+		<weight>70</weight>
+		<small-photo-url>/imgml/athletes/m/1243388.png</small-photo-url>
+		<country-code>USA</country-code>
+		<country-name>United States of America</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/schurter-nino-1127875/</athlete-url>
+		<firstname>Nino</firstname>
+		<lastname>SCHURTER</lastname>
+		<birthdate>1986-05-13</birthdate>
+		<gender>M</gender>
+		<height>172</height>
+		<weight>68</weight>
+		<small-photo-url>/imgml/athletes/m/1243373.png</small-photo-url>
+		<country-code>SUI</country-code>
+		<country-name>Switzerland</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/shi-qinglan-1067338/</athlete-url>
+		<firstname>Qinglan</firstname>
+		<lastname>SHI</lastname>
+		<birthdate>1986-01-06</birthdate>
+		<gender>F</gender>
+		<height>163</height>
+		<weight>60</weight>
+		<small-photo-url>/imgml/athletes/m/1243084.png</small-photo-url>
+		<country-code>CHN</country-code>
+		<country-name>People's Republic of China</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/skarnitzl-jan-1109637/</athlete-url>
+		<firstname>Jan</firstname>
+		<lastname>SKARNITZL</lastname>
+		<birthdate>1986-07-11</birthdate>
+		<gender>M</gender>
+		<height>180</height>
+		<weight>67</weight>
+		<small-photo-url>/imgml/athletes/m/1243267.png</small-photo-url>
+		<country-code>CZE</country-code>
+		<country-name>Czech Republic</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/soto-catriel-andres-1094667/</athlete-url>
+		<firstname>Catriel Andres</firstname>
+		<lastname>SOTO</lastname>
+		<birthdate>1987-04-29</birthdate>
+		<gender>M</gender>
+		<height>176</height>
+		<weight>65</weight>
+		<small-photo-url>/imgml/athletes/m/1243177.png</small-photo-url>
+		<country-code>ARG</country-code>
+		<country-name>Argentina</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/spitz-sabine-1114745/</athlete-url>
+		<firstname>Sabine</firstname>
+		<lastname>SPITZ</lastname>
+		<birthdate>1971-12-27</birthdate>
+		<gender>F</gender>
+		<height>168</height>
+		<weight>60</weight>
+		<small-photo-url>/imgml/athletes/m/1243300.png</small-photo-url>
+		<country-code>GER</country-code>
+		<country-name>Germany</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/stander-burry-1098754/</athlete-url>
+		<firstname>Burry</firstname>
+		<lastname>STANDER</lastname>
+		<birthdate>1987-09-16</birthdate>
+		<gender>M</gender>
+		<height>173</height>
+		<weight>66</weight>
+		<small-photo-url>/imgml/athletes/m/1243185.png</small-photo-url>
+		<country-code>RSA</country-code>
+		<country-name>South Africa</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/stevkova-janka-1108297/</athlete-url>
+		<firstname>Janka</firstname>
+		<lastname>STEVKOVA</lastname>
+		<birthdate>1976-02-04</birthdate>
+		<gender>F</gender>
+		<height>168</height>
+		<weight>55</weight>
+		<small-photo-url>/imgml/athletes/m/1243260.png</small-photo-url>
+		<country-code>SVK</country-code>
+		<country-name>Slovakia</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/suss-esther-1127877/</athlete-url>
+		<firstname>Esther</firstname>
+		<lastname>SUSS</lastname>
+		<birthdate>1974-03-19</birthdate>
+		<gender>F</gender>
+		<height>167</height>
+		<weight>54</weight>
+		<small-photo-url>/imgml/athletes/m/1243374.png</small-photo-url>
+		<country-code>SUI</country-code>
+		<country-name>Switzerland</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/tempier-stephane-1106881/</athlete-url>
+		<firstname>Stephane</firstname>
+		<lastname>TEMPIER</lastname>
+		<birthdate>1986-03-05</birthdate>
+		<gender>M</gender>
+		<height>182</height>
+		<weight>62</weight>
+		<small-photo-url>/imgml/athletes/m/1243241.png</small-photo-url>
+		<country-code>FRA</country-code>
+		<country-name>France</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/tong-weisong-1067320/</athlete-url>
+		<firstname>Weisong</firstname>
+		<lastname>TONG</lastname>
+		<birthdate>1988-01-30</birthdate>
+		<gender>M</gender>
+		<height>176</height>
+		<weight>70</weight>
+		<small-photo-url>/imgml/athletes/m/1243081.png</small-photo-url>
+		<country-code>CHN</country-code>
+		<country-name>People's Republic of China</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/valeriano-rubens-1072007/</athlete-url>
+		<firstname>Rubens</firstname>
+		<lastname>VALERIANO</lastname>
+		<birthdate>1979-08-14</birthdate>
+		<gender>M</gender>
+		<height>0.0</height>
+		<weight>0.0</weight>
+		<small-photo-url>/imgml/athletes/m/1243097.png</small-photo-url>
+		<country-code>BRA</country-code>
+		<country-name>Brazil</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/van-hoovels-kevin-1128995/</athlete-url>
+		<firstname>Kevin</firstname>
+		<lastname>VAN HOOVELS</lastname>
+		<birthdate>1985-07-31</birthdate>
+		<gender>M</gender>
+		<height>184</height>
+		<weight>69</weight>
+		<small-photo-url>/imgml/athletes/m/1243379.png</small-photo-url>
+		<country-code>BEL</country-code>
+		<country-name>Belgium</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/van-houts-rudi-1064229/</athlete-url>
+		<firstname>Rudi</firstname>
+		<lastname>VAN HOUTS</lastname>
+		<birthdate>1984-01-16</birthdate>
+		<gender>M</gender>
+		<height>177</height>
+		<weight>64</weight>
+		<small-photo-url>/imgml/athletes/m/1243072.png</small-photo-url>
+		<country-code>NED</country-code>
+		<country-name>Netherlands</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/vingerling-michael-1066198/</athlete-url>
+		<firstname>Michael</firstname>
+		<lastname>VINGERLING</lastname>
+		<birthdate>1990-06-28</birthdate>
+		<gender>M</gender>
+		<height>184</height>
+		<weight>71</weight>
+		<small-photo-url>/imgml/athletes/m/1243074.png</small-photo-url>
+		<country-code>NED</country-code>
+		<country-name>Netherlands</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/vogel-florian-1127878/</athlete-url>
+		<firstname>Florian</firstname>
+		<lastname>VOGEL</lastname>
+		<birthdate>1982-02-18</birthdate>
+		<gender>M</gender>
+		<height>174</height>
+		<weight>66</weight>
+		<small-photo-url>/imgml/athletes/m/1243375.png</small-photo-url>
+		<country-code>SUI</country-code>
+		<country-name>Switzerland</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/wells-todd-1131062/</athlete-url>
+		<firstname>Todd</firstname>
+		<lastname>WELLS</lastname>
+		<birthdate>1975-12-25</birthdate>
+		<gender>M</gender>
+		<height>188</height>
+		<weight>77</weight>
+		<small-photo-url>/imgml/athletes/m/1243389.png</small-photo-url>
+		<country-code>USA</country-code>
+		<country-name>United States of America</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/wong-kam-po-1100097/</athlete-url>
+		<firstname>Kam-Po</firstname>
+		<lastname>WONG</lastname>
+		<birthdate>1973-03-13</birthdate>
+		<gender>M</gender>
+		<height>173</height>
+		<weight>59</weight>
+		<small-photo-url>/imgml/athletes/m/1243197.png</small-photo-url>
+		<country-code>HKG</country-code>
+		<country-name>Hong Kong, China</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+			<discipline>Cycling - Road</discipline>
+			<discipline>Cycling - Track</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Road Race</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/yamamoto-kohei-1021909/</athlete-url>
+		<firstname>Kohei</firstname>
+		<lastname>YAMAMOTO</lastname>
+		<birthdate>1985-08-20</birthdate>
+		<gender>M</gender>
+		<height>182</height>
+		<weight>69</weight>
+		<small-photo-url>/imgml/athletes/m/1243038.png</small-photo-url>
+		<country-code>JPN</country-code>
+		<country-name>Japan</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Men's Cross-country</event>
+		</events>
+	</athlete>
+	<athlete>
+		<athlete-url>/athlete/zakelj-tanja-1119783/</athlete-url>
+		<firstname>Tanja</firstname>
+		<lastname>ZAKELJ</lastname>
+		<birthdate>1988-09-15</birthdate>
+		<gender>F</gender>
+		<height>158</height>
+		<weight>51</weight>
+		<small-photo-url>/imgml/athletes/m/1243305.png</small-photo-url>
+		<country-code>SLO</country-code>
+		<country-name>Slovenia</country-name>
+		<disciplines>
+			<discipline>Cycling - Mountain Bike</discipline>
+		</disciplines>
+		<events>
+			<event>Women's Cross-country</event>
+		</events>
+	</athlete>
+</athletes>
+
