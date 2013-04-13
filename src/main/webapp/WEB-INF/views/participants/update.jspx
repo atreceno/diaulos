@@ -9,8 +9,8 @@
         <field:select field="gender" id="c_com_atreceno_it_diaulos_domain_Participant_gender" items="${genders}" path="genders" required="true" z="+QVNBH/dSs0d2rbvDMFL+3jvHNY="/>
         <field:input field="email" id="c_com_atreceno_it_diaulos_domain_Participant_email" max="30" min="6" required="true" validationMessageCode="field_invalid_email" validationRegex="[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+" z="MqSasg8bojNkayDC2uUMlDNFpkA="/>
         <field:datetime dateTimePattern="${participant_birthdate_date_format}" field="birthDate" id="c_com_atreceno_it_diaulos_domain_Participant_birthDate" past="true" required="true" z="5Hs3sFzVfnp0HSg147iCc6f2eyc="/>
-        <field:input decimalMax="299.99" decimalMin="0.0" field="weight" id="c_com_atreceno_it_diaulos_domain_Participant_weight" required="false" validationMessageCode="field_invalid_number" z="wgf+f1eCnLBW5J+3dY1/M/k45I8="/>
-        <field:input decimalMax="299.99" decimalMin="0.0" field="height" id="c_com_atreceno_it_diaulos_domain_Participant_height" required="false" validationMessageCode="field_invalid_number" z="ron3AdNPBeZrhUYymlsqw54pqLY="/>
+        <field:input decimalMax="299.99" decimalMin="0.0" field="weight" id="c_com_atreceno_it_diaulos_domain_Participant_weight" required="false" validationMessageCode="field_invalid_number" z="user-managed"/>
+        <field:input decimalMax="299.99" decimalMin="0.0" field="height" id="c_com_atreceno_it_diaulos_domain_Participant_height" required="false" validationMessageCode="field_invalid_number" z="user-managed"/>
         <field:simple field="laps" id="c_com_atreceno_it_diaulos_domain_Participant_laps" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Lap" z="xSvApLjl6HAf3/uDMPgSNgQMt2w="/>
         <field:simple field="races" id="c_com_atreceno_it_diaulos_domain_Participant_races" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Race" z="5VaRNGoBT7UR0BIxxsMu51+C4FU="/>
         <field:simple field="phases" id="c_com_atreceno_it_diaulos_domain_Participant_phases" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Phase" z="l5eBgOa+ssiHWdo1iINM6twpphI="/>
