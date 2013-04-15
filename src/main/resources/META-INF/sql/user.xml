@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<resultset statement="select * from diaulos_db.user" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row>
+	<field name="id">1</field>
+	<field name="enabled">1</field>
+	<field name="password">d417a32def5666de310c785e770ded20cca348fa403b3e2c49b187d2e79cf19d</field>
+	<field name="username">agustin</field>
+	<field name="version">3</field>
+  </row>
+
+  <row>
+	<field name="id">2</field>
+	<field name="enabled">1</field>
+	<field name="password">d417a32def5666de310c785e770ded20cca348fa403b3e2c49b187d2e79cf19d</field>
+	<field name="username">susana</field>
+	<field name="version">1</field>
+  </row>
+
+  <row>
+	<field name="id">3</field>
+	<field name="enabled">1</field>
+	<field name="password">d417a32def5666de310c785e770ded20cca348fa403b3e2c49b187d2e79cf19d</field>
+	<field name="username">antonio</field>
+	<field name="version">0</field>
+  </row>
+
+</resultset>

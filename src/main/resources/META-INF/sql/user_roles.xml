@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<resultset statement="select * from diaulos_db.user_roles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row>
+	<field name="users">1</field>
+	<field name="roles">3</field>
+  </row>
+
+  <row>
+	<field name="users">2</field>
+	<field name="roles">2</field>
+  </row>
+
+  <row>
+	<field name="users">3</field>
+	<field name="roles">1</field>
+  </row>
+</resultset>

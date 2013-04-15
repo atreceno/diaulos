@@ -34,6 +34,11 @@ update phase p inner join event e on left(p.code, 6) = e.code set p.event_id = e
 load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/28_eventunit.txt' into table race fields terminated by '\t' lines terminated by '\n' ignore 1 lines (@discipline_code, @gender_code, @subevent_code, @subphase_code, @subeventunit_code, @sche, @medal, @desc_en, @name, @desc_fr, @name_fr, @eu_type, @cis, @info, @filter11, @filter12, @filter21, @filter22, @criteria) set code = concat(@discipline_code,@gender_code,@subevent_code, @subphase_code, @subeventunit_code), name = @name, description = concat('Say something stunning about ', @name), official = 0, version = 0;
 update race c inner join phase p on left(c.code, 7) = p.code set c.phase_id = p.id, start_date = now(), finish_date = now(), venue_code = 'OPK' where c.phase_id = 0;
 set foreign_key_checks = 1;
+-- User and Role
+load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/user.xml' into table diaulos_db.user (@id, enabled, password, username, @version) set version = 0;
+load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/role.xml' into table diaulos_db.role (@id, name, @version) set version = 0;
+load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/user_roles.xml' into table diaulos_db.user_roles (users, roles);
+
 -- Participant
 -- load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/cm-participants.xml' into table diaulos_db.participant rows identified by '<athlete>' (@athlete_url, @firstname, @lastname, @birthdate, @gender, height, weight, @small_photo_url, @country_code, @country_name) set first_name = @firstname, last_name = @lastname, birth_date = @birthdate, gender = @gender, version = 0;
 -- Uncomment to leave only a few sports
