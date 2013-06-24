@@ -6,3 +6,6 @@
 /.classpath
 /.settings
 /log.roo
+# Config
+/src/main/resources/META-INF/spring/database.properties
+/src/main/resources/META-INF/sql/user.xml
