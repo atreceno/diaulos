@@ -1,0 +1,256 @@
+Id	ENG longdescription	ENG Description	FRA longdescription	FRA Description
+AFG	Afghanistan	Afghanistan	Afghanistan	Afghanistan
+AHO	Netherlands Antilles	Neth. Antilles	Antilles néerlandaises	Antilles néerl.
+AIA	Anguilla	Anguilla	Anguilla	Anguilla
+ALB	Albania	Albania	Albanie	Albanie
+ALG	Algeria	Algeria	Algérie	Algérie
+AND	Andorra	Andorra	Andorre	Andorre
+ANG	Angola	Angola	Angola	Angola
+ANT	Antigua and Barbuda	Antigua&Barbuda	Antigua-et-Barbuda	Antigua-Barbuda
+ANZ	Australia/New Zealand	AUS/NZL	Australie/Nouvelle-Zélande	AUS/NZL
+ARG	Argentina	Argentina	Argentine	Argentine
+ARM	Armenia	Armenia	Arménie	Arménie
+ARU	Aruba	Aruba	Aruba	Aruba
+ASA	American Samoa	American Samoa	Samoa américaines	Samoa amér.
+ATA	Antarctica	Antarctica	Antarctique	Antarctique
+ATF	French Southern Territories	TAAF	French Southern Territories	TAAF
+AUS	Australia	Australia	Australie	Australie
+AUT	Austria	Austria	Autriche	Autriche
+AZE	Azerbaijan	Azerbaijan	Azerbaïdjan	Azerbaïdjan
+BAH	Bahamas	Bahamas	Bahamas	Bahamas
+BAN	Bangladesh	Bangladesh	Bangladesh	Bangladesh
+BAR	Barbados	Barbados	Barbade	Barbade
+BDI	Burundi	Burundi	Burundi	Burundi
+BEL	Belgium	Belgium	Belgique	Belgique
+BEN	Benin	Benin	Bénin	Bénin
+BER	Bermuda	Bermuda	Bermudes	Bermudes
+BHU	Bhutan	Bhutan	Bhoutan	Bhoutan
+BIH	Bosnia and Herzegovina	Bosnia&Herzegov	Bosnie-Herzégovine	Bosnie-Herzég.
+BIZ	Belize	Belize	Belize	Belize
+BLR	Belarus	Belarus	Bélarus	Bélarus
+BOL	Bolivia	Bolivia	Bolivie	Bolivie
+BOT	Botswana	Botswana	Botswana	Botswana
+BRA	Brazil	Brazil	Brésil	Brésil
+BRN	Bahrain	Bahrain	Bahreïn	Bahreïn
+BRU	Brunei Darussalam	Brunei Daruss	Brunéi Darussalam	Brunéi Daruss.
+BUL	Bulgaria	Bulgaria	Bulgarie	Bulgarie
+BUR	Burkina Faso	Burkina Faso	Burkina Faso	Burkina Faso
+BVT	Bouvet Island	Bouvet Island	Île Bouvet	Île Bouvet
+CAF	Central African Republic	Centr Afric Rep	République centrafricaine	Rép. centrafr.
+CAM	Cambodia	Cambodia	Cambodge	Cambodge
+CAN	Canada	Canada	Canada	Canada
+CAY	Cayman Islands	Cayman Islands	Îles Caïmans	Îles Caïmans
+CCK	Cocos Islands	Cocos Islands	Îles Cocos	Îles Cocos
+CGO	Congo	Congo	Congo	Congo
+CHA	Chad	Chad	Tchad	Tchad
+CHI	Chile	Chile	Chili	Chili
+CHN	People's Republic of China	China	République populaire de Chine	Chine
+CIS	Commonwealth of Independent States	CIS	FRA Commonwealth of Independent States	CIS
+CIV	Côte d'Ivoire	Côte d'Ivoire	Côte d'Ivoire	Côte d'Ivoire
+CMR	Cameroon	Cameroon	Cameroun	Cameroun
+COD	Democratic Republic of the Congo	DR Congo	République démocratique du Congo	RD Congo
+COK	Cook Islands	Cook Islands	Îles Cook	Îles Cook
+COL	Colombia	Colombia	Colombie	Colombie
+COM	Comoros	Comoros	Comores	Comores
+CPV	Cape Verde	Cape Verde	Cap-Vert	Cap-Vert
+CRC	Costa Rica	Costa Rica	Costa Rica	Costa Rica
+CRO	Croatia	Croatia	Croatie	Croatie
+CUB	Cuba	Cuba	Cuba	Cuba
+CUW	Curacao	Curacao	Curacao	Curacao
+CXR	Christmas Island	Christmas Island	Île Christmas	Île Christmas
+CYP	Cyprus	Cyprus	Chypre	Chypre
+CZE	Czech Republic	Czech Republic	République tchèque	Rép. tchèque
+DEN	Denmark	Denmark	Danemark	Danemark
+DJI	Djibouti	Djibouti	Djibouti	Djibouti
+DMA	Dominica	Dominica	Dominique	Dominique
+DOM	Dominican Republic	Dominican Rep.	République dominicaine	Rép. dominic.
+ECU	Ecuador	Ecuador	Équateur	Équateur
+EGY	Egypt	Egypt	Égypte	Égypte
+ENG	England	England	Angleterre	Angleterre
+ERI	Eritrea	Eritrea	Érythrée	Érythrée
+ESA	El Salvador	El Salvador	El Salvador	El Salvador
+ESH	Western Sahara	Western Sahara	Sahara Occidental	Sahara Occidental
+ESP	Spain	Spain	Espagne	Espagne
+EST	Estonia	Estonia	Estonie	Estonie
+ETH	Ethiopia	Ethiopia	Éthiopie	Éthiopie
+EUN	Unified Team	Unified Team	Équipe unifiée	Équipe unifiée
+FIJ	Fiji	Fiji	Fidji	Fidji
+FIN	Finland	Finland	Finlande	Finlande
+FLK	Falkland Islands	Falkland Islands	Îles Malouines	Îles Malouines
+FRA	France	France	France	France
+FRG	Federal Republic of Germany	FRG	République Fédérale d'Allemagne	FRG
+FRO	Faroe Islands	Faroe Islands	Îles Féroé	Îles Féroé
+FSM	Federated States of Micronesia	Micronesia	États fédérés de Micronésie	Micronésie
+GAB	Gabon	Gabon	Gabon	Gabon
+GAM	Gambia	Gambia	Gambie	Gambie
+GBR	Great Britain	Great Britain	Grande-Bretagne	Grande-Bretagne
+GBS	Guinea-Bissau	Guinea-Bissau	Guinée-Bissau	Guinée-Bissau
+GDR	GDR	GDR	RDA	RDA
+GEO	Georgia	Georgia	Géorgie	Géorgie
+GEQ	Equatorial Guinea	Equator. Guinea	Guinée équatoriale	Guinée équator.
+GER	Germany	Germany	Allemagne	Allemagne
+GHA	Ghana	Ghana	Ghana	Ghana
+GIB	Gibraltar	Gibraltar	Gibraltar	Gibraltar
+GLP	Guadeloupe	Guadeloupe	Guadeloupe	Guadeloupe
+GRE	Greece	Greece	Grèce	Grèce
+GRL	Greenland	Greenland	Groenland	Groenland
+GRN	Grenada	Grenada	Grenade	Grenade
+GUA	Guatemala	Guatemala	Guatemala	Guatemala
+GUF	French Guiana	French Guiana	Guyane française	Guyane française
+GUI	Guinea	Guinea	Guinée	Guinée
+GUM	Guam	Guam	Guam	Guam
+GUY	Guyana	Guyana	Guyana	Guyana
+HAI	Haiti	Haiti	Haïti	Haïti
+HKG	Hong Kong, China	Hong Kong, CHN	Hong Kong, Chine	Hong Kong, CHN
+HMD	Heard and McDonald Islands	Heard and McDonald Islands	Îles Heard et McDonald	Îles Heard et McDonald
+HON	Honduras	Honduras	Honduras	Honduras
+HUN	Hungary	Hungary	Hongrie	Hongrie
+INA	Indonesia	Indonesia	Indonésie	Indonésie
+IND	India	India	Inde	Inde
+IOA	Independent Olympic Athlete	Independent Olympic Athlete	Athlète Olympique Indépendant	Athlète Olympique Indépendant
+IOT	British Indian Ocean Territory	British Indian Ocean Territory	Ter. brit. de l'Océan Indien	Ter. brit. de l'Océan Indien
+IRI	Islamic Republic of Iran	Iran	République islamique d'Iran	Iran
+IRL	Ireland	Ireland	Irlande	Irlande
+IRQ	Iraq	Iraq	Iraq	Iraq
+ISL	Iceland	Iceland	Islande	Islande
+ISR	Israel	Israel	Israël	Israël
+ISV	Virgin Islands, US	Virgin Isl, US	Îles Vierges américaines	Îles Vierges EU
+ITA	Italy	Italy	Italie	Italie
+IVB	Virgin Islands, British	Virgin Isl, B	Îles Vierges britanniques	Îles Vierges RU
+JAM	Jamaica	Jamaica	Jamaïque	Jamaïque
+JOR	Jordan	Jordan	Jordanie	Jordanie
+JPN	Japan	Japan	Japon	Japon
+KAZ	Kazakhstan	Kazakhstan	Kazakhstan	Kazakhstan
+KEN	Kenya	Kenya	Kenya	Kenya
+KGZ	Kyrgyzstan	Kyrgyzstan	Kirghizistan	Kirghizistan
+KIR	Kiribati	Kiribati	Kiribati	Kiribati
+KOR	Republic of Korea	Korea	République de Corée	Corée
+KSA	Saudi Arabia	Saudi Arabia	Arabie saoudite	Arabie saoudite
+KUW	Kuwait	Kuwait	Koweït	Koweït
+LAO	Lao People's Democratic Republic	Lao PDR	République démocratique populaire lao	RDP lao
+LAT	Latvia	Latvia	Lettonie	Lettonie
+LBA	Libya	Libya	Lybie	Lybie
+LBR	Liberia	Liberia	Libéria	Libéria
+LCA	Saint Lucia	Saint Lucia	Sainte-Lucie	Sainte-Lucie
+LES	Lesotho	Lesotho	Lesotho	Lesotho
+LIB	Lebanon	Lebanon	Liban	Liban
+LIE	Liechtenstein	Liechtenstein	Liechtenstein	Liechtenstein
+LTU	Lithuania	Lithuania	Lituanie	Lituanie
+LUX	Luxembourg	Luxembourg	Luxembourg	Luxembourg
+MAC	Macao, China	Macao, China	Macao	Macao
+MAD	Madagascar	Madagascar	Madagascar	Madagascar
+MAR	Morocco	Morocco	Maroc	Maroc
+MAS	Malaysia	Malaysia	Malaisie	Malaisie
+MAW	Malawi	Malawi	Malawi	Malawi
+MDA	Republic of Moldova	Rep. of Moldova	République de Moldavie	Moldavie
+MDV	Maldives	Maldives	Maldives	Maldives
+MEX	Mexico	Mexico	Mexique	Mexique
+MGL	Mongolia	Mongolia	Mongolie	Mongolie
+MHL	Marshall Islands	Marshall Is	Îles Marshall	Îles Marshall
+MKD	The Former Yugoslav Republic of Macedonia	MKD	ex-République yougoslave de Macédoine	MKD
+MLI	Mali	Mali	Mali	Mali
+MLT	Malta	Malta	Malte	Malte
+MNE	Montenegro	Montenegro	Monténégro	Monténégro
+MNP	Northern Marianas Islands	N. Marianas Is.	Îles Mariannes du Nord	Îs. Mariannes N
+MON	Monaco	Monaco	Monaco	Monaco
+MOZ	Mozambique	Mozambique	Mozambique	Mozambique
+MRI	Mauritius	Mauritius	Maurice	Maurice
+MSR	Montserrat	Montserrat	Montserrat	Montserrat
+MTN	Mauritania	Mauritania	Mauritanie	Mauritanie
+MTQ	Martinique	Martinique	Martinique	Martinique
+MYA	Myanmar	Myanmar	Myanmar	Myanmar
+MYT	Mayotte	Mayotte	Mayotte	Mayotte
+NAM	Namibia	Namibia	Namibie	Namibie
+NCA	Nicaragua	Nicaragua	Nicaragua	Nicaragua
+NCL	New Caledonia	New Caledonia	Nouvelle-Calédonie	Nouvelle-Calédonie
+NED	Netherlands	Netherlands	Pays-Bas	Pays-Bas
+NEP	Nepal	Nepal	Népal	Népal
+NFK	Norfolk Island	Norfolk Island	Île Norfolk	Île Norfolk
+NGR	Nigeria	Nigeria	Nigéria	Nigéria
+NIG	Niger	Niger	Niger	Niger
+NIU	Niue	Niue	Niue	Niue
+NOR	Norway	Norway	Norvège	Norvège
+NRU	Nauru	Nauru	Nauru	Nauru
+NZL	New Zealand	New Zealand	Nouvelle-Zélande	Nle-Zélande
+OMA	Oman	Oman	Oman	Oman
+PAK	Pakistan	Pakistan	Pakistan	Pakistan
+PAN	Panama	Panama	Panama	Panama
+PAR	Paraguay	Paraguay	Paraguay	Paraguay
+PCN	Pitcairn Islands	Pitcairn Islands	Îles Pitcairn	Îles Pitcairn
+PER	Peru	Peru	Pérou	Pérou
+PHI	Philippines	Philippines	Philippines	Philippines
+PLE	Palestine	Palestine	Palestine	Palestine
+PLW	Palau	Palau	Palaos	Palaos
+PNG	Papua New Guinea	Papua N Guinea	Papouasie-Nouvelle-Guinée	Pap.-N.-Guinée
+POL	Poland	Poland	Pologne	Pologne
+POR	Portugal	Portugal	Portugal	Portugal
+PRK	Democratic People's Republic  of Korea	DPR Korea	République populaire démocratique de Corée	RPD de Corée
+PUR	Puerto Rico	Puerto Rico	Porto Rico	Porto Rico
+PYF	French Polynesia	French Polynesia	Polynésie française	Polynésie française
+QAT	Qatar	Qatar	Qatar	Qatar
+REU	Reunion Island	Reunion Island	La Réunion	La Réunion
+ROU	Romania	Romania	Roumanie	Roumanie
+RSA	South Africa	South Africa	Afrique du Sud	Afrique du Sud
+RSS	Russia	Russia	Russia	Russia
+RUS	Russian Federation	Russia	Fédération de Russie	Russie
+RWA	Rwanda	Rwanda	Rwanda	Rwanda
+SAM	Samoa	Samoa	Samoa	Samoa
+SCG	Serbia and Montenegro	Serbia and Montenegro	Serbie-et-Monténégro	Serbie-Montén.
+SEN	Senegal	Senegal	Sénégal	Sénégal
+SEY	Seychelles	Seychelles	Seychelles	Seychelles
+SGS	South Georgia and Sandwich Is.	South Georgia and Sandwich Is.	Îles Géorgie Sandwich du Sud	Îles Géorgie Sandwich du Sud
+SHN	Saint Helena	Saint Helena	Sainte-Hélène	Sainte-Hélène
+SIN	Singapore	Singapore	Singapour	Singapour
+SJM	Svalbard and Jan Mayen	Svalbard and Jan Mayen	Svalbard et Jan Mayen	Svalbard et Jan Mayen
+SKN	Saint Kitts and Nevis	StKitts&Nevis	Saint-Kitts-et-Nevis	S.Kitts-Nevis
+SLE	Sierra Leone	Sierra Leone	Sierra Leone	Sierra Leone
+SLO	Slovenia	Slovenia	Slovénie	Slovénie
+SMR	San Marino	San Marino	Saint-Marin	Saint-Marin
+SOL	Solomon Islands	Solomon Islands	Îles Salomon	Îles Salomon
+SOM	Somalia	Somalia	Somalie	Somalie
+SPM	Saint Pierre and Miquelon	Saint Pierre and Miquelon	Saint-Pierre-et-Miquelon	Saint-Pierre-et-Miquelon
+SRB	Serbia	Serbia	Serbie	Serbie
+SRI	Sri Lanka	Sri Lanka	Sri Lanka	Sri Lanka
+STP	Sao Tome and Principe	S.Tome&Principe	Sao Tomé-et-Principe	S.Tomé-Principe
+SUD	Sudan	Sudan	Soudan	Soudan
+SUI	Switzerland	Switzerland	Suisse	Suisse
+SUR	Suriname	Suriname	Suriname	Suriname
+SVK	Slovakia	Slovakia	Slovaquie	Slovaquie
+SWE	Sweden	Sweden	Suède	Suède
+SWZ	Swaziland	Swaziland	Swaziland	Swaziland
+SYR	Syrian Arab Republic	Syria	République arabe syrienne	Syrie
+TAH	Tahiti	Tahiti	Tahiti	Tahiti
+TAN	United Republic of Tanzania	Tanzania	République unie de Tanzanie	Tanzanie
+TCA	Turks and Caicos Islands	Turks and Caicos Islands	Îles Turks-et-Caicos	Îles Turks-et-Caicos
+TCH	Czechoslovakia	Czechoslovakia	Tchécoslovaquie	Tchécoslovaquie
+TGA	Tonga	Tonga	Tonga	Tonga
+THA	Thailand	Thailand	Thaïlande	Thaïlande
+TJK	Tajikistan	Tajikistan	Tadjikistan	Tadjikistan
+TKL	Tokelau	Tokelau	Tokelau	Tokelau
+TKM	Turkmenistan	Turkmenistan	Turkménistan	Turkménistan
+TLS	Democratic Republic of Timor-Leste	Timor-Leste	République démocratique du Timor-Oriental	Timor-Oriental
+TOG	Togo	Togo	Togo	Togo
+TPE	Chinese Taipei	Chinese Taipei	Chinese Taipei	Chinese Taipei
+TRI	Trinidad and Tobago	Trinidad&Tobago	Trinité-et-Tobago	Trinité-Tobago
+TUN	Tunisia	Tunisia	Tunisie	Tunisie
+TUR	Turkey	Turkey	Turquie	Turquie
+TUV	Tuvalu	Tuvalu	Tuvalu	Tuvalu
+UAE	United Arab Emirates	UA Emirates	Émirats arabes unis	EAU
+UGA	Uganda	Uganda	Ouganda	Ouganda
+UKR	Ukraine	Ukraine	Ukraine	Ukraine
+UMI	US Outlying Islands	US Outlying Islands	Îles min. éloignées des É.-U.	Îles min. éloignées des É.-U.
+URS	USSR	USSR	U.R.S.S.	U.R.S.S.
+URU	Uruguay	Uruguay	Uruguay	Uruguay
+USA	United States of America	United States	États-Unis d'Amérique	États-Unis
+UZB	Uzbekistan	Uzbekistan	Ouzbékistan	Ouzbékistan
+VAN	Vanuatu	Vanuatu	Vanuatu	Vanuatu
+VAT	Vatican	Vatican	Vatican	Vatican
+VEN	Venezuela	Venezuela	Venezuela	Venezuela
+VIE	Vietnam	Vietnam	Viêt Nam	Viêt Nam
+VIN	St Vincent and the Grenadines	StV&Grenadines	Saint-Vincent-et-les-Grenadines	StV&Grenadines
+WLF	Wallis & Futuna Islands	Wallis & Futuna Islands	Wallis-et-Futuna	Wallis-et-Futuna
+XXK	Kosovo	Kosovo	Kosovo	Kosovo
+YEM	Yemen	Yemen	Yémen	Yémen
+YUG	The Federal Republic of Yugoslavia	Yugoslavia	Yougoslavie	Yougoslavie
+ZAM	Zambia	Zambia	Zambie	Zambie
+ZIM	Zimbabwe	Zimbabwe	Zimbabwe	Zimbabwe
