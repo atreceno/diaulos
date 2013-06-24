@@ -10,7 +10,7 @@ alter table race auto_increment = 1;
 alter table phase auto_increment = 1;
 alter table event auto_increment = 1;
 -- Sport
-load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/14_discipline.txt' into table sport fields terminated by '\t' lines terminated by '\n' ignore 1 lines (code, @name, @name_fr, @is_sport, @sport, @order, @schedule) set name = @name, description = concat('Say something cool about ', @name), version = 0;
+load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/discipline.txt' into table sport fields terminated by '\t' lines terminated by '\n' ignore 1 lines (code, @name, @name_fr, @is_sport, @sport, @order, @schedule) set name = @name, description = concat('Say something cool about ', @name), version = 0;
 -- Event Gender
 insert into event_gender (code, name, version) values ('0', 'Global', 0);
 insert into event_gender (code, name, version) values ('M', 'Men', 0);
@@ -21,17 +21,17 @@ insert into medal (code, name, version) values ('G', 'Gold', 0);
 insert into medal (code, name, version) values ('S', 'Silver', 0);
 insert into medal (code, name, version) values ('B', 'Bronce', 0);
 -- Venue
-load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/17_venue.txt' into table venue fields terminated by '\t' lines terminated by '\n' ignore 1 lines (code, @comp, description, name, @desc_fr, @name_fr) set address = 'No address at the moment', capacity = 2000, version = 0;
+load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/venue.txt' into table venue fields terminated by '\t' lines terminated by '\n' ignore 1 lines (code, @comp, description, name, @desc_fr, @name_fr) set address = 'No address at the moment', capacity = 2000, version = 0;
 -- Country
-load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/15_country.txt' into table country fields terminated by '\t' lines terminated by '\n' ignore 1 lines (code, @desc_en, name, @desc_fr, @name_fr) set version = 0;
+load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/country.txt' into table country fields terminated by '\t' lines terminated by '\n' ignore 1 lines (code, @desc_en, name, @desc_fr, @name_fr) set version = 0;
 -- Event
-load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/23_event.txt' into table event fields terminated by '\t' lines terminated by '\n' ignore 1 lines (@discipline_code, @gender_code, @subevent_code, @order, @name, @name_fr, @TeamEvent) set code = concat(@discipline_code, @gender_code, @subevent_code), name = @name, description = concat('Say something good about ', @name), sport_code = @discipline_code, gender_code = @gender_code, version = 0;
+load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/event.txt' into table event fields terminated by '\t' lines terminated by '\n' ignore 1 lines (@discipline_code, @gender_code, @subevent_code, @order, @name, @name_fr, @TeamEvent) set code = concat(@discipline_code, @gender_code, @subevent_code), name = @name, description = concat('Say something good about ', @name), sport_code = @discipline_code, gender_code = @gender_code, version = 0;
 -- Phase
 set foreign_key_checks = 0;
-load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/25_phase.txt' into table phase fields terminated by '\t' lines terminated by '\n' ignore 1 lines (@discipline_code, @gender_code, @subevent_code, @subphase_code, @phase_type, @desc_en, @name, @desc_fr, @name_fr) set code = concat(@discipline_code,@gender_code,@subevent_code, @subphase_code), name = @name, description = concat('Say something awesome about ', @name), version = 0; 
+load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/phase.txt' into table phase fields terminated by '\t' lines terminated by '\n' ignore 1 lines (@discipline_code, @gender_code, @subevent_code, @subphase_code, @phase_type, @desc_en, @name, @desc_fr, @name_fr) set code = concat(@discipline_code,@gender_code,@subevent_code, @subphase_code), name = @name, description = concat('Say something awesome about ', @name), version = 0; 
 update phase p inner join event e on left(p.code, 6) = e.code set p.event_id = e.id where p.event_id = 0;
 -- Race
-load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/28_eventunit.txt' into table race fields terminated by '\t' lines terminated by '\n' ignore 1 lines (@discipline_code, @gender_code, @subevent_code, @subphase_code, @subeventunit_code, @sche, @medal, @desc_en, @name, @desc_fr, @name_fr, @eu_type, @cis, @info, @filter11, @filter12, @filter21, @filter22, @criteria) set code = concat(@discipline_code,@gender_code,@subevent_code, @subphase_code, @subeventunit_code), name = @name, description = concat('Say something stunning about ', @name), official = 0, version = 0;
+load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/eventunit.txt' into table race fields terminated by '\t' lines terminated by '\n' ignore 1 lines (@discipline_code, @gender_code, @subevent_code, @subphase_code, @subeventunit_code, @sche, @medal, @desc_en, @name, @desc_fr, @name_fr, @eu_type, @cis, @info, @filter11, @filter12, @filter21, @filter22, @criteria) set code = concat(@discipline_code,@gender_code,@subevent_code, @subphase_code, @subeventunit_code), name = @name, description = concat('Say something stunning about ', @name), official = 0, version = 0;
 update race c inner join phase p on left(c.code, 7) = p.code set c.phase_id = p.id, start_date = now(), finish_date = now(), venue_code = 'OPK' where c.phase_id = 0;
 set foreign_key_checks = 1;
 -- User and Role
