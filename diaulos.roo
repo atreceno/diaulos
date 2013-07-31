@@ -1,1 +1,241 @@
 project --topLevelPackage com.atreceno.it.diaulos --projectName diaulos --java 6 --packaging JAR
+jpa setup --provider HIBERNATE --database MYSQL --databaseName diaulos_db --userName ulises
+
+/*
+ * References (not business related)
+ */
+enum type --class ~.reference.Gender
+enum constant --name MALE
+enum constant --name FEMALE
+
+/*
+ * Entities
+ */
+entity jpa --class ~.domain.Sport --equals --activeRecord true --testAutomatically --identifierField code --identifierType java.lang.String
+entity jpa --class ~.domain.Venue --equals --activeRecord true --testAutomatically --identifierField code --identifierType java.lang.String
+entity jpa --class ~.domain.EventGender --equals --activeRecord true --testAutomatically --identifierField code --identifierType java.lang.String
+entity jpa --class ~.domain.Country --equals --activeRecord true --testAutomatically --identifierField code --identifierType java.lang.String
+entity jpa --class ~.domain.Medal --equals --activeRecord true --testAutomatically --identifierField code --identifierType java.lang.String
+entity jpa --class ~.domain.Event --equals --activeRecord false --testAutomatically
+entity jpa --class ~.domain.Phase --equals --activeRecord false --testAutomatically
+entity jpa --class ~.domain.Race --equals --activeRecord false --testAutomatically
+entity jpa --class ~.domain.Lap --equals --activeRecord false --testAutomatically
+entity jpa --class ~.domain.Participant --equals --activeRecord false --testAutomatically 
+entity jpa --class ~.domain.ParticEvent --equals --activeRecord false --testAutomatically
+entity jpa --class ~.domain.ParticPhase --equals --activeRecord false --testAutomatically
+entity jpa --class ~.domain.ParticRace --equals --activeRecord false --testAutomatically
+entity jpa --class ~.domain.ParticLap --equals --activeRecord false --testAutomatically
+entity jpa --class ~.domain.security.User --equals --activeRecord false --permitReservedWords
+entity jpa --class ~.domain.security.Role --equals --activeRecord false --permitReservedWords
+
+/*
+ * Fields
+ */
+focus --class ~.domain.Sport
+field string --fieldName code --notNull --sizeMin 2 --sizeMax 2
+field string --fieldName name --notNull --sizeMax 25
+field string --fieldName description --sizeMax 255
+field set --fieldName events --type ~.domain.Event --mappedBy sport --cardinality ONE_TO_MANY
+
+focus --class ~.domain.Venue
+field string --fieldName code --notNull --sizeMin 3 --sizeMax 3
+field string --fieldName name --notNull --sizeMax 25
+field string --fieldName description --sizeMax 255
+field number --fieldName capacity --min 1 --max 100000 --type java.lang.Integer
+field string --fieldName address --sizeMax 255
+
+focus --class ~.domain.EventGender
+field string --fieldName code --notNull --sizeMin 1 --sizeMax 1
+field string --fieldName name --notNull --sizeMax 15
+
+focus --class ~.domain.Country
+field string --fieldName code --notNull --sizeMin 3 --sizeMax 3
+field string --fieldName name --notNull --sizeMax 15
+
+focus --class ~.domain.Medal
+field string --fieldName code --notNull --sizeMin 1 --sizeMax 1
+field string --fieldName name --notNull --sizeMax 6
+
+focus --class ~.domain.Event
+field string --fieldName code --notNull --sizeMin 6 --sizeMax 6 --unique
+field string --fieldName name --notNull --sizeMax 45
+field string --fieldName description --sizeMax 255
+field reference --fieldName gender --type ~.domain.EventGender --notNull --joinColumnName gender_code
+field reference --fieldName sport --type ~.domain.Sport --notNull --joinColumnName sport_code
+field set --fieldName phases --type ~.domain.Phase --mappedBy event --cardinality ONE_TO_MANY
+field set --fieldName participants --type ~.domain.ParticEvent --mappedBy event --cardinality ONE_TO_MANY
+
+focus --class ~.domain.Phase
+field string --fieldName code --notNull --sizeMin 7 --sizeMax 7 --unique
+field string --fieldName name --notNull --sizeMax 45
+field string --fieldName description --sizeMax 255
+field reference --fieldName event --type ~.domain.Event --notNull --joinColumnName event_id
+field set --fieldName races --type ~.domain.Race --mappedBy phase --cardinality ONE_TO_MANY
+field set --fieldName participants --type ~.domain.ParticPhase --mappedBy phase --cardinality ONE_TO_MANY
+
+focus --class ~.domain.Race
+field string --fieldName code --notNull --sizeMin 9 --sizeMax 9 --unique
+field string --fieldName name --notNull --sizeMax 45
+field string --fieldName description --sizeMax 255
+field date --fieldName startDate --type java.util.Date
+field date --fieldName finishDate --type java.util.Date
+field boolean --fieldName official
+field reference --fieldName phase --type ~.domain.Phase --notNull --joinColumnName phase_id
+field reference --fieldName venue --type ~.domain.Venue --joinColumnName venue_code
+field set --fieldName laps --type ~.domain.Lap --mappedBy race --cardinality ONE_TO_MANY
+field set --fieldName participants --type ~.domain.ParticRace --mappedBy race --cardinality ONE_TO_MANY
+
+focus --class ~.domain.Lap
+field string --fieldName code --notNull
+field string --fieldName name --sizeMax 20
+field number --fieldName cumulativeDistance --type java.math.BigDecimal
+field number --fieldName partialDistance --type java.math.BigDecimal
+field reference --fieldName race --type ~.domain.Race --notNull --joinColumnName competition_id
+field set --fieldName participants --type ~.domain.ParticLap --mappedBy lap --cardinality ONE_TO_MANY
+
+focus --class ~.domain.Participant
+field string --fieldName code --notNull --unique
+field string --fieldName firstName --notNull --sizeMin 3 --sizeMax 30
+field string --fieldName lastName --notNull --sizeMin 3 --sizeMax 30
+field enum --fieldName gender --type ~.reference.Gender --notNull --column gender --enumType STRING
+field string --fieldName email --sizeMin 6 --sizeMax 30 --regexp "[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+" 
+field date --fieldName birthDate --type java.util.Date --notNull --past --persistenceType JPA_DATE
+field file --fieldName image --contentType JPG
+field number --fieldName weight --type java.math.BigDecimal --decimalMin 0.0 --decimalMax 299.99
+field number --fieldName height --type java.math.BigDecimal --decimalMin 0.0 --decimalMax 299.99
+field set --fieldName laps --type ~.domain.ParticLap --mappedBy participant --cardinality ONE_TO_MANY
+field set --fieldName races --type ~.domain.ParticRace --mappedBy participant --cardinality ONE_TO_MANY
+field set --fieldName phases --type ~.domain.ParticPhase --mappedBy participant --cardinality ONE_TO_MANY
+field set --fieldName events --type ~.domain.ParticEvent --mappedBy participant --cardinality ONE_TO_MANY
+field reference --fieldName country --type ~.domain.Country --joinColumnName country_code
+
+focus --class ~.domain.ParticEvent
+field reference --fieldName event --type ~.domain.Event --notNull --joinColumnName event_id
+field reference --fieldName participant --type ~.domain.Participant --notNull --joinColumnName participant_id
+field reference --fieldName medal --type ~.domain.Medal --joinColumnName medal_code
+field number --fieldName rank --type java.lang.Integer
+field string --fieldName result --permitReservedWords
+
+focus --class ~.domain.ParticPhase
+field reference --fieldName phase --type ~.domain.Phase --notNull --joinColumnName phase_id
+field reference --fieldName participant --type ~.domain.Participant --notNull --joinColumnName participant_id
+field number --fieldName rank --type java.lang.Integer
+field string --fieldName result --permitReservedWords
+field boolean --fieldName qualified
+
+focus --class ~.domain.ParticRace
+field reference --fieldName race --type ~.domain.Race --notNull --joinColumnName race_id
+field reference --fieldName participant --type ~.domain.Participant --notNull --joinColumnName participant_id
+field number --fieldName rank --type java.lang.Integer
+field string --fieldName result --permitReservedWords
+field string --fieldName lane
+field number --fieldName bib --type java.lang.Integer
+
+focus --class ~.domain.ParticLap
+field reference --fieldName lap --type ~.domain.Lap --notNull --joinColumnName lap_id
+field reference --fieldName participant --type ~.domain.Participant --notNull --joinColumnName participant_id
+field number --fieldName rank --type java.lang.Integer
+field string --fieldName result --permitReservedWords
+
+focus --class ~.domain.security.User
+field string --fieldName username --notNull --sizeMin 3 --sizeMax 20
+field string --fieldName password --notNull --sizeMin 3 --sizeMax 65
+field boolean --fieldName enabled
+field set --fieldName roles --type ~.domain.security.Role --cardinality MANY_TO_MANY
+
+focus --class ~.domain.security.Role
+field string --fieldName name --notNull --sizeMin 8 --sizeMax 20 --regexp ^ROLE_[A-Z]*
+field set --fieldName users --type ~.domain.security.User --mappedBy roles --cardinality MANY_TO_MANY
+
+/*
+ * Repository (DAO) layer
+ */
+repository jpa --interface ~.repository.EventRepository --entity ~.domain.Event
+repository jpa --interface ~.repository.PhaseRepository --entity ~.domain.Phase
+repository jpa --interface ~.repository.RaceRepository --entity ~.domain.Race
+repository jpa --interface ~.repository.LapRepository --entity ~.domain.Lap
+repository jpa --interface ~.repository.ParticipantRepository --entity ~.domain.Participant 
+repository jpa --interface ~.repository.ParticEventRepository --entity ~.domain.ParticEvent
+repository jpa --interface ~.repository.ParticPhaseRepository --entity ~.domain.ParticPhase
+repository jpa --interface ~.repository.ParticRaceRepository --entity ~.domain.ParticRace
+repository jpa --interface ~.repository.ParticLapRepository --entity ~.domain.ParticLap
+repository jpa --interface ~.repository.UserRepository --entity ~.domain.security.User
+repository jpa --interface ~.repository.RoleRepository --entity ~.domain.security.Role
+
+/*
+ * Service layer
+ */
+service --interface ~.service.EventService --entity ~.domain.Event
+service --interface ~.service.PhaseService --entity ~.domain.Phase
+service --interface ~.service.RaceService --entity ~.domain.Race
+service --interface ~.service.LapService --entity ~.domain.Lap
+service --interface ~.service.ParticipantService --entity ~.domain.Participant 
+service --interface ~.service.ParticEventService --entity ~.domain.ParticEvent
+service --interface ~.service.ParticPhaseService --entity ~.domain.ParticPhase
+service --interface ~.service.ParticRaceService --entity ~.domain.ParticRace
+service --interface ~.service.ParticLapService --entity ~.domain.ParticLap
+service --interface ~.service.UserService --entity ~.domain.security.User
+service --interface ~.service.RoleService --entity ~.domain.security.Role
+
+/*
+ * Finders
+ */
+focus --class ~.domain.Sport
+finder add --finderName findSportsByCodeEquals
+finder add --finderName findSportsByNameLike
+
+focus --class ~.domain.Venue
+finder add --finderName findVenuesByCodeEquals
+finder add --finderName findVenuesByNameLike
+
+focus --class ~.domain.Country
+finder add --finderName findCountrysByCodeEquals
+finder add --finderName findCountrysByNameLike
+
+/*
+ * Web tier
+ */
+web mvc setup
+web mvc all --package ~.web
+web mvc finder all
+web mvc language --code es
+json all
+web mvc json all --package ~.web
+
+/*
+ * Selenium Tests
+ */
+selenium test --controller ~.web.SportController
+selenium test --controller ~.web.VenueController
+selenium test --controller ~.web.EventGenderController
+selenium test --controller ~.web.CountryController
+selenium test --controller ~.web.MedalController
+selenium test --controller ~.web.EventController
+selenium test --controller ~.web.PhaseController
+selenium test --controller ~.web.RaceController
+selenium test --controller ~.web.LapController
+selenium test --controller ~.web.ParticipantController
+selenium test --controller ~.web.ParticEventController
+selenium test --controller ~.web.ParticRaceController
+selenium test --controller ~.web.ParticLapController
+
+/*
+ * Security
+ */
+security setup
+
+/*
+ * Logging
+ */
+logging setup --level INFO
+logging setup --level DEBUG --package PERSISTENCE 
+logging setup --level DEBUG --package WEB 
+logging setup --level DEBUG --package SECURITY 
+
+/*
+ * Install addons
+ */
+// addon search --requiresCommand jquery
+// addon install id --searchResultId 1
+// jquery api install
+// jquery ui install
