@@ -7,7 +7,10 @@ import com.atreceno.it.diaulos.domain.LapDataOnDemand;
 import com.atreceno.it.diaulos.domain.LapIntegrationTest;
 import com.atreceno.it.diaulos.repository.LapRepository;
 import com.atreceno.it.diaulos.service.LapService;
+import java.util.Iterator;
 import java.util.List;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +23,7 @@ privileged aspect LapIntegrationTest_Roo_IntegrationTest {
     
     declare @type: LapIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
     
-    declare @type: LapIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext*.xml");
+    declare @type: LapIntegrationTest: @ContextConfiguration(locations = "classpath*:/META-INF/spring/applicationContext*.xml");
     
     declare @type: LapIntegrationTest: @Transactional;
     
@@ -108,7 +111,16 @@ privileged aspect LapIntegrationTest_Roo_IntegrationTest {
         Lap obj = dod.getNewTransientLap(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'Lap' failed to provide a new transient entity", obj);
         Assert.assertNull("Expected 'Lap' identifier to be null", obj.getId());
-        lapService.saveLap(obj);
+        try {
+            lapService.saveLap(obj);
+        } catch (final ConstraintViolationException e) {
+            final StringBuilder msg = new StringBuilder();
+            for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
+                final ConstraintViolation<?> cv = iter.next();
+                msg.append("[").append(cv.getRootBean().getClass().getName()).append(".").append(cv.getPropertyPath()).append(": ").append(cv.getMessage()).append(" (invalid value = ").append(cv.getInvalidValue()).append(")").append("]");
+            }
+            throw new IllegalStateException(msg.toString(), e);
+        }
         lapRepository.flush();
         Assert.assertNotNull("Expected 'Lap' identifier to no longer be null", obj.getId());
     }

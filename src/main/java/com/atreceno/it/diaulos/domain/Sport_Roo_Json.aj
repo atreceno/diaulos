@@ -16,12 +16,20 @@ privileged aspect Sport_Roo_Json {
         return new JSONSerializer().exclude("*.class").serialize(this);
     }
     
+    public String Sport.toJson(String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(this);
+    }
+    
     public static Sport Sport.fromJsonToSport(String json) {
         return new JSONDeserializer<Sport>().use(null, Sport.class).deserialize(json);
     }
     
     public static String Sport.toJsonArray(Collection<Sport> collection) {
         return new JSONSerializer().exclude("*.class").serialize(collection);
+    }
+    
+    public static String Sport.toJsonArray(Collection<Sport> collection, String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(collection);
     }
     
     public static Collection<Sport> Sport.fromJsonArrayToSports(String json) {

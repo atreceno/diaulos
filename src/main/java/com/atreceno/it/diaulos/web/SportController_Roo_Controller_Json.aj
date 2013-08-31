@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 privileged aspect SportController_Roo_Controller_Json {
     
-    @RequestMapping(value = "/{code}", headers = "Accept=application/json")
+    @RequestMapping(value = "/{code}", method = RequestMethod.GET, headers = "Accept=application/json")
     @ResponseBody
     public ResponseEntity<String> SportController.showJson(@PathVariable("code") String code) {
         Sport sport = Sport.findSport(code);
@@ -58,25 +58,13 @@ privileged aspect SportController_Roo_Controller_Json {
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
     
-    @RequestMapping(method = RequestMethod.PUT, headers = "Accept=application/json")
-    public ResponseEntity<String> SportController.updateFromJson(@RequestBody String json) {
+    @RequestMapping(value = "/{code}", method = RequestMethod.PUT, headers = "Accept=application/json")
+    public ResponseEntity<String> SportController.updateFromJson(@RequestBody String json, @PathVariable("code") String code) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         Sport sport = Sport.fromJsonToSport(json);
         if (sport.merge() == null) {
             return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<String>(headers, HttpStatus.OK);
-    }
-    
-    @RequestMapping(value = "/jsonArray", method = RequestMethod.PUT, headers = "Accept=application/json")
-    public ResponseEntity<String> SportController.updateFromJsonArray(@RequestBody String json) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json");
-        for (Sport sport: Sport.fromJsonArrayToSports(json)) {
-            if (sport.merge() == null) {
-                return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
-            }
         }
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }

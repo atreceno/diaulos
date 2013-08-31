@@ -7,7 +7,10 @@ import com.atreceno.it.diaulos.domain.PhaseDataOnDemand;
 import com.atreceno.it.diaulos.domain.PhaseIntegrationTest;
 import com.atreceno.it.diaulos.repository.PhaseRepository;
 import com.atreceno.it.diaulos.service.PhaseService;
+import java.util.Iterator;
 import java.util.List;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +23,7 @@ privileged aspect PhaseIntegrationTest_Roo_IntegrationTest {
     
     declare @type: PhaseIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
     
-    declare @type: PhaseIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext*.xml");
+    declare @type: PhaseIntegrationTest: @ContextConfiguration(locations = "classpath*:/META-INF/spring/applicationContext*.xml");
     
     declare @type: PhaseIntegrationTest: @Transactional;
     
@@ -108,7 +111,16 @@ privileged aspect PhaseIntegrationTest_Roo_IntegrationTest {
         Phase obj = dod.getNewTransientPhase(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'Phase' failed to provide a new transient entity", obj);
         Assert.assertNull("Expected 'Phase' identifier to be null", obj.getId());
-        phaseService.savePhase(obj);
+        try {
+            phaseService.savePhase(obj);
+        } catch (final ConstraintViolationException e) {
+            final StringBuilder msg = new StringBuilder();
+            for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
+                final ConstraintViolation<?> cv = iter.next();
+                msg.append("[").append(cv.getRootBean().getClass().getName()).append(".").append(cv.getPropertyPath()).append(": ").append(cv.getMessage()).append(" (invalid value = ").append(cv.getInvalidValue()).append(")").append("]");
+            }
+            throw new IllegalStateException(msg.toString(), e);
+        }
         phaseRepository.flush();
         Assert.assertNotNull("Expected 'Phase' identifier to no longer be null", obj.getId());
     }

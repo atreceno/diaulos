@@ -7,7 +7,10 @@ import com.atreceno.it.diaulos.domain.ParticRaceDataOnDemand;
 import com.atreceno.it.diaulos.domain.ParticRaceIntegrationTest;
 import com.atreceno.it.diaulos.repository.ParticRaceRepository;
 import com.atreceno.it.diaulos.service.ParticRaceService;
+import java.util.Iterator;
 import java.util.List;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +23,7 @@ privileged aspect ParticRaceIntegrationTest_Roo_IntegrationTest {
     
     declare @type: ParticRaceIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
     
-    declare @type: ParticRaceIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext*.xml");
+    declare @type: ParticRaceIntegrationTest: @ContextConfiguration(locations = "classpath*:/META-INF/spring/applicationContext*.xml");
     
     declare @type: ParticRaceIntegrationTest: @Transactional;
     
@@ -108,7 +111,16 @@ privileged aspect ParticRaceIntegrationTest_Roo_IntegrationTest {
         ParticRace obj = dod.getNewTransientParticRace(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'ParticRace' failed to provide a new transient entity", obj);
         Assert.assertNull("Expected 'ParticRace' identifier to be null", obj.getId());
-        particRaceService.saveParticRace(obj);
+        try {
+            particRaceService.saveParticRace(obj);
+        } catch (final ConstraintViolationException e) {
+            final StringBuilder msg = new StringBuilder();
+            for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
+                final ConstraintViolation<?> cv = iter.next();
+                msg.append("[").append(cv.getRootBean().getClass().getName()).append(".").append(cv.getPropertyPath()).append(": ").append(cv.getMessage()).append(" (invalid value = ").append(cv.getInvalidValue()).append(")").append("]");
+            }
+            throw new IllegalStateException(msg.toString(), e);
+        }
         particRaceRepository.flush();
         Assert.assertNotNull("Expected 'ParticRace' identifier to no longer be null", obj.getId());
     }

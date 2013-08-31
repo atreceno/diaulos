@@ -4,6 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_com_atreceno_it_diaulos_domain_Medal" modelAttribute="medal" path="/medals" render="${empty dependencies}" z="+wIZsyZPaNMKlWfjfUEzCWVy9b8=">
         <field:input field="name" id="c_com_atreceno_it_diaulos_domain_Medal_name" max="6" required="true" z="+scHrbEvn4dfdWL8TsL/p5qDAKM="/>
+        <field:input field="code" id="c_com_atreceno_it_diaulos_domain_Medal_code" max="1" min="1" required="true" z="dJX6ruB7ua36hq1QndYAVbOtrQA="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_com_atreceno_it_diaulos_domain_Medal" render="${not empty dependencies}" z="ASO/38+Z5M0C+G+RH5wqCxjXLEY="/>
 </div>

@@ -7,7 +7,10 @@ import com.atreceno.it.diaulos.domain.EventDataOnDemand;
 import com.atreceno.it.diaulos.domain.EventIntegrationTest;
 import com.atreceno.it.diaulos.repository.EventRepository;
 import com.atreceno.it.diaulos.service.EventService;
+import java.util.Iterator;
 import java.util.List;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +23,7 @@ privileged aspect EventIntegrationTest_Roo_IntegrationTest {
     
     declare @type: EventIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
     
-    declare @type: EventIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext*.xml");
+    declare @type: EventIntegrationTest: @ContextConfiguration(locations = "classpath*:/META-INF/spring/applicationContext*.xml");
     
     declare @type: EventIntegrationTest: @Transactional;
     
@@ -108,7 +111,16 @@ privileged aspect EventIntegrationTest_Roo_IntegrationTest {
         Event obj = dod.getNewTransientEvent(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'Event' failed to provide a new transient entity", obj);
         Assert.assertNull("Expected 'Event' identifier to be null", obj.getId());
-        eventService.saveEvent(obj);
+        try {
+            eventService.saveEvent(obj);
+        } catch (final ConstraintViolationException e) {
+            final StringBuilder msg = new StringBuilder();
+            for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
+                final ConstraintViolation<?> cv = iter.next();
+                msg.append("[").append(cv.getRootBean().getClass().getName()).append(".").append(cv.getPropertyPath()).append(": ").append(cv.getMessage()).append(" (invalid value = ").append(cv.getInvalidValue()).append(")").append("]");
+            }
+            throw new IllegalStateException(msg.toString(), e);
+        }
         eventRepository.flush();
         Assert.assertNotNull("Expected 'Event' identifier to no longer be null", obj.getId());
     }

@@ -1,11 +1,12 @@
 # Mac OS X
 .DS_Store
-# Eclipse
+# Eclipse IDE
 /target
 /.project
 /.classpath
 /.settings
+# Spring Roo
 /log.roo
-# Config
+# Credentials
 /src/main/resources/META-INF/spring/database.properties
 /src/main/resources/META-INF/sql/user.xml

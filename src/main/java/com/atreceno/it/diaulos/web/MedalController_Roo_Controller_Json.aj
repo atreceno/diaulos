@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 privileged aspect MedalController_Roo_Controller_Json {
     
-    @RequestMapping(value = "/{code}", headers = "Accept=application/json")
+    @RequestMapping(value = "/{code}", method = RequestMethod.GET, headers = "Accept=application/json")
     @ResponseBody
     public ResponseEntity<String> MedalController.showJson(@PathVariable("code") String code) {
         Medal medal = Medal.findMedal(code);
@@ -57,25 +57,13 @@ privileged aspect MedalController_Roo_Controller_Json {
         return new ResponseEntity<String>(headers, HttpStatus.CREATED);
     }
     
-    @RequestMapping(method = RequestMethod.PUT, headers = "Accept=application/json")
-    public ResponseEntity<String> MedalController.updateFromJson(@RequestBody String json) {
+    @RequestMapping(value = "/{code}", method = RequestMethod.PUT, headers = "Accept=application/json")
+    public ResponseEntity<String> MedalController.updateFromJson(@RequestBody String json, @PathVariable("code") String code) {
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");
         Medal medal = Medal.fromJsonToMedal(json);
         if (medal.merge() == null) {
             return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<String>(headers, HttpStatus.OK);
-    }
-    
-    @RequestMapping(value = "/jsonArray", method = RequestMethod.PUT, headers = "Accept=application/json")
-    public ResponseEntity<String> MedalController.updateFromJsonArray(@RequestBody String json) {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Type", "application/json");
-        for (Medal medal: Medal.fromJsonArrayToMedals(json)) {
-            if (medal.merge() == null) {
-                return new ResponseEntity<String>(headers, HttpStatus.NOT_FOUND);
-            }
         }
         return new ResponseEntity<String>(headers, HttpStatus.OK);
     }

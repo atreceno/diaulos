@@ -7,7 +7,10 @@ import com.atreceno.it.diaulos.domain.ParticEventDataOnDemand;
 import com.atreceno.it.diaulos.domain.ParticEventIntegrationTest;
 import com.atreceno.it.diaulos.repository.ParticEventRepository;
 import com.atreceno.it.diaulos.service.ParticEventService;
+import java.util.Iterator;
 import java.util.List;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +23,7 @@ privileged aspect ParticEventIntegrationTest_Roo_IntegrationTest {
     
     declare @type: ParticEventIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
     
-    declare @type: ParticEventIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext*.xml");
+    declare @type: ParticEventIntegrationTest: @ContextConfiguration(locations = "classpath*:/META-INF/spring/applicationContext*.xml");
     
     declare @type: ParticEventIntegrationTest: @Transactional;
     
@@ -108,7 +111,16 @@ privileged aspect ParticEventIntegrationTest_Roo_IntegrationTest {
         ParticEvent obj = dod.getNewTransientParticEvent(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'ParticEvent' failed to provide a new transient entity", obj);
         Assert.assertNull("Expected 'ParticEvent' identifier to be null", obj.getId());
-        particEventService.saveParticEvent(obj);
+        try {
+            particEventService.saveParticEvent(obj);
+        } catch (final ConstraintViolationException e) {
+            final StringBuilder msg = new StringBuilder();
+            for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
+                final ConstraintViolation<?> cv = iter.next();
+                msg.append("[").append(cv.getRootBean().getClass().getName()).append(".").append(cv.getPropertyPath()).append(": ").append(cv.getMessage()).append(" (invalid value = ").append(cv.getInvalidValue()).append(")").append("]");
+            }
+            throw new IllegalStateException(msg.toString(), e);
+        }
         particEventRepository.flush();
         Assert.assertNotNull("Expected 'ParticEvent' identifier to no longer be null", obj.getId());
     }

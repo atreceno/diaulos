@@ -7,7 +7,10 @@ import com.atreceno.it.diaulos.domain.RaceDataOnDemand;
 import com.atreceno.it.diaulos.domain.RaceIntegrationTest;
 import com.atreceno.it.diaulos.repository.RaceRepository;
 import com.atreceno.it.diaulos.service.RaceService;
+import java.util.Iterator;
 import java.util.List;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +23,7 @@ privileged aspect RaceIntegrationTest_Roo_IntegrationTest {
     
     declare @type: RaceIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
     
-    declare @type: RaceIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext*.xml");
+    declare @type: RaceIntegrationTest: @ContextConfiguration(locations = "classpath*:/META-INF/spring/applicationContext*.xml");
     
     declare @type: RaceIntegrationTest: @Transactional;
     
@@ -108,7 +111,16 @@ privileged aspect RaceIntegrationTest_Roo_IntegrationTest {
         Race obj = dod.getNewTransientRace(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'Race' failed to provide a new transient entity", obj);
         Assert.assertNull("Expected 'Race' identifier to be null", obj.getId());
-        raceService.saveRace(obj);
+        try {
+            raceService.saveRace(obj);
+        } catch (final ConstraintViolationException e) {
+            final StringBuilder msg = new StringBuilder();
+            for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
+                final ConstraintViolation<?> cv = iter.next();
+                msg.append("[").append(cv.getRootBean().getClass().getName()).append(".").append(cv.getPropertyPath()).append(": ").append(cv.getMessage()).append(" (invalid value = ").append(cv.getInvalidValue()).append(")").append("]");
+            }
+            throw new IllegalStateException(msg.toString(), e);
+        }
         raceRepository.flush();
         Assert.assertNotNull("Expected 'Race' identifier to no longer be null", obj.getId());
     }

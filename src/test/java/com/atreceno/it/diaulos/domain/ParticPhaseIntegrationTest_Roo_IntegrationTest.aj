@@ -7,7 +7,10 @@ import com.atreceno.it.diaulos.domain.ParticPhaseDataOnDemand;
 import com.atreceno.it.diaulos.domain.ParticPhaseIntegrationTest;
 import com.atreceno.it.diaulos.repository.ParticPhaseRepository;
 import com.atreceno.it.diaulos.service.ParticPhaseService;
+import java.util.Iterator;
 import java.util.List;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +23,7 @@ privileged aspect ParticPhaseIntegrationTest_Roo_IntegrationTest {
     
     declare @type: ParticPhaseIntegrationTest: @RunWith(SpringJUnit4ClassRunner.class);
     
-    declare @type: ParticPhaseIntegrationTest: @ContextConfiguration(locations = "classpath:/META-INF/spring/applicationContext*.xml");
+    declare @type: ParticPhaseIntegrationTest: @ContextConfiguration(locations = "classpath*:/META-INF/spring/applicationContext*.xml");
     
     declare @type: ParticPhaseIntegrationTest: @Transactional;
     
@@ -108,7 +111,16 @@ privileged aspect ParticPhaseIntegrationTest_Roo_IntegrationTest {
         ParticPhase obj = dod.getNewTransientParticPhase(Integer.MAX_VALUE);
         Assert.assertNotNull("Data on demand for 'ParticPhase' failed to provide a new transient entity", obj);
         Assert.assertNull("Expected 'ParticPhase' identifier to be null", obj.getId());
-        particPhaseService.saveParticPhase(obj);
+        try {
+            particPhaseService.saveParticPhase(obj);
+        } catch (final ConstraintViolationException e) {
+            final StringBuilder msg = new StringBuilder();
+            for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
+                final ConstraintViolation<?> cv = iter.next();
+                msg.append("[").append(cv.getRootBean().getClass().getName()).append(".").append(cv.getPropertyPath()).append(": ").append(cv.getMessage()).append(" (invalid value = ").append(cv.getInvalidValue()).append(")").append("]");
+            }
+            throw new IllegalStateException(msg.toString(), e);
+        }
         particPhaseRepository.flush();
         Assert.assertNotNull("Expected 'ParticPhase' identifier to no longer be null", obj.getId());
     }

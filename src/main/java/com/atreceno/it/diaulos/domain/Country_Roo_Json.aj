@@ -16,12 +16,20 @@ privileged aspect Country_Roo_Json {
         return new JSONSerializer().exclude("*.class").serialize(this);
     }
     
+    public String Country.toJson(String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(this);
+    }
+    
     public static Country Country.fromJsonToCountry(String json) {
         return new JSONDeserializer<Country>().use(null, Country.class).deserialize(json);
     }
     
     public static String Country.toJsonArray(Collection<Country> collection) {
         return new JSONSerializer().exclude("*.class").serialize(collection);
+    }
+    
+    public static String Country.toJsonArray(Collection<Country> collection, String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(collection);
     }
     
     public static Collection<Country> Country.fromJsonArrayToCountrys(String json) {

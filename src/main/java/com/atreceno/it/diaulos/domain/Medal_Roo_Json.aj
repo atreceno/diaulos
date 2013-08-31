@@ -16,12 +16,20 @@ privileged aspect Medal_Roo_Json {
         return new JSONSerializer().exclude("*.class").serialize(this);
     }
     
+    public String Medal.toJson(String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(this);
+    }
+    
     public static Medal Medal.fromJsonToMedal(String json) {
         return new JSONDeserializer<Medal>().use(null, Medal.class).deserialize(json);
     }
     
     public static String Medal.toJsonArray(Collection<Medal> collection) {
         return new JSONSerializer().exclude("*.class").serialize(collection);
+    }
+    
+    public static String Medal.toJsonArray(Collection<Medal> collection, String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(collection);
     }
     
     public static Collection<Medal> Medal.fromJsonArrayToMedals(String json) {

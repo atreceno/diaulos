@@ -16,12 +16,20 @@ privileged aspect Venue_Roo_Json {
         return new JSONSerializer().exclude("*.class").serialize(this);
     }
     
+    public String Venue.toJson(String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(this);
+    }
+    
     public static Venue Venue.fromJsonToVenue(String json) {
         return new JSONDeserializer<Venue>().use(null, Venue.class).deserialize(json);
     }
     
     public static String Venue.toJsonArray(Collection<Venue> collection) {
         return new JSONSerializer().exclude("*.class").serialize(collection);
+    }
+    
+    public static String Venue.toJsonArray(Collection<Venue> collection, String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(collection);
     }
     
     public static Collection<Venue> Venue.fromJsonArrayToVenues(String json) {

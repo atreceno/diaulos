@@ -16,12 +16,20 @@ privileged aspect ParticEvent_Roo_Json {
         return new JSONSerializer().exclude("*.class").serialize(this);
     }
     
+    public String ParticEvent.toJson(String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(this);
+    }
+    
     public static ParticEvent ParticEvent.fromJsonToParticEvent(String json) {
         return new JSONDeserializer<ParticEvent>().use(null, ParticEvent.class).deserialize(json);
     }
     
     public static String ParticEvent.toJsonArray(Collection<ParticEvent> collection) {
         return new JSONSerializer().exclude("*.class").serialize(collection);
+    }
+    
+    public static String ParticEvent.toJsonArray(Collection<ParticEvent> collection, String[] fields) {
+        return new JSONSerializer().include(fields).exclude("*.class").serialize(collection);
     }
     
     public static Collection<ParticEvent> ParticEvent.fromJsonArrayToParticEvents(String json) {
