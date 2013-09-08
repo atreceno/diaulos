@@ -6,10 +6,7 @@ package com.atreceno.it.diaulos.domain;
 import com.atreceno.it.diaulos.domain.EventGender;
 import com.atreceno.it.diaulos.domain.EventGenderDataOnDemand;
 import com.atreceno.it.diaulos.domain.EventGenderIntegrationTest;
-import java.util.Iterator;
 import java.util.List;
-import javax.validation.ConstraintViolation;
-import javax.validation.ConstraintViolationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -96,38 +93,6 @@ privileged aspect EventGenderIntegrationTest_Roo_IntegrationTest {
         obj.flush();
         Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getCode(), id);
         Assert.assertTrue("Version for 'EventGender' failed to increment on merge and flush directive", (currentVersion != null && obj.getVersion() > currentVersion) || !modified);
-    }
-    
-    @Test
-    public void EventGenderIntegrationTest.testPersist() {
-        Assert.assertNotNull("Data on demand for 'EventGender' failed to initialize correctly", dod.getRandomEventGender());
-        EventGender obj = dod.getNewTransientEventGender(Integer.MAX_VALUE);
-        Assert.assertNotNull("Data on demand for 'EventGender' failed to provide a new transient entity", obj);
-        Assert.assertNull("Expected 'EventGender' identifier to be null", obj.getCode());
-        try {
-            obj.persist();
-        } catch (final ConstraintViolationException e) {
-            final StringBuilder msg = new StringBuilder();
-            for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
-                final ConstraintViolation<?> cv = iter.next();
-                msg.append("[").append(cv.getRootBean().getClass().getName()).append(".").append(cv.getPropertyPath()).append(": ").append(cv.getMessage()).append(" (invalid value = ").append(cv.getInvalidValue()).append(")").append("]");
-            }
-            throw new IllegalStateException(msg.toString(), e);
-        }
-        obj.flush();
-        Assert.assertNotNull("Expected 'EventGender' identifier to no longer be null", obj.getCode());
-    }
-    
-    @Test
-    public void EventGenderIntegrationTest.testRemove() {
-        EventGender obj = dod.getRandomEventGender();
-        Assert.assertNotNull("Data on demand for 'EventGender' failed to initialize correctly", obj);
-        String id = obj.getCode();
-        Assert.assertNotNull("Data on demand for 'EventGender' failed to provide an identifier", id);
-        obj = EventGender.findEventGender(id);
-        obj.remove();
-        obj.flush();
-        Assert.assertNull("Failed to remove 'EventGender' with identifier '" + id + "'", EventGender.findEventGender(id));
     }
     
 }

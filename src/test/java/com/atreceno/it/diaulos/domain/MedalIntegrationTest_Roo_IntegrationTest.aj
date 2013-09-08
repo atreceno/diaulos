@@ -6,10 +6,7 @@ package com.atreceno.it.diaulos.domain;
 import com.atreceno.it.diaulos.domain.Medal;
 import com.atreceno.it.diaulos.domain.MedalDataOnDemand;
 import com.atreceno.it.diaulos.domain.MedalIntegrationTest;
-import java.util.Iterator;
 import java.util.List;
-import javax.validation.ConstraintViolation;
-import javax.validation.ConstraintViolationException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -96,26 +93,6 @@ privileged aspect MedalIntegrationTest_Roo_IntegrationTest {
         obj.flush();
         Assert.assertEquals("Identifier of merged object not the same as identifier of original object", merged.getCode(), id);
         Assert.assertTrue("Version for 'Medal' failed to increment on merge and flush directive", (currentVersion != null && obj.getVersion() > currentVersion) || !modified);
-    }
-    
-    @Test
-    public void MedalIntegrationTest.testPersist() {
-        Assert.assertNotNull("Data on demand for 'Medal' failed to initialize correctly", dod.getRandomMedal());
-        Medal obj = dod.getNewTransientMedal(Integer.MAX_VALUE);
-        Assert.assertNotNull("Data on demand for 'Medal' failed to provide a new transient entity", obj);
-        Assert.assertNull("Expected 'Medal' identifier to be null", obj.getCode());
-        try {
-            obj.persist();
-        } catch (final ConstraintViolationException e) {
-            final StringBuilder msg = new StringBuilder();
-            for (Iterator<ConstraintViolation<?>> iter = e.getConstraintViolations().iterator(); iter.hasNext();) {
-                final ConstraintViolation<?> cv = iter.next();
-                msg.append("[").append(cv.getRootBean().getClass().getName()).append(".").append(cv.getPropertyPath()).append(": ").append(cv.getMessage()).append(" (invalid value = ").append(cv.getInvalidValue()).append(")").append("]");
-            }
-            throw new IllegalStateException(msg.toString(), e);
-        }
-        obj.flush();
-        Assert.assertNotNull("Expected 'Medal' identifier to no longer be null", obj.getCode());
     }
     
     @Test

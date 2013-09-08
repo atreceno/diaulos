@@ -55,16 +55,6 @@ privileged aspect RaceIntegrationTest_Roo_IntegrationTest {
     }
     
     @Test
-    public void RaceIntegrationTest.testFindAllRaces() {
-        Assert.assertNotNull("Data on demand for 'Race' failed to initialize correctly", dod.getRandomRace());
-        long count = raceService.countAllRaces();
-        Assert.assertTrue("Too expensive to perform a find all test for 'Race', as there are " + count + " entries; set the findAllMaximum to exceed this value or set findAll=false on the integration test annotation to disable the test", count < 250);
-        List<Race> result = raceService.findAllRaces();
-        Assert.assertNotNull("Find all method for 'Race' illegally returned null", result);
-        Assert.assertTrue("Find all method for 'Race' failed to return any data", result.size() > 0);
-    }
-    
-    @Test
     public void RaceIntegrationTest.testFindRaceEntries() {
         Assert.assertNotNull("Data on demand for 'Race' failed to initialize correctly", dod.getRandomRace());
         long count = raceService.countAllRaces();

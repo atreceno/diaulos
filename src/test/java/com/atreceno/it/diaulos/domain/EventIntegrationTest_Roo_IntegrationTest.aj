@@ -58,7 +58,7 @@ privileged aspect EventIntegrationTest_Roo_IntegrationTest {
     public void EventIntegrationTest.testFindAllEvents() {
         Assert.assertNotNull("Data on demand for 'Event' failed to initialize correctly", dod.getRandomEvent());
         long count = eventService.countAllEvents();
-        Assert.assertTrue("Too expensive to perform a find all test for 'Event', as there are " + count + " entries; set the findAllMaximum to exceed this value or set findAll=false on the integration test annotation to disable the test", count < 250);
+        Assert.assertTrue("Too expensive to perform a find all test for 'Event', as there are " + count + " entries; set the findAllMaximum to exceed this value or set findAll=false on the integration test annotation to disable the test", count < 700);
         List<Event> result = eventService.findAllEvents();
         Assert.assertNotNull("Find all method for 'Event' illegally returned null", result);
         Assert.assertTrue("Find all method for 'Event' failed to return any data", result.size() > 0);
