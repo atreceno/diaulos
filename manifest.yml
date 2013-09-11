@@ -1,0 +1,14 @@
+---
+applications:
+- name: diaulos
+  memory: 1G
+  instances: 1
+  host: diaulos
+  domain: cfapps.io
+  path: target/diaulos-0.1.0.BUILD-SNAPSHOT.war
+  services:
+    diaulos-cdb:
+      label: cleardb
+      provider: cleardb
+      version: n/a
+      plan: spark

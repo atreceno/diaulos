@@ -68,7 +68,9 @@
         <property name="persistenceUnitName" value="persistenceUnit"/>
         <property name="dataSource" ref="dataSource"/>
     </bean>
+    <!-- 
     <jdbc:initialize-database>
     	<jdbc:script location="classpath:/META-INF/sql/diaulos_dml.sql" />
     </jdbc:initialize-database>
+     -->
 </beans>
