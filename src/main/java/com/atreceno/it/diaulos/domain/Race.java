@@ -39,11 +39,11 @@ public class Race {
     private String description;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
+    @DateTimeFormat(style = "MM")
     private Date startDate;
 
     @Temporal(TemporalType.TIMESTAMP)
-    @DateTimeFormat(style = "M-")
+    @DateTimeFormat(style = "MM")
     private Date finishDate;
 
     private Boolean official;
