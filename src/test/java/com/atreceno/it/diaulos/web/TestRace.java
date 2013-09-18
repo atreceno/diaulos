@@ -33,8 +33,8 @@ public class TestRace {
 		driver.findElement(By.id("j_password")).sendKeys("olympic");
 		driver.findElement(By.id("proceed")).click();
 
-		driver.get(baseUrl);
-		driver.findElement(By.linkText("Create new Race")).click();
+		driver.get(baseUrl + "/races?form");
+//		driver.findElement(By.xpath("//a[@title='Create new Race']")).click();
 		driver.findElement(By.id("_code_id")).sendKeys("AAGEE1PR1");
 		driver.findElement(By.id("_name_id")).sendKeys("Selenium Race");
 		driver.findElement(By.id("_description_id")).sendKeys(
