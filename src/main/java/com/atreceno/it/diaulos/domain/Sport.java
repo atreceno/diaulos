@@ -16,24 +16,25 @@ import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
-@RooToString
+@RooToString(excludeFields = "events")
 @RooEquals
-@RooJpaActiveRecord(finders = { "findSportsByCodeEquals", "findSportsByNameLike" })
+@RooJpaActiveRecord(finders = { "findSportsByCodeEquals",
+		"findSportsByNameLike" })
 @RooJson
 public class Sport {
 
 	@Id
-    @NotNull
-    @Size(min = 2, max = 2)
-    private String code;
+	@NotNull
+	@Size(min = 2, max = 2)
+	private String code;
 
-    @NotNull
-    @Size(max = 25)
-    private String name;
+	@NotNull
+	@Size(max = 25)
+	private String name;
 
-    @Size(max = 255)
-    private String description;
+	@Size(max = 255)
+	private String description;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "sport")
-    private Set<Event> events = new HashSet<Event>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "sport")
+	private Set<Event> events = new HashSet<Event>();
 }
