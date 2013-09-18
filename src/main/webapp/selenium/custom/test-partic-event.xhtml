@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/diaulos/" />
+<title>ParticEventTest</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">ParticEventTest</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/diaulos/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Create new Partic Event</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=_event_id</td>
+	<td>CTM001 Men's Sprint Say something good about Men's Sprint</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=_participant_id</td>
+	<td>A123456 Chris Hoy chris.hoy@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=_medal_id</td>
+	<td>Gold</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=_rank_id</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=_result_id</td>
+	<td>9.713</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=proceed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=_s_com_atreceno_it_diaulos_domain_ParticEvent_event_event_id</td>
+	<td>CTM001 Men's Sprint Say something good about Men's Sprint</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=_s_com_atreceno_it_diaulos_domain_ParticEvent_participant_participant_id</td>
+	<td>A123456 Chris Hoy chris.hoy@gmail.com</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=_s_com_atreceno_it_diaulos_domain_ParticEvent_medal_medal_id</td>
+	<td>Gold</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=_s_com_atreceno_it_diaulos_domain_ParticEvent_rank_rank_id</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=_s_com_atreceno_it_diaulos_domain_ParticEvent_result_result_id</td>
+	<td>9.713</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=List all Partic Events</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
