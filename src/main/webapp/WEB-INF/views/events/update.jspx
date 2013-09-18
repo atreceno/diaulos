@@ -6,8 +6,8 @@
         <field:input field="code" id="c_com_atreceno_it_diaulos_domain_Event_code" max="6" min="6" required="true" z="Atqg8U8/1vPn68c98Kk6+IYu0Ec="/>
         <field:textarea field="name" id="c_com_atreceno_it_diaulos_domain_Event_name" required="true" z="+awTuof1EF5xji/p/iepWfCwP84="/>
         <field:textarea field="description" id="c_com_atreceno_it_diaulos_domain_Event_description" z="iJC93vXbTWjyla5zo9uUFW0Oe1Y="/>
-        <field:select field="gender" id="c_com_atreceno_it_diaulos_domain_Event_gender" itemValue="code" items="${eventgenders}" path="/eventgenders" required="true" z="r990X6CohsbMGfKJN9RGElIEoNc="/>
-        <field:select field="sport" id="c_com_atreceno_it_diaulos_domain_Event_sport" itemValue="code" items="${sports}" path="/sports" required="true" z="8vWha82kFzaXxnn8XakjGPaUNHc="/>
+        <field:select field="gender" id="c_com_atreceno_it_diaulos_domain_Event_gender" itemLabel="name" itemValue="code" items="${eventgenders}" path="/eventgenders" required="true" z="user-managed"/>
+        <field:select field="sport" id="c_com_atreceno_it_diaulos_domain_Event_sport" itemLabel="name" itemValue="code" items="${sports}" path="/sports" required="true" z="user-managed"/>
         <field:simple field="phases" id="c_com_atreceno_it_diaulos_domain_Event_phases" messageCode="entity_reference_not_managed" messageCodeAttribute="Phase" z="yfeM/nJTIR1HmaaZzq6f/J/aZwo="/>
         <field:simple field="participants" id="c_com_atreceno_it_diaulos_domain_Event_participants" messageCode="entity_reference_not_managed" messageCodeAttribute="Partic Event" z="FEbSu8RpEBUyhWjMWk4mwe5NF9I="/>
     </form:update>
