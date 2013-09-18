@@ -7,8 +7,6 @@ import com.atreceno.it.diaulos.domain.Event;
 import com.atreceno.it.diaulos.domain.EventGender;
 import com.atreceno.it.diaulos.domain.Sport;
 import com.atreceno.it.diaulos.service.EventService;
-import com.atreceno.it.diaulos.service.ParticEventService;
-import com.atreceno.it.diaulos.service.PhaseService;
 import com.atreceno.it.diaulos.web.EventController;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -29,12 +27,6 @@ privileged aspect EventController_Roo_Controller {
     
     @Autowired
     EventService EventController.eventService;
-    
-    @Autowired
-    ParticEventService EventController.particEventService;
-    
-    @Autowired
-    PhaseService EventController.phaseService;
     
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String EventController.create(@Valid Event event, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
@@ -107,14 +99,6 @@ privileged aspect EventController_Roo_Controller {
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
         uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/events";
-    }
-    
-    void EventController.populateEditForm(Model uiModel, Event event) {
-        uiModel.addAttribute("event", event);
-        uiModel.addAttribute("eventgenders", EventGender.findAllEventGenders());
-        uiModel.addAttribute("particevents", particEventService.findAllParticEvents());
-        uiModel.addAttribute("phases", phaseService.findAllPhases());
-        uiModel.addAttribute("sports", Sport.findAllSports());
     }
     
     String EventController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

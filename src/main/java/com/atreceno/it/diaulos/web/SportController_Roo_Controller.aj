@@ -4,12 +4,10 @@
 package com.atreceno.it.diaulos.web;
 
 import com.atreceno.it.diaulos.domain.Sport;
-import com.atreceno.it.diaulos.service.EventService;
 import com.atreceno.it.diaulos.web.SportController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,9 +18,6 @@ import org.springframework.web.util.UriUtils;
 import org.springframework.web.util.WebUtils;
 
 privileged aspect SportController_Roo_Controller {
-    
-    @Autowired
-    EventService SportController.eventService;
     
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String SportController.create(@Valid Sport sport, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
@@ -87,11 +82,6 @@ privileged aspect SportController_Roo_Controller {
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
         uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/sports";
-    }
-    
-    void SportController.populateEditForm(Model uiModel, Sport sport) {
-        uiModel.addAttribute("sport", sport);
-        uiModel.addAttribute("events", eventService.findAllEvents());
     }
     
     String SportController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

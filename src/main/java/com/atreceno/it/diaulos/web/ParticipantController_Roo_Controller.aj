@@ -3,17 +3,10 @@
 
 package com.atreceno.it.diaulos.web;
 
-import com.atreceno.it.diaulos.domain.Country;
 import com.atreceno.it.diaulos.domain.Participant;
-import com.atreceno.it.diaulos.reference.Gender;
-import com.atreceno.it.diaulos.service.ParticEventService;
-import com.atreceno.it.diaulos.service.ParticLapService;
-import com.atreceno.it.diaulos.service.ParticPhaseService;
-import com.atreceno.it.diaulos.service.ParticRaceService;
 import com.atreceno.it.diaulos.service.ParticipantService;
 import com.atreceno.it.diaulos.web.ParticipantController;
 import java.io.UnsupportedEncodingException;
-import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import org.joda.time.format.DateTimeFormat;
@@ -32,18 +25,6 @@ privileged aspect ParticipantController_Roo_Controller {
     
     @Autowired
     ParticipantService ParticipantController.participantService;
-    
-    @Autowired
-    ParticEventService ParticipantController.particEventService;
-    
-    @Autowired
-    ParticLapService ParticipantController.particLapService;
-    
-    @Autowired
-    ParticPhaseService ParticipantController.particPhaseService;
-    
-    @Autowired
-    ParticRaceService ParticipantController.particRaceService;
     
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String ParticipantController.create(@Valid Participant participant, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
@@ -114,17 +95,6 @@ privileged aspect ParticipantController_Roo_Controller {
     
     void ParticipantController.addDateTimeFormatPatterns(Model uiModel) {
         uiModel.addAttribute("participant_birthdate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-    }
-    
-    void ParticipantController.populateEditForm(Model uiModel, Participant participant) {
-        uiModel.addAttribute("participant", participant);
-        addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("countrys", Country.findAllCountrys());
-        uiModel.addAttribute("particevents", particEventService.findAllParticEvents());
-        uiModel.addAttribute("particlaps", particLapService.findAllParticLaps());
-        uiModel.addAttribute("particphases", particPhaseService.findAllParticPhases());
-        uiModel.addAttribute("particraces", particRaceService.findAllParticRaces());
-        uiModel.addAttribute("genders", Arrays.asList(Gender.values()));
     }
     
     String ParticipantController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

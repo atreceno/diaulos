@@ -5,10 +5,6 @@ package com.atreceno.it.diaulos.web;
 
 import com.atreceno.it.diaulos.domain.Phase;
 import com.atreceno.it.diaulos.domain.Race;
-import com.atreceno.it.diaulos.domain.Venue;
-import com.atreceno.it.diaulos.service.LapService;
-import com.atreceno.it.diaulos.service.ParticRaceService;
-import com.atreceno.it.diaulos.service.PhaseService;
 import com.atreceno.it.diaulos.service.RaceService;
 import com.atreceno.it.diaulos.web.RaceController;
 import java.io.UnsupportedEncodingException;
@@ -32,15 +28,6 @@ privileged aspect RaceController_Roo_Controller {
     
     @Autowired
     RaceService RaceController.raceService;
-    
-    @Autowired
-    LapService RaceController.lapService;
-    
-    @Autowired
-    ParticRaceService RaceController.particRaceService;
-    
-    @Autowired
-    PhaseService RaceController.phaseService;
     
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String RaceController.create(@Valid Race race, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
@@ -115,17 +102,8 @@ privileged aspect RaceController_Roo_Controller {
     }
     
     void RaceController.addDateTimeFormatPatterns(Model uiModel) {
-        uiModel.addAttribute("race_startdate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-        uiModel.addAttribute("race_finishdate_date_format", DateTimeFormat.patternForStyle("M-", LocaleContextHolder.getLocale()));
-    }
-    
-    void RaceController.populateEditForm(Model uiModel, Race race) {
-        uiModel.addAttribute("race", race);
-        addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("laps", lapService.findAllLaps());
-        uiModel.addAttribute("particraces", particRaceService.findAllParticRaces());
-        uiModel.addAttribute("phases", phaseService.findAllPhases());
-        uiModel.addAttribute("venues", Venue.findAllVenues());
+        uiModel.addAttribute("race_startdate_date_format", DateTimeFormat.patternForStyle("MM", LocaleContextHolder.getLocale()));
+        uiModel.addAttribute("race_finishdate_date_format", DateTimeFormat.patternForStyle("MM", LocaleContextHolder.getLocale()));
     }
     
     String RaceController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

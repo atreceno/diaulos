@@ -11,6 +11,7 @@ import com.atreceno.it.diaulos.domain.Medal;
 import com.atreceno.it.diaulos.domain.ParticEvent;
 import com.atreceno.it.diaulos.domain.ParticLap;
 import com.atreceno.it.diaulos.domain.ParticPhase;
+import com.atreceno.it.diaulos.domain.ParticRace;
 import com.atreceno.it.diaulos.domain.Participant;
 import com.atreceno.it.diaulos.domain.Phase;
 import com.atreceno.it.diaulos.domain.Race;
@@ -23,6 +24,7 @@ import com.atreceno.it.diaulos.service.LapService;
 import com.atreceno.it.diaulos.service.ParticEventService;
 import com.atreceno.it.diaulos.service.ParticLapService;
 import com.atreceno.it.diaulos.service.ParticPhaseService;
+import com.atreceno.it.diaulos.service.ParticRaceService;
 import com.atreceno.it.diaulos.service.ParticipantService;
 import com.atreceno.it.diaulos.service.PhaseService;
 import com.atreceno.it.diaulos.service.RaceService;
@@ -54,6 +56,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     ParticPhaseService ApplicationConversionServiceFactoryBean.particPhaseService;
     
     @Autowired
+    ParticRaceService ApplicationConversionServiceFactoryBean.particRaceService;
+    
+    @Autowired
     ParticipantService ApplicationConversionServiceFactoryBean.participantService;
     
     @Autowired
@@ -80,14 +85,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.atreceno.it.diaulos.domain.Country>() {
             public com.atreceno.it.diaulos.domain.Country convert(java.lang.String id) {
                 return Country.findCountry(id);
-            }
-        };
-    }
-    
-    public Converter<Event, String> ApplicationConversionServiceFactoryBean.getEventToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Event, java.lang.String>() {
-            public String convert(Event event) {
-                return new StringBuilder().append(event.getCode()).append(' ').append(event.getName()).append(' ').append(event.getDescription()).toString();
             }
         };
     }
@@ -236,6 +233,30 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
+    public Converter<ParticRace, String> ApplicationConversionServiceFactoryBean.getParticRaceToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.ParticRace, java.lang.String>() {
+            public String convert(ParticRace particRace) {
+                return new StringBuilder().append(particRace.getRank()).append(' ').append(particRace.getResult()).append(' ').append(particRace.getLane()).append(' ').append(particRace.getBib()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, ParticRace> ApplicationConversionServiceFactoryBean.getIdToParticRaceConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.atreceno.it.diaulos.domain.ParticRace>() {
+            public com.atreceno.it.diaulos.domain.ParticRace convert(java.lang.Long id) {
+                return particRaceService.findParticRace(id);
+            }
+        };
+    }
+    
+    public Converter<String, ParticRace> ApplicationConversionServiceFactoryBean.getStringToParticRaceConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.atreceno.it.diaulos.domain.ParticRace>() {
+            public com.atreceno.it.diaulos.domain.ParticRace convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), ParticRace.class);
+            }
+        };
+    }
+    
     public Converter<Participant, String> ApplicationConversionServiceFactoryBean.getParticipantToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Participant, java.lang.String>() {
             public String convert(Participant participant) {
@@ -260,14 +281,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
-    public Converter<Phase, String> ApplicationConversionServiceFactoryBean.getPhaseToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Phase, java.lang.String>() {
-            public String convert(Phase phase) {
-                return new StringBuilder().append(phase.getCode()).append(' ').append(phase.getName()).append(' ').append(phase.getDescription()).toString();
-            }
-        };
-    }
-    
     public Converter<Long, Phase> ApplicationConversionServiceFactoryBean.getIdToPhaseConverter() {
         return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.atreceno.it.diaulos.domain.Phase>() {
             public com.atreceno.it.diaulos.domain.Phase convert(java.lang.Long id) {
@@ -280,14 +293,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.atreceno.it.diaulos.domain.Phase>() {
             public com.atreceno.it.diaulos.domain.Phase convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Phase.class);
-            }
-        };
-    }
-    
-    public Converter<Race, String> ApplicationConversionServiceFactoryBean.getRaceToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Race, java.lang.String>() {
-            public String convert(Race race) {
-                return new StringBuilder().append(race.getCode()).append(' ').append(race.getName()).append(' ').append(race.getDescription()).append(' ').append(race.getStartDate()).toString();
             }
         };
     }
@@ -308,26 +313,10 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
-    public Converter<Sport, String> ApplicationConversionServiceFactoryBean.getSportToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Sport, java.lang.String>() {
-            public String convert(Sport sport) {
-                return new StringBuilder().append(sport.getName()).append(' ').append(sport.getDescription()).toString();
-            }
-        };
-    }
-    
     public Converter<String, Sport> ApplicationConversionServiceFactoryBean.getIdToSportConverter() {
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.atreceno.it.diaulos.domain.Sport>() {
             public com.atreceno.it.diaulos.domain.Sport convert(java.lang.String id) {
                 return Sport.findSport(id);
-            }
-        };
-    }
-    
-    public Converter<Venue, String> ApplicationConversionServiceFactoryBean.getVenueToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Venue, java.lang.String>() {
-            public String convert(Venue venue) {
-                return new StringBuilder().append(venue.getName()).append(' ').append(venue.getDescription()).append(' ').append(venue.getCapacity()).append(' ').append(venue.getAddress()).toString();
             }
         };
     }
@@ -360,14 +349,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         return new org.springframework.core.convert.converter.Converter<java.lang.String, com.atreceno.it.diaulos.domain.security.Role>() {
             public com.atreceno.it.diaulos.domain.security.Role convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Role.class);
-            }
-        };
-    }
-    
-    public Converter<User, String> ApplicationConversionServiceFactoryBean.getUserToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.security.User, java.lang.String>() {
-            public String convert(User user) {
-                return new StringBuilder().append(user.getUsername()).append(' ').append(user.getPassword()).toString();
             }
         };
     }
@@ -410,6 +391,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         registry.addConverter(getParticPhaseToStringConverter());
         registry.addConverter(getIdToParticPhaseConverter());
         registry.addConverter(getStringToParticPhaseConverter());
+        registry.addConverter(getParticRaceToStringConverter());
+        registry.addConverter(getIdToParticRaceConverter());
+        registry.addConverter(getStringToParticRaceConverter());
         registry.addConverter(getParticipantToStringConverter());
         registry.addConverter(getIdToParticipantConverter());
         registry.addConverter(getStringToParticipantConverter());

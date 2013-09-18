@@ -5,10 +5,7 @@ package com.atreceno.it.diaulos.web;
 
 import com.atreceno.it.diaulos.domain.Event;
 import com.atreceno.it.diaulos.domain.Phase;
-import com.atreceno.it.diaulos.service.EventService;
-import com.atreceno.it.diaulos.service.ParticPhaseService;
 import com.atreceno.it.diaulos.service.PhaseService;
-import com.atreceno.it.diaulos.service.RaceService;
 import com.atreceno.it.diaulos.web.PhaseController;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -29,15 +26,6 @@ privileged aspect PhaseController_Roo_Controller {
     
     @Autowired
     PhaseService PhaseController.phaseService;
-    
-    @Autowired
-    EventService PhaseController.eventService;
-    
-    @Autowired
-    ParticPhaseService PhaseController.particPhaseService;
-    
-    @Autowired
-    RaceService PhaseController.raceService;
     
     @RequestMapping(method = RequestMethod.POST, produces = "text/html")
     public String PhaseController.create(@Valid Phase phase, BindingResult bindingResult, Model uiModel, HttpServletRequest httpServletRequest) {
@@ -107,13 +95,6 @@ privileged aspect PhaseController_Roo_Controller {
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
         uiModel.addAttribute("size", (size == null) ? "10" : size.toString());
         return "redirect:/phases";
-    }
-    
-    void PhaseController.populateEditForm(Model uiModel, Phase phase) {
-        uiModel.addAttribute("phase", phase);
-        uiModel.addAttribute("events", eventService.findAllEvents());
-        uiModel.addAttribute("particphases", particPhaseService.findAllParticPhases());
-        uiModel.addAttribute("races", raceService.findAllRaces());
     }
     
     String PhaseController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {
