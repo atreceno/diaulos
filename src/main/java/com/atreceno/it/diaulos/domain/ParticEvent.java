@@ -18,7 +18,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooEquals
 @RooJson
 @Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "event_id",
-		"participant_id" }) })
+"participant_id" }) })
 public class ParticEvent {
 
 	@NotNull

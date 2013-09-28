@@ -2,6 +2,8 @@ package com.atreceno.it.diaulos.domain;
 
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.roo.addon.equals.RooEquals;
@@ -15,19 +17,21 @@ import org.springframework.roo.addon.tostring.RooToString;
 @RooJpaEntity
 @RooEquals
 @RooJson
+@Table(uniqueConstraints = { @UniqueConstraint(columnNames = { "lap_id",
+		"participant_id" }) })
 public class ParticLap {
 
-    @NotNull
-    @ManyToOne
-    @JoinColumn(name = "lap_id")
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "lap_id")
 	private Lap lap;
 
-    @NotNull
-    @ManyToOne
-    @JoinColumn(name = "participant_id")
-    private Participant participant;
+	@NotNull
+	@ManyToOne
+	@JoinColumn(name = "participant_id")
+	private Participant participant;
 
-    private Integer rank;
+	private Integer rank;
 
-    private String result;
+	private String result;
 }
