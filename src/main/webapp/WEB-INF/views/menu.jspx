@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0" xmlns:sec="http://www.springframework.org/security/tags">
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:sec="http://www.springframework.org/security/tags" id="menu" version="2.0">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
@@ -7,82 +7,82 @@
             <menu:item id="i_sport_list" messageCode="global_menu_list" url="/sports?page=1&amp;size=${empty param.size ? 10 : param.size}" z="iqMY9FBkETNY7DJ6yFZPDBsZf6U="/>
             <menu:item id="fi_sport_codeequals" messageCode="global_menu_find" url="/sports?find=ByCodeEquals&amp;form" z="WqrqQhOrB1aCf91D7Wd5XqQy9rU="/>
             <menu:item id="fi_sport_namelike" messageCode="global_menu_find" url="/sports?find=ByNameLike&amp;form" z="PowuoTIQUViYIcxNqRDD1W6XqtY="/>
-	        <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-            	<menu:item id="i_sport_new" messageCode="global_menu_new" url="/sports?form" z="jdou8PPu2yCbtL5DBr68Xjbu6Pk="/>
+            <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
+                <menu:item id="i_sport_new" messageCode="global_menu_new" url="/sports?form" z="jdou8PPu2yCbtL5DBr68Xjbu6Pk="/>
             </sec:authorize>
         </menu:category>
         <menu:category id="c_event" z="AURyeKTmOObIARXqfI9DXukJNIE=">
             <menu:item id="i_event_list" messageCode="global_menu_list" url="/events?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MxywFHCy64/coyVU05GEg92ERF4="/>
             <menu:item id="i_particevent_list" messageCode="global_menu_list" url="/particevents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="RS9FEHJSW/81rP0S5iho21XKACg="/>
             <menu:item id="i_eventgender_list" messageCode="global_menu_list" url="/eventgenders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="19aOxpcB9I5lCncI7E/7/dP63kY="/>
-	        <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-	            <menu:item id="i_event_new" messageCode="global_menu_new" url="/events?form" z="BObcRn250Q23VbXG8kWIXR49efE="/>
-	            <menu:item id="i_particevent_new" messageCode="global_menu_new" url="/particevents?form" z="M7gCBMZfidABBZ+Vn6+OAvpIFi0="/>
-	            <menu:item id="i_eventgender_new" messageCode="global_menu_new" url="/eventgenders?form" z="WN0EtjypsP05XFjeMDbQ+vzlCuA="/>
+            <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
+                <menu:item id="i_event_new" messageCode="global_menu_new" url="/events?form" z="BObcRn250Q23VbXG8kWIXR49efE="/>
+                <menu:item id="i_particevent_new" messageCode="global_menu_new" url="/particevents?form" z="M7gCBMZfidABBZ+Vn6+OAvpIFi0="/>
+                <menu:item id="i_eventgender_new" messageCode="global_menu_new" url="/eventgenders?form" z="WN0EtjypsP05XFjeMDbQ+vzlCuA="/>
             </sec:authorize>
         </menu:category>
         <menu:category id="c_phase" z="9fjQE6nTFVP5IYRnDQfKv2Xy97o=">
             <menu:item id="i_phase_list" messageCode="global_menu_list" url="/phases?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KUfQD8stsm//WTpE/EkmdEoeFB8="/>
             <menu:item id="i_particphase_list" messageCode="global_menu_list" url="/particphases?page=1&amp;size=${empty param.size ? 10 : param.size}" z="KL95APCY605VmaYPiTjRBJvjG+Y="/>
-	        <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-	            <menu:item id="i_phase_new" messageCode="global_menu_new" url="/phases?form" z="pl21lez+zvOx+9QNzUtk6Gs6pvQ="/>
-	            <menu:item id="i_particphase_new" messageCode="global_menu_new" url="/particphases?form" z="zKGQRStPmuQS4cwH9pD0DJwYemg="/>
-	        </sec:authorize>
+            <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
+                <menu:item id="i_phase_new" messageCode="global_menu_new" url="/phases?form" z="pl21lez+zvOx+9QNzUtk6Gs6pvQ="/>
+                <menu:item id="i_particphase_new" messageCode="global_menu_new" url="/particphases?form" z="zKGQRStPmuQS4cwH9pD0DJwYemg="/>
+            </sec:authorize>
         </menu:category>
         <menu:category id="c_race" z="r4JqxNLcjSNy12JQsZaYJAxxE+M=">
             <menu:item id="i_race_list" messageCode="global_menu_list" url="/races?page=1&amp;size=${empty param.size ? 10 : param.size}" z="sE4UyOFddub7WGQ4ktzpXvIoTu4="/>
             <menu:item id="i_particrace_list" messageCode="global_menu_list" url="/particraces?page=1&amp;size=${empty param.size ? 10 : param.size}" z="NqQvEbDDoxRvuL+ZecrFPX5Z77s="/>
-	        <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-	            <menu:item id="i_race_new" messageCode="global_menu_new" url="/races?form" z="BNbRyyHCMLaFjKBjCe4sxdGvvMo="/>
-	            <menu:item id="i_particrace_new" messageCode="global_menu_new" url="/particraces?form" z="YNCHgNNtobIp+zkNbGA+WjIHaUU="/>
-	        </sec:authorize>
+            <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
+                <menu:item id="i_race_new" messageCode="global_menu_new" url="/races?form" z="BNbRyyHCMLaFjKBjCe4sxdGvvMo="/>
+                <menu:item id="i_particrace_new" messageCode="global_menu_new" url="/particraces?form" z="YNCHgNNtobIp+zkNbGA+WjIHaUU="/>
+            </sec:authorize>
         </menu:category>
         <menu:category id="c_lap" z="YMCOgW0PX7qMExhRrV46rFJGWnE=">
             <menu:item id="i_lap_list" messageCode="global_menu_list" url="/laps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="0v2rD/GBUGQ3+tCSglRkGO/9Kag="/>
             <menu:item id="i_particlap_list" messageCode="global_menu_list" url="/particlaps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="g1o9pwR+yVC4g8zubltl3Qaz6r8="/>
-	        <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-	            <menu:item id="i_lap_new" messageCode="global_menu_new" url="/laps?form" z="INjBPijA8VPNU/A/YPYNppLbjso="/>
-	            <menu:item id="i_particlap_new" messageCode="global_menu_new" url="/particlaps?form" z="zdLZqdtUn84sLWaXsXdP0icv43s="/>
-	        </sec:authorize>
+            <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
+                <menu:item id="i_lap_new" messageCode="global_menu_new" url="/laps?form" z="INjBPijA8VPNU/A/YPYNppLbjso="/>
+                <menu:item id="i_particlap_new" messageCode="global_menu_new" url="/particlaps?form" z="zdLZqdtUn84sLWaXsXdP0icv43s="/>
+            </sec:authorize>
         </menu:category>
         <menu:category id="c_country" z="+9IFFFqXHr5bWdYjx7upDibmQfo=">
             <menu:item id="i_country_list" messageCode="global_menu_list" url="/countrys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="AwKhjnZH+dOj0X4glIoj4SVuHNY="/>
             <menu:item id="fi_country_codeequals" messageCode="global_menu_find" url="/countrys?find=ByCodeEquals&amp;form" z="INOZN58SZ/YDqoiW0IxrL0UJNso="/>
             <menu:item id="fi_country_namelike" messageCode="global_menu_find" url="/countrys?find=ByNameLike&amp;form" z="zlS0SJkEgdnRrCPISIq/merKgd8="/>
-	        <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-	            <menu:item id="i_country_new" messageCode="global_menu_new" url="/countrys?form" z="OnEHsuvR46cQji6jmcBL0pJOBMc="/>
-	        </sec:authorize>
+            <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
+                <menu:item id="i_country_new" messageCode="global_menu_new" url="/countrys?form" z="OnEHsuvR46cQji6jmcBL0pJOBMc="/>
+            </sec:authorize>
         </menu:category>
         <menu:category id="c_venue" z="PuK9BiH7zeOJAH31wtFNKW4HZIE=">
             <menu:item id="i_venue_list" messageCode="global_menu_list" url="/venues?page=1&amp;size=${empty param.size ? 10 : param.size}" z="A/T6bffysLZueO27CAWFqrpVwFM="/>
+            <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
+                <menu:item id="i_venue_new" messageCode="global_menu_new" url="/venues?form" z="BzPxP3VhbuLuFIZpYVPUbl90JIE="/>
+            </sec:authorize>
             <menu:item id="fi_venue_codeequals" messageCode="global_menu_find" url="/venues?find=ByCodeEquals&amp;form" z="dmYPIKv2raAAnr3boKlXWDt3I5Y="/>
             <menu:item id="fi_venue_namelike" messageCode="global_menu_find" url="/venues?find=ByNameLike&amp;form" z="igVkqjklMSE3X5ZxD8hYSk5xFWw="/>
-	        <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-	            <menu:item id="i_venue_new" messageCode="global_menu_new" url="/venues?form" z="BzPxP3VhbuLuFIZpYVPUbl90JIE="/>
-	        </sec:authorize>
         </menu:category>
         <menu:category id="c_medal" z="HP0w8gQxSC3Yz22/59zPcScBN9g=">
             <menu:item id="i_medal_list" messageCode="global_menu_list" url="/medals?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+joCEdWxZF1z2wPNxJax1ebZ4lE="/>
-	        <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-            	<menu:item id="i_medal_new" messageCode="global_menu_new" url="/medals?form" z="EX9yXMOfzLdR8OmX17l0pmr4Gxw="/>
-	        </sec:authorize>
+            <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
+                <menu:item id="i_medal_new" messageCode="global_menu_new" url="/medals?form" z="EX9yXMOfzLdR8OmX17l0pmr4Gxw="/>
+            </sec:authorize>
         </menu:category>
         <menu:category id="c_participant" z="ANH5qTsrRqntSp+G/TNiqRlMyII=">
             <menu:item id="i_participant_list" messageCode="global_menu_list" url="/participants?page=1&amp;size=${empty param.size ? 10 : param.size}" z="S0+pQAqtn2c+Ml1YK0wRvKopmdk="/>
-	        <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-	            <menu:item id="i_participant_new" messageCode="global_menu_new" url="/participants?form" z="d/gQJiqo5AiD27LP1zhtXRYMcyM="/>
-	        </sec:authorize>
+            <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
+                <menu:item id="i_participant_new" messageCode="global_menu_new" url="/participants?form" z="d/gQJiqo5AiD27LP1zhtXRYMcyM="/>
+            </sec:authorize>
         </menu:category>
         <sec:authorize ifAllGranted="ROLE_ADMIN">
-	        <menu:category id="c_security" z="user-managed">
-	            <menu:item id="i_user_new" messageCode="global_menu_new" url="/users?form" z="Zv1m8u2rG+JFKcvJ+AHVVK0ey24="/>
-	            <menu:item id="i_user_list" messageCode="global_menu_list" url="/users?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4MY4uybxa60Q1G2rlI5bOwg+sm0="/>
-	            <menu:item id="i_role_new" messageCode="global_menu_new" url="/roles?form" z="WNB2HvnzvtbOA3r7qL1gqrUOq8g="/>
-	            <menu:item id="i_role_list" messageCode="global_menu_list" url="/roles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="DVFtqj4xcHbEiJh6bgI7Tyre3ec="/>
-	        </menu:category>
-	        <menu:category id="c_seleniumtests" z="PPLMd2yNB6/LSbjIWogAacRPU+Q=">
-	            <menu:item id="si_seleniumtests_test" messageCode="selenium_menu_test_suite" url="/resources/selenium/test-suite.xhtml" z="wwunW/IPDcunN97u41MvMJZQ2to="/>
-	        </menu:category>
+            <menu:category id="c_security" z="user-managed">
+                <menu:item id="i_user_new" messageCode="global_menu_new" url="/users?form" z="Zv1m8u2rG+JFKcvJ+AHVVK0ey24="/>
+                <menu:item id="i_user_list" messageCode="global_menu_list" url="/users?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4MY4uybxa60Q1G2rlI5bOwg+sm0="/>
+                <menu:item id="i_role_new" messageCode="global_menu_new" url="/roles?form" z="WNB2HvnzvtbOA3r7qL1gqrUOq8g="/>
+                <menu:item id="i_role_list" messageCode="global_menu_list" url="/roles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="DVFtqj4xcHbEiJh6bgI7Tyre3ec="/>
+            </menu:category>
+            <menu:category id="c_seleniumtests" z="PPLMd2yNB6/LSbjIWogAacRPU+Q=">
+                <menu:item id="si_seleniumtests_test" messageCode="selenium_menu_test_suite" url="/resources/selenium/test-suite.xhtml" z="wwunW/IPDcunN97u41MvMJZQ2to="/>
+            </menu:category>
         </sec:authorize>
         <menu:category id="c_eventgender" render="false" z="user-managed"/>
         <menu:category id="c_user" render="false" z="user-managed"/>
