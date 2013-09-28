@@ -20,7 +20,7 @@ import org.springframework.roo.addon.json.RooJson;
 import org.springframework.roo.addon.tostring.RooToString;
 
 @RooJavaBean
-@RooToString
+@RooToString(excludeFields = { "laps", "participants" })
 @RooJpaEntity
 @RooEquals
 @RooJson
