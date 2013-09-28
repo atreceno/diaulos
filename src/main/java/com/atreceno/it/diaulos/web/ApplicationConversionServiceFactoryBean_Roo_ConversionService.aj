@@ -257,14 +257,6 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
         };
     }
     
-    public Converter<Participant, String> ApplicationConversionServiceFactoryBean.getParticipantToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Participant, java.lang.String>() {
-            public String convert(Participant participant) {
-                return new StringBuilder().append(participant.getCode()).append(' ').append(participant.getFirstName()).append(' ').append(participant.getLastName()).append(' ').append(participant.getEmail()).toString();
-            }
-        };
-    }
-    
     public Converter<Long, Participant> ApplicationConversionServiceFactoryBean.getIdToParticipantConverter() {
         return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.atreceno.it.diaulos.domain.Participant>() {
             public com.atreceno.it.diaulos.domain.Participant convert(java.lang.Long id) {

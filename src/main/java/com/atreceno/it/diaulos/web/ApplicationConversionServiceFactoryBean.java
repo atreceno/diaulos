@@ -6,6 +6,7 @@ import org.springframework.format.support.FormattingConversionServiceFactoryBean
 import org.springframework.roo.addon.web.mvc.controller.converter.RooConversionService;
 
 import com.atreceno.it.diaulos.domain.Event;
+import com.atreceno.it.diaulos.domain.Participant;
 import com.atreceno.it.diaulos.domain.Phase;
 import com.atreceno.it.diaulos.domain.Race;
 import com.atreceno.it.diaulos.domain.Sport;
@@ -46,8 +47,8 @@ public class ApplicationConversionServiceFactoryBean extends
 	public Converter<Event, String> getEventToStringConverter() {
 		return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Event, java.lang.String>() {
 			public String convert(Event event) {
-				return new StringBuilder().append(event.getCode()).append(' ')
-						.append(event.getName()).toString();
+				return new StringBuilder().append(event.getCode())
+						.append(" - ").append(event.getName()).toString();
 			}
 		};
 	}
@@ -55,8 +56,8 @@ public class ApplicationConversionServiceFactoryBean extends
 	public Converter<Phase, String> getPhaseToStringConverter() {
 		return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Phase, java.lang.String>() {
 			public String convert(Phase phase) {
-				return new StringBuilder().append(phase.getCode()).append(' ')
-						.append(phase.getName()).toString();
+				return new StringBuilder().append(phase.getCode())
+						.append(" - ").append(phase.getName()).toString();
 			}
 		};
 	}
@@ -64,7 +65,7 @@ public class ApplicationConversionServiceFactoryBean extends
 	public Converter<Race, String> getRaceToStringConverter() {
 		return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Race, java.lang.String>() {
 			public String convert(Race race) {
-				return new StringBuilder().append(race.getCode()).append(' ')
+				return new StringBuilder().append(race.getCode()).append(" - ")
 						.append(race.getName()).append(' ')
 						.append(race.getStartDate()).toString();
 			}
@@ -90,4 +91,14 @@ public class ApplicationConversionServiceFactoryBean extends
 		};
 	}
 
+	public Converter<Participant, String> getParticipantToStringConverter() {
+		return new org.springframework.core.convert.converter.Converter<com.atreceno.it.diaulos.domain.Participant, java.lang.String>() {
+			public String convert(Participant participant) {
+				return new StringBuilder().append(participant.getCode())
+						.append(" - ").append(participant.getFirstName())
+						.append(' ').append(participant.getLastName())
+						.toString();
+			}
+		};
+	}
 }
