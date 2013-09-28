@@ -19,10 +19,10 @@ public class Medal {
 
 	@Id
     @NotNull
-    @Size(min = 1, max = 1)
+    @Size(min = 2, max = 2)
     private String code;
 
     @NotNull
-    @Size(max = 6)
+    @Size(max = 10)
     private String name;
 }

@@ -30,8 +30,8 @@ privileged aspect MedalDataOnDemand_Roo_DataOnDemand {
     
     public void MedalDataOnDemand.setName(Medal obj, int index) {
         String name = "name_" + index;
-        if (name.length() > 6) {
-            name = name.substring(0, 6);
+        if (name.length() > 10) {
+            name = name.substring(0, 10);
         }
         obj.setName(name);
     }
