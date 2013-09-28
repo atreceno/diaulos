@@ -6,7 +6,7 @@
         <table:table data="${particevents}" id="l_com_atreceno_it_diaulos_domain_ParticEvent" path="/particevents" z="VH5EsP2FoVwivSO5gJE0WumKWhU=">
             <table:column id="c_com_atreceno_it_diaulos_domain_ParticEvent_event" property="event" z="puHTYa+YcOUqdwHR0k5IzaOsWlg="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_ParticEvent_participant" property="participant" z="2r/dZ59HErMrGQTi6vZ8odJRgnk="/>
-            <table:column id="c_com_atreceno_it_diaulos_domain_ParticEvent_medal" property="medal" z="PJw1DoBkY2TOFmVS/lhin5xOxz0="/>
+            <table:column id="c_com_atreceno_it_diaulos_domain_ParticEvent_medal" property="medal" render="false" z="user-managed"/>
             <table:column id="c_com_atreceno_it_diaulos_domain_ParticEvent_rank" property="rank" z="SV1tdVW6purgZIEPtx+iMS8Q45I="/>
             <table:column id="c_com_atreceno_it_diaulos_domain_ParticEvent_result" property="result" z="Zdu3K0UWN/PRvjrPWHmxEOUrYLM="/>
         </table:table>

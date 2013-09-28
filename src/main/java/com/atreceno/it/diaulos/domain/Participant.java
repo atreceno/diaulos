@@ -31,63 +31,62 @@ import org.springframework.roo.addon.tostring.RooToString;
 import com.atreceno.it.diaulos.reference.Gender;
 
 @RooJavaBean
-@RooToString
+@RooToString(excludeFields = { "laps", "races", "phases", "events" })
 @RooJpaEntity
 @RooEquals
 @RooJson
 public class Participant {
 
-    @NotNull
-    @Column(unique = true)
-    private String code;
+	@NotNull
+	@Column(unique = true)
+	private String code;
 
-    @NotNull
-    @Size(min = 3, max = 30)
-    private String firstName;
+	@Size(min = 3, max = 30)
+	private String firstName;
 
-    @NotNull
-    @Size(min = 3, max = 30)
-    private String lastName;
+	@NotNull
+	@Size(min = 3, max = 30)
+	private String lastName;
 
-    @NotNull
-    @Enumerated(EnumType.STRING)
-    private Gender gender;
+	@NotNull
+	@Enumerated(EnumType.STRING)
+	private Gender gender;
 
-    @Size(min = 6, max = 30)
-    @Pattern(regexp = "[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+")
-    private String email;
+	@Size(min = 6, max = 30)
+	@Pattern(regexp = "[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+")
+	private String email;
 
-    @NotNull
-    @Past
-    @Temporal(TemporalType.DATE)
-    @DateTimeFormat(style = "M-")
-    private Date birthDate;
+	@NotNull
+	@Past
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(style = "M-")
+	private Date birthDate;
 
-//    @RooUploadedFile(contentType = "image/jpeg")
-//    @Lob
-//    private byte[] image;
+	// @RooUploadedFile(contentType = "image/jpeg")
+	// @Lob
+	// private byte[] image;
 
-    @DecimalMin("0.0")
-    @DecimalMax("299.99")
-    private BigDecimal weight;
+	@DecimalMin("0.0")
+	@DecimalMax("299.99")
+	private BigDecimal weight;
 
-    @DecimalMin("0.0")
-    @DecimalMax("299.99")
-    private BigDecimal height;
+	@DecimalMin("0.0")
+	@DecimalMax("299.99")
+	private BigDecimal height;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "participant")
-    private Set<ParticLap> laps = new HashSet<ParticLap>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "participant")
+	private Set<ParticLap> laps = new HashSet<ParticLap>();
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "participant")
-    private Set<ParticRace> races = new HashSet<ParticRace>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "participant")
+	private Set<ParticRace> races = new HashSet<ParticRace>();
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "participant")
-    private Set<ParticPhase> phases = new HashSet<ParticPhase>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "participant")
+	private Set<ParticPhase> phases = new HashSet<ParticPhase>();
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "participant")
-    private Set<ParticEvent> events = new HashSet<ParticEvent>();
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "participant")
+	private Set<ParticEvent> events = new HashSet<ParticEvent>();
 
-    @ManyToOne
-    @JoinColumn(name = "country_code")
-    private Country country;
+	@ManyToOne
+	@JoinColumn(name = "country_code")
+	private Country country;
 }
