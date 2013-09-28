@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class TestPhase {
+public class SeleniumPhase {
 	private WebDriver driver;
 	private String baseUrl;
 	private StringBuffer verificationErrors = new StringBuffer();
@@ -33,8 +33,8 @@ public class TestPhase {
 		driver.findElement(By.id("j_password")).sendKeys("olympic");
 		driver.findElement(By.id("proceed")).click();
 
-		driver.get(baseUrl);
-		driver.findElement(By.linkText("Create new Phase")).click();
+		driver.get(baseUrl + "/phases?form");
+//		driver.findElement(By.linkText("Create new Phase")).click();
 		driver.findElement(By.id("_code_id")).sendKeys("AAGEE1P");
 		driver.findElement(By.id("_name_id")).sendKeys("Selenium Phase");
 		driver.findElement(By.id("_description_id")).sendKeys(
@@ -42,7 +42,7 @@ public class TestPhase {
 		driver.findElement(By.id("_event_id")).clear();
 		driver.findElement(By.id("_event_id")).sendKeys("");
 		driver.findElement(By.id("_event_id"))
-				.sendKeys("AAGEE1 Selenium Event");
+				.sendKeys("AAGEE1 - Selenium Event");
 		driver.findElement(By.id("proceed")).click();
 		try {
 			assertEquals(
@@ -73,7 +73,7 @@ public class TestPhase {
 		}
 		try {
 			assertEquals(
-					"AAGEE1 Selenium Event",
+					"AAGEE1 - Selenium Event",
 					driver.findElement(
 							By.id("_s_com_atreceno_it_diaulos_domain_Phase_event_event_id"))
 							.getText());
@@ -114,7 +114,7 @@ public class TestPhase {
 		}
 		try {
 			assertEquals(
-					"AAGEE1 Selenium Event",
+					"AAGEE1 - Selenium Event",
 					driver.findElement(
 							By.id("_s_com_atreceno_it_diaulos_domain_Phase_event_event_id"))
 							.getText());

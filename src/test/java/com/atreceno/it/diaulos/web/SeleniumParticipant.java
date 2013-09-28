@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class TestParticipant {
+public class SeleniumParticipant {
 	private WebDriver driver;
 	private String baseUrl;
 	private StringBuffer verificationErrors = new StringBuffer();
@@ -33,15 +33,15 @@ public class TestParticipant {
 		driver.findElement(By.id("j_password")).sendKeys("olympic");
 		driver.findElement(By.id("proceed")).click();
 
-		driver.get(baseUrl);
-		driver.findElement(By.linkText("Create new Participant")).click();
+		driver.get(baseUrl + "/participants?form");
+//		driver.findElement(By.linkText("Create new Participant")).click();
 		driver.findElement(By.id("_code_id")).sendKeys("A123456");
 		driver.findElement(By.id("_firstName_id")).sendKeys("Chris");
 		driver.findElement(By.id("_lastName_id")).sendKeys("Hoy");
 		driver.findElement(By.id("_email_id")).sendKeys("chris.hoy@gmail.com");
 		driver.findElement(By.id("_birthDate_id")).sendKeys("Mar 23, 1976");
 		driver.findElement(By.id("_weight_id")).sendKeys("93");
-		driver.findElement(By.id("_height_id")).sendKeys("1.85");
+		driver.findElement(By.id("_height_id")).sendKeys("185");
 		driver.findElement(By.id("_country_id")).clear();
 		driver.findElement(By.id("_country_id")).sendKeys("");
 		driver.findElement(By.id("_country_id")).sendKeys("Great Britain");

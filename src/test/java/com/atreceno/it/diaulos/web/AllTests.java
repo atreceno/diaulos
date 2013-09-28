@@ -5,9 +5,9 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ TestLogin.class, TestSport.class, TestEvent.class,
-		TestPhase.class, TestRace.class, TestParticipant.class,
-		TestParticEvent.class })
+@SuiteClasses({ SeleniumLogin.class, SeleniumSport.class, SeleniumEvent.class,
+		SeleniumPhase.class, SeleniumRace.class, SeleniumParticipant.class,
+		SeleniumParticEvent.class, SeleniumUndo.class })
 public class AllTests {
 
 }

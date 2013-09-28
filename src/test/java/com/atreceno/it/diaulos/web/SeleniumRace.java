@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class TestRace {
+public class SeleniumRace {
 	private WebDriver driver;
 	private String baseUrl;
 	private StringBuffer verificationErrors = new StringBuffer();
@@ -46,19 +46,21 @@ public class TestRace {
 		driver.findElement(By.id("_phase_id")).clear();
 		driver.findElement(By.id("_phase_id")).sendKeys("");
 		driver.findElement(By.id("_phase_id")).sendKeys(
-				"AAGEE1P Selenium Phase");
+				"AAGEE1P - Selenium Phase");
 		driver.findElement(By.id("_venue_id")).clear();
 		driver.findElement(By.id("_venue_id")).sendKeys("");
 		driver.findElement(By.id("_venue_id")).sendKeys(
 				"ExCeL - South Arena 2 2000 No address at the moment");
 		driver.findElement(By.id("_official_id")).click();
-		driver.findElement(By.id("proceed")).click();
+		driver.findElement(By.id("proceed")).submit();
+//		driver.findElement(By.id("proceed")).click();
 		driver.findElement(By.xpath("//img[@alt='Update Race']")).click();
 		driver.findElement(By.id("_official_id")).click();
 		driver.findElement(By.id("_description_id")).clear();
 		driver.findElement(By.id("_description_id")).sendKeys(
 				"This is a Selenium Test of a Race entity.");
-		driver.findElement(By.id("proceed")).click();
+		driver.findElement(By.id("proceed")).submit();
+//		driver.findElement(By.id("proceed")).click();
 		try {
 			assertEquals(
 					"AAGEE1PR1",
@@ -97,7 +99,7 @@ public class TestRace {
 		}
 		try {
 			assertEquals(
-					"AAGEE1P Selenium Phase",
+					"AAGEE1P - Selenium Phase",
 					driver.findElement(
 							By.id("_s_com_atreceno_it_diaulos_domain_Race_phase_phase_id"))
 							.getText());

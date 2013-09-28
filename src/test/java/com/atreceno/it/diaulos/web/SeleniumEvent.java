@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class TestEvent {
+public class SeleniumEvent {
 	private WebDriver driver;
 	private String baseUrl;
 	private StringBuffer verificationErrors = new StringBuffer();
@@ -33,8 +33,8 @@ public class TestEvent {
 		driver.findElement(By.id("j_password")).sendKeys("olympic");
 		driver.findElement(By.id("proceed")).click();
 
-		driver.get(baseUrl);
-		driver.findElement(By.linkText("Create new Event")).click();
+		driver.get(baseUrl + "/events?form");
+//		driver.findElement(By.linkText("Create new Event")).click();
 		driver.findElement(By.id("_code_id")).sendKeys("AAGEE1");
 		driver.findElement(By.id("_name_id")).sendKeys("Selenium Event");
 		driver.findElement(By.id("_description_id")).sendKeys(

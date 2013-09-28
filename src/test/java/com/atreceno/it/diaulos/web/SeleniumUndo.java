@@ -14,7 +14,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class TestUndo {
+public class SeleniumUndo {
 	private WebDriver driver;
 	private String baseUrl;
 	private boolean acceptNextAlert = true;

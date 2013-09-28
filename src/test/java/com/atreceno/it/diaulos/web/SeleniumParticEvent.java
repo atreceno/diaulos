@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class TestSport {
+public class SeleniumParticEvent {
 	private WebDriver driver;
 	private String baseUrl;
 	private StringBuffer verificationErrors = new StringBuffer();
@@ -25,7 +25,7 @@ public class TestSport {
 	}
 
 	@Test
-	public void testSport() throws Exception {
+	public void testParticEvent() throws Exception {
 
 		// Login first
 		driver.get(baseUrl + "/login");
@@ -33,71 +33,68 @@ public class TestSport {
 		driver.findElement(By.id("j_password")).sendKeys("olympic");
 		driver.findElement(By.id("proceed")).click();
 
-		driver.get(baseUrl + "/sports?form");
-		//driver.findElement(By.linkText("Create new Sport")).click();
-		driver.findElement(By.id("_code_id")).sendKeys("AA");
-		driver.findElement(By.id("_name_id")).sendKeys("Selenium Sport");
-		driver.findElement(By.id("_description_id")).sendKeys(
-				"This is a Selenium Sport.");
+		driver.get(baseUrl + "/particevents?form");
+//		driver.findElement(By.linkText("Create new Partic Event")).click();
+		driver.findElement(By.id("_event_id")).clear();
+		driver.findElement(By.id("_event_id")).sendKeys("");
+		driver.findElement(By.id("_event_id")).sendKeys(
+				"AAGEE1 - Selenium Event");
+		driver.findElement(By.id("_participant_id")).clear();
+		driver.findElement(By.id("_participant_id")).sendKeys("");
+		driver.findElement(By.id("_participant_id")).sendKeys(
+				"A123456 - Chris Hoy");
+		driver.findElement(By.id("_medal_id")).clear();
+		driver.findElement(By.id("_medal_id")).sendKeys("");
+		driver.findElement(By.id("_medal_id")).sendKeys("Gold");
+		driver.findElement(By.id("_rank_id")).sendKeys("1");
+		driver.findElement(By.id("_result_id")).sendKeys("9.713");
 		driver.findElement(By.id("proceed")).click();
 		try {
 			assertEquals(
-					"Selenium Sport",
+					"AAGEE1 - Selenium Event",
 					driver.findElement(
-							By.id("_s_com_atreceno_it_diaulos_domain_Sport_name_name_id"))
+							By.id("_s_com_atreceno_it_diaulos_domain_ParticEvent_event_event_id"))
 							.getText());
 		} catch (Error e) {
 			verificationErrors.append(e.toString());
 		}
 		try {
 			assertEquals(
-					"This is a Selenium Sport.",
+					"A123456 - Chris Hoy",
 					driver.findElement(
-							By.id("_s_com_atreceno_it_diaulos_domain_Sport_description_description_id"))
-							.getText());
-		} catch (Error e) {
-			verificationErrors.append(e.toString());
-		}
-		driver.findElement(By.linkText("Find by Code Equals")).click();
-		driver.findElement(By.id("_code_id")).sendKeys("AA");
-		driver.findElement(By.id("proceed")).click();
-		try {
-			assertEquals("Selenium Sport",
-					driver.findElement(By.xpath("//table/tbody/tr[1]/td[1]"))
-							.getText());
-		} catch (Error e) {
-			verificationErrors.append(e.toString());
-		}
-		try {
-			assertEquals("This is a Selenium Sport.",
-					driver.findElement(By.xpath("//table/tbody/tr[1]/td[2]"))
-							.getText());
-		} catch (Error e) {
-			verificationErrors.append(e.toString());
-		}
-		driver.findElement(By.xpath("//img[@alt='Update Sport']")).click();
-		driver.findElement(By.id("_description_id")).clear();
-		driver.findElement(By.id("_description_id")).sendKeys(
-				"This is a Selenium Sport (front-end unit testing).");
-		driver.findElement(By.id("proceed")).click();
-		try {
-			assertEquals(
-					"Selenium Sport",
-					driver.findElement(
-							By.id("_s_com_atreceno_it_diaulos_domain_Sport_name_name_id"))
+							By.id("_s_com_atreceno_it_diaulos_domain_ParticEvent_participant_participant_id"))
 							.getText());
 		} catch (Error e) {
 			verificationErrors.append(e.toString());
 		}
 		try {
 			assertEquals(
-					"This is a Selenium Sport (front-end unit testing).",
+					"Gold",
 					driver.findElement(
-							By.id("_s_com_atreceno_it_diaulos_domain_Sport_description_description_id"))
+							By.id("_s_com_atreceno_it_diaulos_domain_ParticEvent_medal_medal_id"))
 							.getText());
 		} catch (Error e) {
 			verificationErrors.append(e.toString());
 		}
+		try {
+			assertEquals(
+					"1",
+					driver.findElement(
+							By.id("_s_com_atreceno_it_diaulos_domain_ParticEvent_rank_rank_id"))
+							.getText());
+		} catch (Error e) {
+			verificationErrors.append(e.toString());
+		}
+		try {
+			assertEquals(
+					"9.713",
+					driver.findElement(
+							By.id("_s_com_atreceno_it_diaulos_domain_ParticEvent_result_result_id"))
+							.getText());
+		} catch (Error e) {
+			verificationErrors.append(e.toString());
+		}
+		driver.findElement(By.linkText("List all Partic Events")).click();
 	}
 
 	@After
