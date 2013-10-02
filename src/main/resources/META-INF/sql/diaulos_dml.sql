@@ -1,4 +1,8 @@
 -- Delete data
+delete from partic_lap;
+delete from partic_race;
+delete from partic_phase;
+delete from partic_event;
 delete from lap;
 delete from race;
 delete from phase;
