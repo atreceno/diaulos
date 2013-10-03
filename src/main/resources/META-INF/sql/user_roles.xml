@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resultset>
 <resultset statement="select * from diaulos_db.user_roles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <row>
 	<field name="users">1</field>
