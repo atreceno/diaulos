@@ -61,12 +61,12 @@
             <menu:item id="fi_venue_codeequals" messageCode="global_menu_find" url="/venues?find=ByCodeEquals&amp;form" z="dmYPIKv2raAAnr3boKlXWDt3I5Y="/>
             <menu:item id="fi_venue_namelike" messageCode="global_menu_find" url="/venues?find=ByNameLike&amp;form" z="igVkqjklMSE3X5ZxD8hYSk5xFWw="/>
         </menu:category>
-        <menu:category id="c_medal" z="HP0w8gQxSC3Yz22/59zPcScBN9g=">
-            <menu:item id="i_medal_list" messageCode="global_menu_list" url="/medals?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+joCEdWxZF1z2wPNxJax1ebZ4lE="/>
-            <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-                <menu:item id="i_medal_new" messageCode="global_menu_new" url="/medals?form" z="EX9yXMOfzLdR8OmX17l0pmr4Gxw="/>
-            </sec:authorize>
-        </menu:category>
+        <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
+	        <menu:category id="c_medal" z="HP0w8gQxSC3Yz22/59zPcScBN9g=">
+	            <menu:item id="i_medal_list" messageCode="global_menu_list" url="/medals?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+joCEdWxZF1z2wPNxJax1ebZ4lE="/>
+	            <menu:item id="i_medal_new" messageCode="global_menu_new" url="/medals?form" z="EX9yXMOfzLdR8OmX17l0pmr4Gxw="/>
+	        </menu:category>
+        </sec:authorize>
         <menu:category id="c_participant" z="ANH5qTsrRqntSp+G/TNiqRlMyII=">
             <menu:item id="i_participant_list" messageCode="global_menu_list" url="/participants?page=1&amp;size=${empty param.size ? 10 : param.size}" z="S0+pQAqtn2c+Ml1YK0wRvKopmdk="/>
             <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
