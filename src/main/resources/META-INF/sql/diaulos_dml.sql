@@ -16,15 +16,18 @@ delete from country;
 delete from user_roles;
 delete from user;
 delete from role;
-delete from partic_event;
 -- Set ID back to 1
+alter table partic_lap auto_increment = 1;
+alter table partic_race auto_increment = 1;
+alter table partic_phase auto_increment = 1;
+alter table partic_event auto_increment = 1;
 alter table lap auto_increment = 1;
 alter table race auto_increment = 1;
 alter table phase auto_increment = 1;
 alter table event auto_increment = 1;
+alter table participant auto_increment = 1;
 alter table user auto_increment = 1;
 alter table role auto_increment = 1;
-alter table participant auto_increment = 1;
 -- Sport
 load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/discipline.txt' into table sport fields terminated by '\t' lines terminated by '\n' ignore 1 lines (code, @name, @name_fr, @is_sport, @sport, @order, @schedule) set name = @name, description = concat('Say something cool about ', @name), version = 0;
 -- Event Gender
@@ -51,13 +54,19 @@ update phase p inner join event e on left(p.code, 6) = e.code set p.event_id = e
 load data infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/eventunit.txt' into table race fields terminated by '\t' lines terminated by '\n' ignore 1 lines (@discipline_code, @gender_code, @subevent_code, @subphase_code, @subeventunit_code, @sche, @medal, @desc_en, @name, @desc_fr, @name_fr, @eu_type, @cis, @info, @filter11, @filter12, @filter21, @filter22, @criteria) set code = concat(@discipline_code,@gender_code,@subevent_code, @subphase_code, @subeventunit_code), name = @name, description = concat('Say something stunning about ', @name), official = 0, version = 0;
 update race c inner join phase p on left(c.code, 7) = p.code set c.phase_id = p.id, start_date = now(), finish_date = now(), venue_code = 'OPK' where c.phase_id = 0;
 set foreign_key_checks = 1;
--- Laps (adding 10 laps for testing)
-set @num = 10;
-insert into lap(code, race_id, version) select concat(ra.code, @num:=@num+1), ra.id, 0 from race ra limit 10;
+
+-- Laps (adding laps for testing)
+-- set @num = 10;
+-- insert into lap(code, race_id, version) select concat(ra.code, @num:=@num+1), ra.id, 0 from race ra limit 10;
+-- Notice how the next insert does not depend on race. We are using race table just as a dummy table to generate 100 lines. 
+set @num = 0;
+insert into lap(code, cumulative_distance, name, partial_distance, version, race_id) select concat("CRM012101-", @num:=@num+100), @num, "lap", 100, 0, 3258 from race ra limit 100; 
+
 -- User and Role
 load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/user.xml' into table diaulos_db.user (@id, enabled, password, username, @version) set version = 0;
 load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/role.xml' into table diaulos_db.role (@id, name, @version) set version = 0;
 load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/user_roles.xml' into table diaulos_db.user_roles (users, roles);
+
 -- Participant (CM)
 -- load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/cm-participants.xml' into table diaulos_db.participant rows identified by '<athlete>' (@athleteurl, @firstname, @lastname, @birthdate, gender, height, weight, @smallphotourl, @countrycode, @countryname) set first_name = @firstname, last_name = @lastname, birth_date = @birthdate, code = concat('A',lpad(floor(rand() * 100000), 6, '0')), country_code = @countrycode, email = 'one.two@three.com', version = 0;
 -- Register Participans to Events (CM)
@@ -69,16 +78,23 @@ load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/user_
 -- insert into partic_phase (rank, result, qualified, phase_id, participant_id, version) select @rank:=@rank+1 as rank, 333.33 - @rank, 0, 663, p.id, 0 from participant p where p.gender = 'M';  
 -- set @rank = 0;
 -- insert into partic_phase (rank, result, qualified, phase_id, participant_id, version) select @rank:=@rank+1 as rank, 333.33 - @rank, 0, 666, p.id, 0 from participant p where p.gender = 'F';  
+
 -- Load all participants
 load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/participants.xml' into table diaulos_db.participant rows identified by '<athlete>' (code, @firstName, @lastName, gender, @birthDate, weight, height, @organisation, @tournaments) set first_name = @firstName, last_name = @lastName, birth_date = @birthDate, country_code = @organisation, email = "one.two@three.com", version = 0;
 create table pe_aux (e_code varchar(255), p_code varchar(255));
 load xml infile '~/Development/git/diaulos/src/main/resources/META-INF/sql/participants.xml' into table diaulos_db.pe_aux rows identified by '<tournaments>' (@code, @tournaments) set p_code = @code, e_code = @tournaments;
 insert into partic_event (event_id, participant_id, version) select e.id, p.id, 0 from event e inner join participant p inner join pe_aux a where e.code = a.e_code and p.code = a.p_code;
 drop table pe_aux;
+
 -- Some start lists
-insert into partic_phase (participant_id, phase_id, version) select pa.id, ph.id, 0 from participant pa inner join phase ph limit 10;
-insert into partic_race (participant_id, race_id, version) select pa.id, ra.id, 0 from participant pa inner join race ra limit 10;
-insert into partic_lap (participant_id, lap_id, version) select pa.id, la.id, 0 from participant pa inner join lap la limit 10;
+-- insert into partic_phase (participant_id, phase_id, version) select pa.id, ph.id, 0 from participant pa inner join phase ph limit 10;
+-- insert into partic_race (participant_id, race_id, version) select pa.id, ra.id, 0 from participant pa inner join race ra limit 10;
+-- insert into partic_lap (participant_id, lap_id, version) select pa.id, la.id, 0 from participant pa inner join lap la limit 10;
+-- Register all participants in CRM012 (id:150) into phase CRM0121 (id:678)
+insert into partic_phase(qualified, rank, result, version, participant_id, phase_id) select 0, null, null, 0, pe.participant_id, 678 from partic_event pe where event_id = 150; 
+-- Register all participants in CRM0121 (id:678) into race CRM012101 (id:3258)
+insert into partic_race(bib, lane, rank, result, version, participant_id, race_id) select @num:=@num+1, "N/A", null, null, 0, pp.participant_id, 3258 from partic_phase pp where phase_id = 678;
+
 -- Uncomment to leave only a few sports
 -- delete r from race r, phase p, event e, sport s where r.phase_id = p.id and p.event_id = e.id and e.sport_code = s.code and s.code not in ('CM', 'CB'); 
 -- delete p from phase p inner join event e on p.event_id = e.id inner join sport s on e.sport_code = s.code where s.code not in ('CM', 'CB');
