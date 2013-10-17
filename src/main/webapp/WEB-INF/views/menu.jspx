@@ -14,10 +14,10 @@
         <menu:category id="c_event" z="AURyeKTmOObIARXqfI9DXukJNIE=">
             <menu:item id="i_event_list" messageCode="global_menu_list" url="/events?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MxywFHCy64/coyVU05GEg92ERF4="/>
             <menu:item id="i_particevent_list" messageCode="global_menu_list" url="/particevents?page=1&amp;size=${empty param.size ? 10 : param.size}" z="RS9FEHJSW/81rP0S5iho21XKACg="/>
-            <menu:item id="i_eventgender_list" messageCode="global_menu_list" url="/eventgenders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="19aOxpcB9I5lCncI7E/7/dP63kY="/>
             <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
                 <menu:item id="i_event_new" messageCode="global_menu_new" url="/events?form" z="BObcRn250Q23VbXG8kWIXR49efE="/>
                 <menu:item id="i_particevent_new" messageCode="global_menu_new" url="/particevents?form" z="M7gCBMZfidABBZ+Vn6+OAvpIFi0="/>
+                <menu:item id="i_eventgender_list" messageCode="global_menu_list" url="/eventgenders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="19aOxpcB9I5lCncI7E/7/dP63kY="/>
                 <menu:item id="i_eventgender_new" messageCode="global_menu_new" url="/eventgenders?form" z="WN0EtjypsP05XFjeMDbQ+vzlCuA="/>
             </sec:authorize>
         </menu:category>
@@ -62,10 +62,10 @@
             <menu:item id="fi_venue_namelike" messageCode="global_menu_find" url="/venues?find=ByNameLike&amp;form" z="igVkqjklMSE3X5ZxD8hYSk5xFWw="/>
         </menu:category>
         <sec:authorize ifAnyGranted="ROLE_ADMIN, ROLE_MANAGER">
-	        <menu:category id="c_medal" z="HP0w8gQxSC3Yz22/59zPcScBN9g=">
-	            <menu:item id="i_medal_list" messageCode="global_menu_list" url="/medals?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+joCEdWxZF1z2wPNxJax1ebZ4lE="/>
-	            <menu:item id="i_medal_new" messageCode="global_menu_new" url="/medals?form" z="EX9yXMOfzLdR8OmX17l0pmr4Gxw="/>
-	        </menu:category>
+            <menu:category id="c_medal" z="HP0w8gQxSC3Yz22/59zPcScBN9g=">
+                <menu:item id="i_medal_list" messageCode="global_menu_list" url="/medals?page=1&amp;size=${empty param.size ? 10 : param.size}" z="+joCEdWxZF1z2wPNxJax1ebZ4lE="/>
+                <menu:item id="i_medal_new" messageCode="global_menu_new" url="/medals?form" z="EX9yXMOfzLdR8OmX17l0pmr4Gxw="/>
+            </menu:category>
         </sec:authorize>
         <menu:category id="c_participant" z="ANH5qTsrRqntSp+G/TNiqRlMyII=">
             <menu:item id="i_participant_list" messageCode="global_menu_list" url="/participants?page=1&amp;size=${empty param.size ? 10 : param.size}" z="S0+pQAqtn2c+Ml1YK0wRvKopmdk="/>
