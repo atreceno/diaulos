@@ -1,7 +1,5 @@
 package com.atreceno.it.diaulos.web;
 
-import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.roo.addon.web.mvc.controller.json.RooWebJson;
 import org.springframework.roo.addon.web.mvc.controller.scaffold.RooWebScaffold;
@@ -9,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.atreceno.it.diaulos.domain.Event;
 import com.atreceno.it.diaulos.domain.Phase;
 import com.atreceno.it.diaulos.service.EventService;
 
